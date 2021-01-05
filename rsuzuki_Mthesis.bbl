@@ -1,0 +1,69 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Adriani et~al.(2018)Adriani, Mura, Orton, Hansen, Altieri, Moriconi,
+  Rogers, Eichst\"{a}dt, Momary, Ingersoll, Filacchione, Sindoni,
+  Tabataba-Vakili, Dinelli, Fabiano, Bolton, Connerney, Atreya, Lunine, Tosi,
+  Migliorini, Grassi, Piccioni, Noschese, Cicchetti, Plainaki, Olivieri,
+  O'Neill, Turrini, Stefani, Sordini, and Amoroso]{Adriani2018}
+A.~Adriani, A.~Mura, G.~Orton, C.~Hansen, F.~Altieri, M.~L. Moriconi,
+  J.~Rogers, G.~Eichst\"{a}dt, T.~Momary, A.~P. Ingersoll, G.~Filacchione,
+  G.~Sindoni, F.~Tabataba-Vakili, B.~M. Dinelli, F.~Fabiano, S.~J. Bolton,
+  J.~E.~P. Connerney, S.~K. Atreya, J.~I. Lunine, F.~Tosi, A.~Migliorini,
+  D.~Grassi, G.~Piccioni, R.~Noschese, A.~Cicchetti, C.~Plainaki, A.~Olivieri,
+  M.~E. O'Neill, D.~Turrini, S.~Stefani, R.~Sordini, and M.~Amoroso.
+\newblock Clusters of cyclones encircling jupiter's poles.
+\newblock \emph{Nature}, 555\penalty0 (7695):\penalty0 216--219, Mar. 2018.
+\newblock \doi{10.1038/nature25491}.
+\newblock URL \url{https://doi.org/10.1038/nature25491}.
+
+\bibitem[Antu{\~{n}}ano et~al.(2015)Antu{\~{n}}ano, del
+  R{\'{\i}}o-Gaztelurrutia, S{\'{a}}nchez-Lavega, and Hueso]{Antuano2015}
+A.~Antu{\~{n}}ano, T.~del R{\'{\i}}o-Gaztelurrutia, A.~S{\'{a}}nchez-Lavega,
+  and R.~Hueso.
+\newblock Dynamics of saturn's polar regions.
+\newblock \emph{Journal of Geophysical Research: Planets}, 120\penalty0
+  (2):\penalty0 155--176, Feb. 2015.
+\newblock \doi{10.1002/2014je004709}.
+\newblock URL \url{https://doi.org/10.1002/2014je004709}.
+
+\bibitem[Brueshaber et~al.(2019)Brueshaber, Sayanagi, and
+  Dowling]{Brueshaber2019}
+S.~R. Brueshaber, K.~M. Sayanagi, and T.~E. Dowling.
+\newblock Dynamical regimes of giant planet polar vortices.
+\newblock \emph{Icarus}, 323:\penalty0 46--61, May 2019.
+\newblock \doi{10.1016/j.icarus.2019.02.001}.
+\newblock URL \url{https://doi.org/10.1016/j.icarus.2019.02.001}.
+
+\bibitem[Showman(2007)]{Showman2007}
+A.~P. Showman.
+\newblock Numerical simulations of forced shallow-water turbulence: Effects of
+  moist convection on the large-scale circulation of jupiter and saturn.
+\newblock \emph{Journal of the Atmospheric Sciences}, 64\penalty0 (9):\penalty0
+  3132--3157, Sept. 2007.
+\newblock \doi{10.1175/jas4007.1}.
+\newblock URL \url{https://doi.org/10.1175/jas4007.1}.
+
+\bibitem[Showman et~al.(2009)Showman, Cho, and Menou]{showman2009atmospheric}
+A.~P. Showman, J.~Y.-K. Cho, and K.~Menou.
+\newblock Atmospheric circulation of exoplanets, 2009.
+
+\bibitem[Takehiro et~al.(2006)Takehiro, Odaka, Ishioka, Ishiwatari, and
+  Hayashi]{spmodel2006}
+S.~Takehiro, M.~Odaka, K.~Ishioka, M.~Ishiwatari, and Y.-Y. Hayashi.
+\newblock Spmodel: A series of hierarchical spectral models for geophyiscal
+  fluid dynamics.
+\newblock \url{http://www.nagare.or.jp/mm/2006/spmodel/}, 2006.
+
+\bibitem[Takehiro et~al.(2013)Takehiro, SASAKI, Ishioka, Odaka, Takahashi,
+  Nakajima, Ishiwatari, Hayashi, and Group]{spmodel2013}
+S.~Takehiro, Y.~SASAKI, K.~Ishioka, M.~Odaka, Y.~O. Takahashi, K.~Nakajima,
+  M.~Ishiwatari, Y.-Y. Hayashi, and S.~D. Group.
+\newblock Hierarchical spectral models for gfd (spmodel).
+\newblock \url{http://www.gfd-dennou.org/library/spmodel/}, 2013.
+
+\end{thebibliography}
