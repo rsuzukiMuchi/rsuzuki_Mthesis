@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -39,6 +39,40 @@ S.~R. Brueshaber, K.~M. Sayanagi, and T.~E. Dowling.
 \newblock \doi{10.1016/j.icarus.2019.02.001}.
 \newblock URL \url{https://doi.org/10.1016/j.icarus.2019.02.001}.
 
+\bibitem[Christensen(2002)]{CHRISTENSEN2002}
+U.~R. Christensen.
+\newblock Zonal flow driven by strongly supercritical convection in rotating
+  spherical shells.
+\newblock \emph{Journal of Fluid Mechanics}, 470:\penalty0 115--133, Oct. 2002.
+\newblock \doi{10.1017/s0022112002002008}.
+\newblock URL \url{https://doi.org/10.1017/s0022112002002008}.
+
+\bibitem[Gierasch et~al.(2000)Gierasch, Ingersoll, Banfield, Ewald,
+  Helfenstein, Simon-Miller, Vasavada, Breneman, Senske, and
+  Team]{Gierasch2000}
+P.~J. Gierasch, A.~P. Ingersoll, D.~Banfield, S.~P. Ewald, P.~Helfenstein,
+  A.~Simon-Miller, A.~Vasavada, H.~H. Breneman, D.~A. Senske, and G.~I. Team.
+\newblock Observation of moist convection in jupiter's atmosphere.
+\newblock \emph{Nature}, 403\penalty0 (6770):\penalty0 628--630, Feb. 2000.
+\newblock \doi{10.1038/35001017}.
+\newblock URL \url{https://doi.org/10.1038/35001017}.
+
+\bibitem[Porco(2005)]{Porco2005}
+C.~C. Porco.
+\newblock Cassini imaging science: Initial results on saturn's atmosphere.
+\newblock \emph{Science}, 307\penalty0 (5713):\penalty0 1243--1247, Feb. 2005.
+\newblock \doi{10.1126/science.1107691}.
+\newblock URL \url{https://doi.org/10.1126/science.1107691}.
+
+\bibitem[Scott and Polvani(2007)]{Scott2007}
+R.~K. Scott and L.~M. Polvani.
+\newblock Forced-dissipative shallow-water turbulence on the sphere and the
+  atmospheric circulation of the giant planets.
+\newblock \emph{Journal of the Atmospheric Sciences}, 64\penalty0 (9):\penalty0
+  3158--3176, Sept. 2007.
+\newblock \doi{10.1175/jas4003.1}.
+\newblock URL \url{https://doi.org/10.1175/jas4003.1}.
+
 \bibitem[Showman(2007)]{Showman2007}
 A.~P. Showman.
 \newblock Numerical simulations of forced shallow-water turbulence: Effects of
@@ -65,5 +99,15 @@ S.~Takehiro, Y.~SASAKI, K.~Ishioka, M.~Odaka, Y.~O. Takahashi, K.~Nakajima,
   M.~Ishiwatari, Y.-Y. Hayashi, and S.~D. Group.
 \newblock Hierarchical spectral models for gfd (spmodel).
 \newblock \url{http://www.gfd-dennou.org/library/spmodel/}, 2013.
+
+\bibitem[Yoden and Yamada(1993)]{Yoden1993}
+S.~Yoden and M.~Yamada.
+\newblock A numerical experiment on two-dimensional decaying turbulence on a
+  rotating sphere.
+\newblock \emph{Journal of the Atmospheric Sciences}, 50\penalty0 (4):\penalty0
+  631--644, Feb. 1993.
+\newblock \doi{10.1175/1520-0469(1993)050<0631:aneotd>2.0.co;2}.
+\newblock URL
+  \url{https://doi.org/10.1175/1520-0469(1993)050<0631:aneotd>2.0.co;2}.
 
 \end{thebibliography}

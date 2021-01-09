@@ -1,0 +1,14 @@
+PWD c:/Users/ryoma/Desktop/rsuzuki_Mthesis
+INPUT c:/w32tex/share/texmf/web2c/texmf.cnf
+INPUT c:/w32tex/share/texmf/web2c/pdftex/latex.fmt
+INPUT c:/Users/ryoma/Desktop/rsuzuki_Mthesis/rsuzuki_Mthesis.tex
+OUTPUT c:/Users/ryoma/Desktop/rsuzuki_Mthesis/rsuzuki_Mthesis.log
+INPUT c:/w32tex/share/texmf/tex/jlatex/base/jreport.cls
+INPUT c:/w32tex/share/texmf/tex/jlatex/base/jreport.cls
+INPUT c:/w32tex/share/texmf/tex/jlatex/base/j-report.cls
+INPUT c:/w32tex/share/texmf/tex/jlatex/base/j-report.cls
+INPUT c:/w32tex/share/texmf/tex/jlatex/base/j-size12.clo
+INPUT c:/w32tex/share/texmf/tex/jlatex/base/j-size12.clo
+INPUT c:/w32tex/share/texmf/fonts/tfm/public/cm/cmr12.tfm
+INPUT c:/w32tex/share/texmf/tex/jlatex/base/jresize12.clo
+INPUT c:/w32tex/share/texmf/tex/jlatex/base/jresize12.clo
