@@ -41,6 +41,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%            PageStyle Setting           %%%%%%%%
+%\pagestyle{Dheadings}
 \pagestyle{DAmyheadings}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%        Title and Auther Setting        %%%%%%%%
@@ -77,8 +78,8 @@
 %%%%%%%%        Dennou-Style Definition         %%%%%%%%
 
 %% 改段落時の空行設定
-\Dparskip      % 改段落時に一行空行を入れる
-%\Dnoparskip    % 改段落時に一行空行を入れない
+%\Dparskip      % 改段落時に一行空行を入れる
+\Dnoparskip    % 改段落時に一行空行を入れない
 
 %% 改段落時のインデント設定
 \Dparindent    % 改段落時にインデントする
@@ -128,6 +129,12 @@
 %\makeatother
 
 \renewcommand\thefootnote{*\arabic{footnote}}
+
+%% appendix 用のカウンター %%
+\newcounter{chapcounter}
+\newcounter{seccounter}
+\@addtoreset{chapter}{chapcounter}
+\@addtoreset{section}{seccounter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%             Text Start                 %%%%%%%%
 
@@ -184,8 +191,12 @@ ddd
 \setcounter{table}{0}
 \setcounter{figure}{0}
 
-\chapter{はじめに}
-\section{巨大惑星表層流の特徴}
+\def\chap1{はじめに}
+\chapter{\chap1}
+\label{chap:1}
+\markright{1 \chap1}
+\def\intro1{巨大惑星表層流の特徴}
+\section{\intro1}
 \label{sec:intro1}
 巨大惑星
 %
@@ -195,11 +206,11 @@ ddd
 それに比べ，水やメタンを多く含む
 巨大氷惑星(天王星，海王星)の総称として用いる．}
 %
-大気の大規模循環とバンド構造は1970年代にPioneer，Voyger といった
+大気の大規模循環は1970年代にPioneer，Voyger といった
 探査機によって，これらの惑星の高解像度画像が撮影されて以来，
 大きな謎となっている．
 %
-巨大惑星表層のの風速分布を図\ref{fig1}に示す\citep{showman2009atmospheric}．
+巨大惑星表層の風速分布を図\ref{fig1}に示す\citep{showman2009atmospheric}．
 %
 風速分布の大きな特徴として，
 巨大ガス惑星(木星，土星)では赤道域で
@@ -235,35 +246,35 @@ ddd
 低中緯度ではあまり見られない空間スケールの大きい
 低気圧性渦(自転と同じ向きに回転する渦)が
 存在し，そのレジームが巨大惑星ごとに
-異なることが近年のJuno, Cassini といった探査機の観測によってわかっている．
+異なることが近年のJuno, Cassini といった探査機の観測によって明らかになった．
 %
 図\ref{fig2} に木星と土星の極域観測を示した．
 木星では複数の低気圧性渦が極付近にある低気圧性渦を
-取り囲んでいることがわかっている．
+取り囲んでいるという特徴がある．
 %
 北極域では極から約$0.5^\circ$ 離れた位置に
 低気圧性渦があり，その渦の周りを
 8つの低気圧性渦が囲んでいる．
-それぞれの渦の半径は約2000 - 2300 km(緯度幅で$\sim 2^\circ$) である．
+それぞれの渦の半径は約2000 - 2300 km (緯度幅で$\sim 2^\circ$) である．
 %
 南極域では極から約$1 \sim 2 ^\circ$ 離れた位置に
 低気圧性渦があり，その渦の周りを
 5つの低気圧性渦が囲んでいる．
 それぞれの渦の半径は北極域のものより大きく，
-約2800 - 3500 km(緯度幅で$\sim 3^\circ$) である\citep{Adriani2018}．
-%
+約2800 - 3500 km (緯度幅で$\sim 3^\circ$) である\citep{Adriani2018}．
+
 複数の低気圧性渦が存在する木星に対し，
-土星では半径約2000 km(緯度幅で$\sim 2^\circ$) の
+土星では半径約2000 km (緯度幅で$\sim 2^\circ$) の
 単一の低気圧性渦が各極域を支配している．
 %
 天王星，海王星もVoyger 2号と地上観測から
 土星の低気圧性渦よりもサイズの大きい，
-単一の低気圧性極渦(緯度幅で$\sim 10^\circ$)が存在していることが
+単一の低気圧性渦(緯度幅で$\sim 10^\circ$)が存在することが
 示唆されている．
 %
 \begin{figure}[t]
   \begin{center}
-    \includegraphics[clip,width=10cm]{./fig/intro/fig2.png}
+    \includegraphics[clip,width=8cm]{./fig/intro/fig2.png}
     \caption{
       \footnotesize{左はJuno による木星観測(波長 : $5 \rm{\mu m}$).
 黒の等緯度線は$80^\circ$ \citep{Adriani2018}．
@@ -276,17 +287,19 @@ ddd
 \end{figure}
 %
 %
-\section{先行研究}
+\def\intro2{先行研究}
+\section{\intro2}
 \label{sec:intro2}
 巨大惑星の内部構造の観測が難しいこともあり，
+大気循環の力学的描像と理解は
 数値計算を行い，\ref{sec:intro1}節で
 述べた表層流の特徴の再現を通して，理解を試みてきた．
 %
 しかし，巨大惑星の内部構造は内部熱源があることなど，
 地球型惑星の内部構造と大きく異なっており，
-地球大気とのアナロジーで観測される表層流を理解することは難しい．
+地球大気とのアナロジーで表層流を理解することは難しい．
 特に，数値計算を行う際に問題になるのは
-表層流の主となるエネルギー源は何なのかということである．
+観測される表層の大気運動の深さである．
 これについては大きく分けて，2つの説が考えられている．
 %
 1つは惑星内部の対流層と観測可能な雲が存在する大気上層部の
@@ -308,13 +321,15 @@ ddd
 これまでの「浅いモデル」の研究では
 初期に小スケールの乱流を与え，時間発展をみる
 自由減衰乱流実験\citep{Yoden1993}や
-小規模な渦度強制を加える実験\citep{Scott2007}が行われてきた．
+小規模な渦度強制を加える実験\citep{Scott2007}などが行われてきた．
 %
 しかし，このような全球的かつ連続的な
 強制が巨大惑星に働いているとは考えにくい．
 %
 擾乱を引き起こす現象として
-木星，土星で観測されている雷雲(\cite{Gierasch2000}, \cite{Porco2005})が考えられている．
+木星，土星で観測されている
+雷雲(\cite{Gierasch2000}, \cite{Porco2005})が考えられている．
+%
 \cite{Showman2007}はこの雷雲を想定した
 局所的かつ離散的な強制を与え，球面浅水実験を行った．
 彼らは緯度$0 - 70^\circ$，経度$0 - 120^\circ$の範囲の領域を計算した．
@@ -322,12 +337,18 @@ ddd
 赤道域で幅の広い東風ジェットが形成し，
 中緯度では渦が支配的になることがわかった．
 %
-中緯度の変形半径が4000 km より大きい場合には，
-弱い渦は伴うものの，ジェットが支配的になることがわかった．
+中緯度の変形半径が大きい場合($> 4000$ km) には，
+弱い渦は伴うものの，ジェットが支配的にな
+ことがわかった．
+%
+雷雲の強さ，ニュートン冷却の緩和時間などの
+パラメータを変更した実験を行ったが，
+どのケースも赤道域では東風ジェットになり，
+木星，土星で見られるような赤道加速は見られなかった．
 %
 \begin{figure}[H]
   \begin{center}
-    \includegraphics[clip,width=10cm]{./fig/intro/fig3.png}
+    \includegraphics[clip,width=9cm]{./fig/intro/fig3.png}
     \caption{
       \footnotesize{\cite{Showman2007}のジオポテンシャルと
 速度ベクトルの計算結果(4190地球日，中緯度の変形半径 : $L_d \sim 1200$ km)．
@@ -340,30 +361,95 @@ ddd
 \subsection{Brueshaber et al. (2019)}
 \label{sec:intro22}
 \cite{Brueshaber2019}は\cite{Showman2007}の雷雲を
-想定した強制浅水実験を極域(等緯度線で$\sim 60^\circ$ より高緯度)で計算し，
+想定した強制浅水実験を極域(約$\sim 60^\circ$ の等緯度線より高緯度)で計算し，
 極渦とそのレジームに注目した．
-その結果，図\ref{fig4}に示すようにBurger 数 : $Bu = (L_d/a)^2$ と呼ばれる無次元量の値によって，
+その結果，図\ref{fig4}に示すようにBurger 数 : $Bu = (L_d/a)^2$ と呼ばれる
+変形半径 : $L_d$ と惑星半径 : $a$ で書かれる無次元量の値によって，
 極渦のレジームが変化することがわかった．
-\begin{figure}[ht]
+%
+Burger 数の値が$Bu \leq 2.40 \times 10^{-4}$の場合，
+木星で観測されるような極のまわりを囲むような
+配置は見られないが，複数の小さな低気圧性渦が形成する．
+この特徴からこのレジームを木星的と分類した．
+%
+Burger 数の値が$4.00 \times 10^{-4 } \leq  Bu \leq  8.16 \times 10^{-4}$の場合，
+高気圧性渦と低気圧性渦が混在するレジームがあらわれる．
+Burger 数が木星的レジームと土星的レジームの間にあるため
+このレジームを遷移状態と分類した．
+%
+Burger 数の値が$8.16 \times 10^{-4 } \leq Bu \leq  2.50 \times 10^{-3}$の場合，
+土星で観測されるような極を中心とした単一の低気圧性渦が形成する．
+この特徴からこのレジームを土星的と分類した．
+%
+Burger 数の値が$Bu \geq 4.44 \times 10^{-3 }$の場合，
+土星的レジームよりも強力な極を中心とした単一の低気圧性渦が形成する．
+この特徴からこのレジームを氷巨大惑星的と分類した．
+%
+\begin{figure}[H]
   \begin{center}
-    \includegraphics[clip,width=13cm]{./fig/intro/fig4.png}
+    \includegraphics[clip,width=14cm]{./fig/intro/fig4_1.png}
     \caption{
-      \footnotesize{\cite{Brueshaber2019}
+      \footnotesize{\cite{Brueshaber2019}の無次元ポテンシャル渦度 : $Q_e^*$ の計算結果(20000地球日)．
+Burger 数の値に応じて巨大惑星で観測されるような極渦のレジームが変化する．
+$Q_e^* = 0$ は静止流体(相対渦度や流体層の厚さの水平平均からの変化はない)，
+$Q_e^* > 0$ は低気圧性渦，$Q_e^* < 0$ は高気圧性渦を表す．
       }
     }
     \label{fig4}
   \end{center}
 \end{figure}
-
-
-\section{研究目的}
+%
+\def\intro3{研究目的}
+\section{\intro3}
 \label{sec:intro3}
-
-
+木星，土星で観測される雷雲を想定した強制を与えた浅水数値実験を
+\cite{Showman2007}は低緯度から中緯度の領域を計算し，
+赤道域のジェットと縞状構造に着目した．
+%
+一方，\cite{Brueshaber2019}は極域の領域で計算を行い，
+極渦のレジームに着目した．
+%
+どちらの先行研究も領域計算であり，このような
+領域の制限は流れ場全体の構造に影響を与える可能性がある．
+%
+例えば，\cite{Heimpel2007}は薄い球殻領域内の
+深部対流運動を全球の1/8 の領域で解き，
+縞状構造と赤道加速が共存する状態を数値的に再現した．
+しかし，この計算を全球で計算した
+\cite{Takehiro2015}では時間積分を進めると縞状構造が
+消滅するという結果がある．
+%
+そのため本論文では，雷雲を想定した
+強制浅水実験を全球で行い，
+低緯度から中緯度の主に東西ジェットの構造を
+\cite{Showman2007}の計算と比較，
+極域の主に渦の構造を\cite{Brueshaber2019}と比較する．
+そして，雷雲を想定した強制により，
+\ref{sec:intro1}節で述べた巨大惑星の表層流の特徴が
+雷雲による強制により，形成されるのかを調べることが
+本研究の目的である．
+%
+\def\intro4{本論文の構成}
+\section{\intro4}
+\label{sec:intro4}
+本論文の構成を簡単に述べる．
+\ref{chap:2}章では用いた1.5層浅水方程式系と
+数値実験の手法および設定について述べる．
+\ref{chap:3}章ではBurger 数，ニュートン冷却の緩和時間，
+低気圧性渦/高気圧性渦の割合，解像度，それぞれの
+値を変化させたときの実験結果を示す．
+\ref{chap:4}章では
+東西ジェットと極渦のレジームに注目し考察を行う．
+\ref{chap:5}章で本論文の結論を述べる．
+%
+%
 \setcounter{table}{0}
 \setcounter{figure}{0}
-
-\chapter{モデルと手法}
+\def\chap2{モデルと手法}
+\chapter{\chap2}
+\label{chap:2}
+\markright{2 \chap2}
+ここでは本研究で用いるモデルと実験手法・実験設定について述べる．
 \section{支配方程式系}
 \label{sec:model1}
 本研究では球面上の1.5層浅水方程式系を用いる．
@@ -374,12 +460,12 @@ ddd
 %
 \begin{align}
 & \DD{\Dvect{u}}{t}+ g' \Dgrad h + f \Dvect{k} \times \Dvect{u} = -\Dvect{D}_{\Dvect{u}},  \label{eq:eq1} \\
-& \DP{g'h}{t} + \Ddiv (g'h\Dvect{u}) = \Sigma S_{storm} + S_{rad} - D_h. \label{eq:eq2} 
+& \DP{g'h}{t} + \Ddiv (g'h\Dvect{u}) = \Sigma S_{storm} + S_{rad} - D_h \label{eq:eq2} 
 \end{align}
 %
-ここで，$D$は数値粘性項，$h$は上層の厚さ，$g'$は低減重力加速度， $S_{storm}$は雷雲を模した質量強制項，$S_{rad}$ は
-放射緩和項である．
-%\footnote{連続の式はBrueshaber et al. (2019) の記載が誤植と考え，Showman (2007) の記載を用いる．}
+である\footnote{導出は付録 \ref{ape:A}を参照．}．
+ここで，$D$は数値粘性項，$h$は上層の厚さ，$g'$は低減重力加速度，
+ $S_{storm}$は雷雲を模した質量強制項，$S_{rad}$ は放射緩和項である．
 それぞれの強制項は
 \begin{align}
 &S_{storm} = s \cdot \exp \left [- \frac{R^2}{R_{storm}^2} - \frac{(t-t_0)}{\tau_{storm}^2} \right ], \label{eq:eq3}\\
@@ -408,27 +494,64 @@ ddd
 \setcounter{table}{0}
 \setcounter{figure}{0}
 
-\chapter{実験結果}
-\chapter{考察}
-\chapter{結論}
+\def\chap3{実験結果}
+\chapter{\chap3}
+\label{chap:3}
+\markright{3 \chap3}
+ddd
+
+\def\chap4{考察}
+\chapter{\chap4}
+\label{chap:4}
+\markright{4 \chap4}
+ddd
+
+\def\chap5{結論}
+\chapter{\chap5}
+\label{chap:5}
+\markright{5 \chap5}
 sss
 
 
-%\chapter*{付録}
-\markright{付録 A}
-\addcontentsline{toc}{chapter}{付録 A}
-sss
+
+%%% Appendix %%%
+%%%%%%%%%%%%%%%%
+%\setcounter{chapter}{1} % chapter の番号をゼロにリセットする
+%\setcounter{section}{0} % section の番号をゼロにリセットする
+\stepcounter{chapcounter}
+\stepcounter{seccounter}
+
+\renewcommand{\thesection}{\Alph{section}} % 数字ではなくアルファベットで数える
+
+def\thesection{\Alph{section}}
+\def\theequation{\Alph{section}.\arabic{equation}}
+
+\chapter*{付録}
+\addcontentsline{toc}{chapter}{付録}
+%%  A  %%
+\def\apetitleA{: 1.5層浅水方程式系の導出}
+\def\apeA{\Alph{section} \apetitleA}
+\section{\apetitleA}
+\label{ape:A}
+\markright{\apeA}
+\input{./appendix/A/appendix_a.tex}
 
 
-%\chapter*{謝辞}
+
+%%%%%%%%%%%%%%%%
+\def\acknow{謝辞}
+\chapter*{\acknow}
+\addcontentsline{toc}{chapter}{\acknow}
+\label{acknow}
 \markright{謝辞}
-\addcontentsline{toc}{chapter}{謝辞}
+ddd
 
-
-\markright{参考文献}
+\newpage
+\renewcommand{\bibname}{参考文献}
 \addcontentsline{toc}{chapter}{参考文献}
 \bibliographystyle{abbrvnat}
 \nocite{*}
+\markright{参考文献}
 \bibliography{./reference/reference}
 
 \end{document}
