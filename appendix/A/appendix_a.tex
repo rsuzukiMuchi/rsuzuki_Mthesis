@@ -4,72 +4,74 @@
 \setcounter{subsubsection}{0}
 \setcounter{figure}{0}
 \setcounter{table}{0}
+\setcounter{equation}{0}
 \renewcommand{\thesubsection}{\Alph{section}.\arabic{subsection}} 
 \renewcommand{\thesubsubsection}{\Alph{section}.\arabic{subsection}.\arabic{subsubsection}} 
 \renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
 \renewcommand{\thetable}{\Alph{section}.\arabic{table}}
-
+%
 ここでは，\cite{Vallis2017} 3.2節 有効重力の方程式系を参考に，
 1.5層浅水モデルの方程式を導出する．
-\subsection*{1.5 層浅水モデルの概要}
-浅水系で一番単純な1層モデルは密度が変化しない
-一層の流体層を考えている．
+\subsection*{・1.5 層浅水モデルの概要}
+浅水系で最も単純な1層モデルは
+密度が変化しない一層の流体層を考えている．
 %
 %
 \begin{figure}[b]
  \begin{center}
- \includegraphics[clip,width=12cm]{./appendix/A/fig/one-half-fig1.png}
+ \includegraphics[clip,width=13cm]{./appendix/A/fig/one-half-fig1.png}
  \end{center}
  \caption{1.5層浅水方程式系の模式図　(\cite{Vallis2017} の図3.3 を改変).
- 左は自由表面近似，右は剛体表面近似である．} 
+左は自由表面近似，右は剛体表面近似である．
+上層の厚さ$h$は上層の高さ$\eta_0$と下層の高さ$\eta_1$を用いて，
+$h=\eta_0 - \eta_1$で書かれる．
+} 
  \label{figA1}
 \end{figure}
 %
 しかし，現実の流体の密度は変化するはずである．
-流体の密度変化は成層していれば，鉛直方向に変化すると考えられる．
-図1に1.5層モデルの模式図を示す．
-ここで，$h$は上層の厚さ，上層，下層の密度は
-それぞれ$\rho_1, \rho_2~(\rho_1 < \rho_2)$ である．
-上端の境界条件は自由表面と剛体表面の2つの場合がある．
-以下ではそれぞれの境界条件の場合で，方程式系を導く．
-
+特に成層していれば，鉛直方向に変化すると考えられる．
 1.5層モデルでは上層は活動的，
 下層は無限に深く静止した密度の異なる2つの流体層を考え，
 単純ではあるが鉛直方向の密度変化を考慮する．
 %
-上層と下層は静水圧平衡しており，
-下層は非常に深いので，上層の運動による
-上層の厚さの変化は下層の厚さを大きく変えることはなく，
-下層の運動に影響を与えない．
-%
 海洋では下層はほとんど静止し，
 運動のある上層は数100 m の厚さであるため，
 このモデルが使われることがある．
-
-\cite{Showman2007} では
-上層は静力学的に安定した対流圏上部 (5 - 10 bar の
-水の凝結レベル付近から上の層の厚さ)，
-下層は無限に深く中立的に成層化した層を
-考えると記載している．
 %
-\subsection*{自由表面近似}
-\subsubsection*{運動量の式}
+図\ref{figA1}に1.5層モデルの模式図を示す．
+ここで，$\eta_0$は上層の高さ，
+$\eta_1$は下層の高さ，$h$は上層の厚さ，
+上層，下層の密度はそれぞれ$\rho_1, \rho_2~(\rho_1 < \rho_2)$ である．
+上端の境界条件は自由表面と剛体表面の2つの場合がある．
+\cite{Showman2007}, \cite{Brueshaber2019} では
+剛体表面近似を用いていると考えられる．
+以下ではそれぞれの境界条件の場合で方程式系を導く．
+%
+%\cite{Showman2007} では
+%上層は静力学的に安定した対流圏上部 (5 - 10 bar の
+%水の凝結レベル付近から上の層の厚さ)，
+%下層は無限に深く中立的に成層化した層を
+%考えると記載している．
+%
+\subsection*{・自由表面近似}
+\subsubsection*{運動量方程式}
 まずは上層について考える．上層の静水圧の式は
 \begin{equation}
-\frac{\partial p_1}{\partial z}=-\rho_1 g.
+\frac{\partial p_1}{\partial z}=-\rho_1 g. \label{eq:A1}
 \end{equation}
 これを，上層の上端$\eta_0$ からある深さ$z$ まで積分すると
 \begin{equation}
-\int_0^{p_1} dp= -\rho_1 g  \int_{\eta_0}^z dz.
+\int_0^{p_1} dp= -\rho_1 g  \int_{\eta_0}^z dz. \label{eq:A2}
 \end{equation}
 自由表面近似では上層の上端で$p(\eta_0) = 0$なので，
 \begin{equation}
-p_1 (x, y, z, t) = \rho_1 g  (\eta_0 - z).
+p_1 (x, y, z, t) = \rho_1 g  (\eta_0 - z). \label{eq:A3}
 \end{equation}
-式(2.3)の水平勾配をとると，
+式(\ref{eq:A3})の水平勾配をとると，
 \begin{align}
 \nabla_z p_1 &= \rho_1 g \nabla_z \eta_0, \notag \\
-\frac{1}{\rho_1} \nabla_z p_1 &=  g \nabla_z \eta_0.
+\frac{1}{\rho_1} \nabla_z p_1 &=  g \nabla_z \eta_0. \label{eq:A4}
 \end{align}
 ここで，
 \begin{align}
@@ -80,158 +82,124 @@ p_1 (x, y, z, t) = \rho_1 g  (\eta_0 - z).
 次に下層について考える．
 下層の静水圧の式は
 \begin{equation}
-\frac{\partial p_2}{\partial z}=-\rho_2 g.
+\frac{\partial p_2}{\partial z}=-\rho_2 g. \label{eq:A5}
 \end{equation}
 これを，下層の上端$\eta_1$ からある深さ$z$ まで積分すると
 \begin{align}
 \int_{p_1}^{p_2} dp= -\rho_2 g  \int_{\eta_1}^z dz, \notag \\
-p_2 - p_1 = \rho_2 g  (\eta_1 -  z).
+p_2 - p_1 = \rho_2 g  (\eta_1 -  z). \label{eq:A6}
 \end{align}
-$p_1$ は式(2.3)で $z=\eta_1$とした値なので
+$p_1$ は式(\ref{eq:A3})で $z=\eta_1$とした値なので
 \begin{align}
 p_2  &= p_1  + \rho_2 g  (\eta_1  - z) \notag \\
      &= \rho_1 g (\eta_0 - \eta_1) + \rho_2 g  (\eta_1  - z) \notag \\
-     &= \rho_1 g (\eta_0 - \eta_1) + \rho_2 g  (\eta_1  - z). 
+     &= \rho_1 g (\eta_0 - \eta_1) + \rho_2 g  (\eta_1  - z).  \label{eq:A7}
 \end{align}
 %
-式(2.7)の水平勾配をとると，
+式(\ref{eq:A7})の水平勾配をとると，
 \begin{align}
 \nabla_z p_2 &= \rho_1 g  (\nabla_z \eta_0 - \nabla_z \eta_1) + \rho_2 g  \nabla_z \eta_1   \notag \\
 & = \rho_1 g \nabla_z \eta_0 +  \rho_1 g \frac{(\rho_2 - \rho_1)}{ \rho_1 }  \nabla_z \eta_1 \notag \\
-& = \rho_1 g \nabla_z \eta_0 +  \rho_1 g'  \nabla_z \eta_1 
+& = \rho_1 g \nabla_z \eta_0 +  \rho_1 g'  \nabla_z \eta_1. \label{eq:A8} 
 \end{align}
-ここで，$g'$ は有効重力加速度(reduced gravity) 
+ここで，$g'$ は低減重力加速度(reduced gravity) 
 \begin{align}
-g' = g \frac{(\rho_2 -\rho_1)}{\rho_1}  \notag
+g' = g \frac{(\rho_2 -\rho_1)}{\rho_1}  \notag 
 \end{align}
-である．下層は運動がないので，式(2.8) の左辺の圧力勾配$\nabla_z p_2 $は 0になる．
+である．下層は運動がないので，式(\ref{eq:A8}) の
+左辺の圧力勾配$\nabla_z p_2 $は 0になる．
 よって，
 \begin{align}
- g \nabla_z \eta_0 = -  g'  \nabla_z \eta_1 .
+ g \nabla_z \eta_0 = -  g'  \nabla_z \eta_1 . \label{eq:A9}
 \end{align}
-式(2.4) より
+式(\ref{eq:A4}) より
 \begin{align}
- \frac{1}{\rho_1} \nabla_z p_1  = -  g'  \nabla_z \eta_1 .
+ \frac{1}{\rho_1} \nabla_z p_1  = -  g'  \nabla_z \eta_1 . \label{eq:A10}
 \end{align}
 %
-上層の回転の効果を含む非粘性流体の運動量の式は
+上層の回転の効果を含む非粘性流体の運動量方程式は
 \begin{equation}
-\DP{\Dvect{u_1}}{t}+(\Dvect{u_1} \cdot \nabla)\Dvect{u_1}=
--f\Dvect{k}\times \Dvect{u_1}-\frac{1}{\rho_1}\nabla_z p_1.
+%\DP{\Dvect{u_1}}{t}+(\Dvect{u_1} \cdot \nabla)\Dvect{u_1}=
+%-f\Dvect{k}\times \Dvect{u_1}-\frac{1}{\rho_1}\nabla_z p_1. \label{eq:A11}
+\DD{\Dvect{u_1}}{t} + \frac{1}{\rho_1}\nabla_z p_1 + f\Dvect{k}\times \Dvect{u_1} = 0. \label{eq:A11}
 \end{equation}
-ここで，$\Dvect{k}$は$z$方向の単位ベクトルである．式(2.11)に式(2.10)を代入すると
+ここで，$\Dvect{k}$は$z$方向の単位ベクトルである．
+式(\ref{eq:A11})に式(\ref{eq:A10})を代入すると
 \begin{equation}
-\DP{\Dvect{u_1}}{t}+(\Dvect{u_1} \cdot \nabla)\Dvect{u_1}=
--f\Dvect{k}\times \Dvect{u_1} + g' \nabla_z\eta_1
+\DD{\Dvect{u_1}}{t}  - g' \nabla_z\eta_1 + f\Dvect{k}\times \Dvect{u_1} = 0 \label{eq:A12}
 \end{equation}
 となる．
-\if
-$h=\eta_0 - \eta_1 $と表すことができるので，
-\begin{equation}
-\DP{\Dvect{u_1}}{t}+(\Dvect{u_1} \cdot \nabla)\Dvect{u_1}=
--f\Dvect{k}\times \Dvect{u_1} + g' \nabla_z (\eta_0 -h).
-\end{equation}
-\fi
 %
 \subsubsection*{連続の式}
 連続の式は1層の浅水系と同様に考えることができ，
 \begin{equation}
-\DP{h}{t}+\nabla_z (h\Dvect{u_1})=0．
+\DP{g'h}{t}+\nabla_z (g'h\Dvect{u_1})=0．\label{eq:A13}
 \end{equation}
 まとめると
 \begin{itembox}[l]{自由表面近似}
 \begin{align}
-&\text{・運動量の式}　\quad \DP{\Dvect{u_1}}{t}+(\Dvect{u_1} \cdot \nabla_z)\Dvect{u_1}=
--f\Dvect{k}\times \Dvect{u_1} + g'\nabla_z\eta_1
-　\tag{2.12}\\
-&\text{・連続の式}　\qquad \DP{h}{t}+\nabla_z (h\Dvect{u_1})=0 \tag{2.13}．
+&\text{・運動量方程式}　\quad \DD{\Dvect{u_1}}{t}  - g'\nabla_z\eta_1 + f\Dvect{k}\times \Dvect{u_1} = 0
+　\tag{A.11} \\
+&\text{・連続の式}　\qquad \DP{g'h}{t}+\nabla_z (g'h\Dvect{u_1})=0 \tag{A.12}．
 \end{align}
 \end{itembox}
 %
-\subsection*{剛体表面近似}
+\subsection*{・剛体表面近似}
 表面での運動が小さいならば，剛体表面を置いたという近似をしてもよいだろう．
 上端にふたをすることで，上端の上下運動は許されなくなる．
-その圧力の強制$P(x, y, t)$とする．
+その圧力の強制を$P(x, y, t)$とする．
 また，上層の上端を基準面にとり，そこで$z=0$とする ($\eta_0 = 0$)．
 自由表面近似と同様に上層での静水圧の式を$z=0$からある深さ$z$まで積分すると
 \begin{align}
 \int_P^{p_1} dp= -\rho_1 g  \int_{0}^z dz, \notag \\
-p_1 - P   = - \rho_1 g z.
+p_1 - P   = - \rho_1 g z. \label{eq:A14}
 \end{align}
-式(3.1)の水平勾配をとると，
+式(\ref{eq:A14})の水平勾配をとると，
 \begin{align}
-\nabla_z p_1 &= \nabla_z P.
+\nabla_z p_1 &= \nabla_z P. \label{eq:A15}
 \end{align}
 下層の静水圧の式を$\eta_1$からある深さ$z$まで積分すると
 \begin{align}
 \int_{p_1}^{p_2} dp &= -\rho_2 g  \int_{\eta_1}^z dz, \notag \\
 p_2 - p_1 &= \rho_2 g (\eta_1 - z), \notag \\
-p_2 &= p_1 + \rho_2 g (\eta_1 - z).
+p_2 &= p_1 + \rho_2 g (\eta_1 - z). \label{eq:A16}
 \end{align}
-$p_1$ に式(3.1)で$ z=\eta_1$ にしたものを代入すれば
+$p_1$ に式(\ref{eq:A14})で$ z=\eta_1$ にしたものを代入すれば
 \begin{align}
 p_2 & = -\rho_1 g \eta_1 + \rho_2 g (\eta_1 - z) + P　\notag \\
-& = \rho_1 g h - \rho_2 g (h - z) + P.
+& = \rho_1 g h - \rho_2 g (h - z) + P. \label{eq:A17}
 \end{align}
 水平勾配をとると
 \begin{align}
 \nabla_z p_2 & = - g (\rho_2 - \rho_1) \nabla_z h  + \nabla_z P, \notag \\
-& = - \rho_1 g' \nabla_z h  + \nabla_z P .
+& = - \rho_1 g' \nabla_z h  + \nabla_z P . \label{eq:A18}
 \end{align}
 下層では運動がないので$\nabla_z p_2 = 0$．よって
 \begin{align}
-\frac{1}{\rho_1 } \nabla_z P =   g' \nabla_z h  
+\frac{1}{\rho_1 } \nabla_z P =   g' \nabla_z h. \label{eq:A19}
 \end{align}
-式(3.2)より
+式(\ref{eq:A15})より
 \begin{align}
-\frac{1}{\rho_1} \nabla_z p_1 =  g' \nabla_z h.
+\frac{1}{\rho_1} \nabla_z p_1 =  g' \nabla_z h. \label{eq:A20}
 \end{align}
-式(2.11)に式(3.7)を代入すると
+式(\ref{eq:A11})に式(\ref{eq:A20})を代入すると
 \begin{equation}
-\DP{\Dvect{u_1}}{t}+(\Dvect{u_1} \cdot \nabla)\Dvect{u_1}=
--f\Dvect{k}\times \Dvect{u_1} - g' \nabla_z h
+\DD{\Dvect{u_1}}{t} + g' \nabla_z h + f\Dvect{k}\times \Dvect{u_1} = 0 \label{eq:A21}
 \end{equation}
 となる．
 %
 まとめると
 \begin{itembox}[l]{剛体表面近似}
 \begin{align}
-&\text{・運動量の式}　\quad \DP{\Dvect{u_1}}{t}+(\Dvect{u_1} \cdot \nabla_z)\Dvect{u_1}=
--f\Dvect{k}\times \Dvect{u_1} - g'\nabla_z h
-　\tag{3.8}\\
-&\text{・連続の式}　\qquad \DP{h}{t}+\nabla_z (h\Dvect{u_1})=0 \tag{2.13}．
+&\text{・運動量方程式}　\quad \DD{\Dvect{u_1}}{t} + g'\nabla_z h
+ + f\Dvect{k}\times \Dvect{u_1}  =0
+　\tag{A.21}\\
+&\text{・連続の式}　\qquad \DP{g'h}{t}+\nabla_z (g'h\Dvect{u_1})=0 \tag{A.12}．
 \end{align}
 \end{itembox}
-
-
-剛体表面の方程式系は1層モデルの底面地形がない場合の方程式系の$g$が$g'$に置きかわるだけである．
-\newpage
-\section*{Brueshaber et al. (2019) の方程式系}
-\setcounter{equation}{0}
-Brueshaber et al. (2019) の方程式系は
-\begin{itembox}[l]{Brueshaber et al. (2019)}
-\begin{align}
-&\text{・運動量の式}　\quad \DP{\Dvect{u}}{t}+(\Dvect{u} \cdot \nabla)\Dvect{u}=
--f\Dvect{k}\times \Dvect{u} - g'\nabla_z h + \Delta^m \Dvect{u} + k(r)\Dvect{u}_t
-　\\
-&\text{・連続の式}　\qquad \DP{g'h}{t}+g'h \Ddiv \Dvect{u}= \Sigma S_{storm} + S_{mass} + S_{rad} ．
-\end{align}
-\end{itembox}
-
-Brueshaber et al. (2019) と同様のストームを想定した Showman (2007) の方程式系は
-\begin{itembox}[l]{Showman (2007)}
-\begin{align}
-&\text{・運動量の式}　\quad \DP{\Dvect{u}}{t}+(\Dvect{u} \cdot \nabla)\Dvect{u} =
--f\Dvect{k}\times \Dvect{u} - g'\nabla_z h 
-　\\
-&\text{・連続の式}　\qquad \DP{g'h}{t}+g' \Ddiv (h \Dvect{u}) = \Sigma S_{storm} + S_{rad} . 
-\end{align}
-\end{itembox}
-
-
-3章で導出した剛体表面近似の式と見比べると，運動量の式が一致している(粘性項やスポンジ項を除いて)．
-よって，Brueshaber et al. (2019) と Showman (2007) では剛体表面近似を用いていることがわかった．
-
-
-しかし，Brueshaber et al. (2019) の連続の式は剛体表面近似のものとは異なる．運動量の式は剛体表面近似と一致しているため，
-これは誤植と考える．作成するモデルでは式(4.4)の連続の式を用いる．
+%
+剛体表面近似の方程式系は
+1層モデルの底面地形がない場合の
+方程式系の重力加速度 : $g$ が低減重力加速度 : $g'$ に置きかわるだけである．
+%
+本研究はこの剛体表面近似を用いる．

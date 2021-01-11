@@ -1,0 +1,175 @@
+%% Appendix B %%
+%%%%%%%%%%%%%%%%
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+\renewcommand{\thesubsection}{\Alph{section}.\arabic{subsection}} 
+\renewcommand{\thesubsubsection}{\Alph{section}.\arabic{subsection}.\arabic{subsubsection}} 
+\renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
+\renewcommand{\thetable}{\Alph{section}.\arabic{table}}
+%
+ここでは実際にモデル内で計算した方程式系を示す．
+\subsection*{・渦度・発散型の運動量方程式への変形}
+運動量方程式(\ref{eq:eq1}) はオイラー形式で書くと
+\begin{align}
+\DP{\Dvect{u}}{t} + (\Dvect{u}\cdot \nabla)\Dvect{u} +  g' \Dgrad h + f \Dvect{k} \times \Dvect{u} = -\Dvect{D}_{\Dvect{u}},  \label{ape:B1}
+\end{align}
+ここで，左辺第2項の移流項の部分を変形すると
+\begin{align}
+(\Dvect{u}\cdot \nabla)\Dvect{u} = \nabla \left ( \frac{\Dvect{u}\cdot \Dvect{u}}{2} \right) +\zeta \Dvect{k}\times \Dvect{u} \label{ape:B2}
+\end{align}
+となる．これを式(\ref{ape:B1})に代入すると
+\begin{align}
+& \DP{\Dvect{u}}{t} +  \nabla \left ( \frac{\Dvect{u}\cdot \Dvect{u}}{2} \right) +\zeta \Dvect{k}\times \Dvect{u} +  g' \Dgrad h + f \Dvect{k} \times \Dvect{u} = -\Dvect{D}_{\Dvect{u}},  \notag \\
+& \DP{\Dvect{u}}{t} +  \nabla \left ( \frac{\Dvect{u}\cdot \Dvect{u}}{2}  +  g' \Dgrad h \right) +
+ (\zeta + f ) \Dvect{k}\times \Dvect{u}   = -\Dvect{D}_{\Dvect{u}} \label{ape:B3}
+\end{align}
+となる．
+式(\ref{ape:B3})の回転と発散をとると，それぞれ
+\begin{align}
+\DP{\zeta}{t}&=-\Ddiv (\zeta+f)\Dvect{u} - D_\zeta ,\label{ape:B4} \\
+\DP{D}{t}&=\Dvect{k}\cdot \Drot (\zeta+f)\Dvect{u} 
+-\nabla^2 \left(g' h  +\frac{\Dvect{u}\cdot \Dvect{u}}{2}\right) -D_D. \label{ape:B5}
+\end{align}
+である\footnote{
+式(\ref{ape:B5})の左辺第3項に回転演算子を作用させると
+\begin{align}
+-{\rm{\hat{\bf k}}}\cdot \Drot \left [ (\zeta+f){\rm{\hat{\bf k}}}\times \Dvect{v} \right ]&=-{\rm{\hat{\bf k}}}\cdot \Drot \left [ (\zeta+f) 
+\left (
+\begin{array}{c}
+0 \\
+0 \\
+1
+\end{array} \right )
+\times 
+\left (
+\begin{array}{c}
+u \\
+v \\
+w
+\end{array} \right )
+\right ] \notag \\
+&=-{\rm{\hat{\bf k}}}\cdot \Drot \left [ (\zeta+f) 
+\left ( 
+\begin{array}{c}
+-v \\
+u \\
+0
+\end{array} \right) 
+\right ] \notag \\
+&=-{\rm{\hat{\bf k}}}\cdot  \left [ (\zeta+f) 
+\left ( 
+\begin{array}{c}
+-\DP{u}{z} \\
+-\DP{v}{z} \\
+\DP{u}{x}+\DP{v}{y}
+\end{array} \right) 
+\right ] \notag \\
+&= -\Ddiv (\zeta+f) \Dvect{v}. \notag
+\end{align}
+
+また，発散演算子を作用させると
+\begin{align}
+- \Ddiv \left [ (\zeta+f){\rm{\hat{\bf k}}}\times \Dvect{v} \right ] 
+&={\rm{\hat{\bf k}}} \cdot \Drot (\zeta+f)\Dvect{v}.\notag
+\end{align}ここで，ベクトル公式$\Ddiv (\Dvect{A}\times \Dvect{B})=\Dvect{B}\cdot (\Drot \Dvect{A})-\Dvect{A}\cdot \Drot \Dvect{B}$を用いた．
+}．
+球面座標系での物質微分，発散，勾配，回転は
+\begin{align}
+\frac{D\phi}{Dt}&=\DP{\phi}{t}+\frac{u}{a\cos{\vartheta}}\DP{\phi}{\lambda}
++\frac{v}{a}\DP{\phi}{\vartheta}, \label{ape:B6} \\
+\Ddiv \Dvect{A}&=\frac{1}{a\cos{\vartheta}}\left[\DP{A_\lambda}{\lambda}
++\DP{(A_\vartheta \cos{\vartheta})}{\vartheta}\right ], \label{ape:B7} \\
+\nabla \phi&=\frac{\Dvect{i}}{a\cos{\vartheta}}\DP{\phi}{\lambda}
++\frac{\Dvect{j}}{a}\DP{\phi}{\vartheta},  \label{ape:B8} \\ 
+\Drot \Dvect{A}&=\frac{1}{r^2\cos{\vartheta}}
+\begin{vmatrix}
+\Dvect{i}r\cos{\vartheta} & \Dvect{j}r & \Dvect{k} \\
+\DP{}{\lambda} & \DP{}{\vartheta} & \DP{}{r} \\
+A_\lambda r \cos{\vartheta} & A_\vartheta r &A_r \label{ape:B9}
+\end{vmatrix}．
+\end{align}
+これを用いて，式(\ref{ape:B4}), (\ref{ape:B5})を書き下せば
+\begin{align}
+\DP{\zeta}{t}&=-\frac{1}{a\cos{\vartheta}}\DP{}{\lambda}
+[(\zeta+f)u]-\frac{1}{a\cos{\vartheta}}\DP{}{\vartheta}[(\zeta+f)v\cos{\vartheta}] - D_\zeta , \label{ape:B10} \\
+\DP{D}{t}&=\frac{1}{a\cos{\vartheta}}\DP{}{\lambda}  
+[(\zeta+f)v]-\frac{1}{a\cos{\vartheta}}\DP{}{\vartheta}[(\zeta+f)u\cos{\vartheta}] \notag \\
+&-\nabla^2 \left [ g' h + E \right ] -D_D. \label{ape:B11}
+\end{align}
+ここで，$E$は運動エネルギーで$E=(u^2 + v^2)/2$．
+$\nabla^2$は
+\begin{align}
+\nabla^2=\frac{1}{a^2 \cos{\vartheta}^2}\DP[2]{}{\lambda}
++\frac{1}{a^2\cos{\vartheta}}\DP{}{\vartheta} \left (
+\cos{\vartheta} \DP{}{\vartheta}\right ). \label{ape:B12}
+\end{align}
+%
+\subsection*{・サイン緯度への変形}
+$U=u\cos \vartheta, V=v\cos \vartheta$と$\mu = \sin \vartheta$を用い，
+サイン緯度に書きかえると
+%
+\begin{align}
+\DP{\zeta}{t} &= - \frac{1}{a (1-\mu^2)}
+\DP{}{\lambda} [(\zeta + f)U] 
+- \frac{1}{a}
+\DP{}{\mu} [(\zeta + f)V] - D_\zeta, \label{ape:B13} \\
+%
+\DP{D}{t} &=  \frac{1}{a(1-\mu^2)}
+\DP{}{\lambda} [(\zeta + f)V] 
+- \frac{1}{a}
+\DP{}{\mu} [(\zeta + f)U] \notag \\
+& -\nabla^2 [g'h + E] - D_D, \label{ape:B14} \\
+\DP{g'h}{t} &= - \frac{1}{a (1-\mu^2)}
+\DP{}{\lambda}(g'hU) 
+- \frac{1}{a}
+\DP{}{\mu}(g'hV)   \notag \\
+& + \Sigma S_{strom}  + S_{rad}
+- D_h. \label{ape:B15} 
+\end{align}
+%
+また，上層の厚さ$h$を上層の厚さの平均場$h_{eq}$とそこからのずれ$h'$を用いて，\\
+$h=h'(\lambda, \phi, t) + h_{eq}$と書くと
+\begin{align}
+\DP{\zeta}{t} &= - \frac{1}{a (1-\mu^2)}
+\DP{}{\lambda} [(\zeta + f)U] 
+- \frac{1}{a} \DP{}{\mu} [(\zeta + f)V] - D_\zeta,  \label{ape:B16} \\
+\DP{D}{t} &=  \frac{1}{a(1-\mu^2)}
+\DP{}{\lambda} [(\zeta + f)V] - \frac{1}{a}
+\DP{}{\mu} [(\zeta + f)U] 
+ -\nabla^2 [g'h' + E] - D_D,  \label{ape:B17} \\
+\DP{g'h'}{t} &= - \frac{1}{a (1-\mu^2)}
+\DP{}{\lambda}(g'h'U) 
+- \frac{1}{a}
+\DP{}{\mu}(g'h'V)  
+- g'h_{eq}D 
++ \Sigma S_{strom}  + S_{rad} - D_h. \label{ape:B18}
+\end{align}
+ここで，
+\begin{align}
+&S_{storm} = s \cdot \exp \left [- \frac{R^2}{R_{storm}^2} - \frac{(t-t_0)}{\tau_{storm}^2} \right ], \label{ape:B19} \\
+&S_{rad}  = - \frac{\langle g'h' \rangle }{\tau_{mass}} - \frac{g'h' - \langle g'h' \rangle}{\tau_{APE}} \label{ape:B20}
+\end{align}
+である\footnote{$S_{rad}$の変形は
+\begin{align}
+S_{rad}  &=  - \frac{\langle g'h \rangle - g'h_{eq}}{\tau_{mass}} - \frac{g'h - \langle g'h \rangle}{\tau_{APE}} \notag \\
+& =  - \frac{\langle g'(h'+h_{eq}) \rangle - g'h_{eq}}{\tau_{mass}} - \frac{g'(h'+h_{eq}) - \langle g'(h'+h_{eq}) \rangle}{\tau_{APE}} \notag \\
+& =  - \frac{\langle g'h' \rangle + g'h_{eq} - g'h_{eq}}{\tau_{mass}} - \frac{g'h'+g'h_{eq} - \langle g'h' \rangle - g'h_{eq} }{\tau_{APE}} \notag \\
+& =  - \frac{\langle g'h' \rangle }{\tau_{mass}} - \frac{g'h' - \langle g'h' \rangle  }{\tau_{APE}}. \notag
+\end{align}}．
+%
+\newpage
+\subsection*{・数値粘性項}
+式(\ref{ape:B16}), (\ref{ape:B17}), (\ref{ape:B18})の数値粘性項 : $D_\zeta, D_D, D_h$はそれぞれ
+\begin{align}
+D_\zeta &= K_m \left [(-1)^{N_m}\nabla^{2N_m} 
+- \left (\frac{2}{a^2} \right )^{2N_m} \right ]\zeta, \\
+D_D  &= K_m \left [(-1)^{N_m}\nabla^{2N_m} 
+- \left (\frac{2}{a^2} \right )^{2N_m} \right ]D, \\
+D_h &= (-1)^{N_h}K_h \nabla^{2N_h}gh'.
+\end{align}
+ここで，$K_m$は水平粘性係数，$K_h$は水平拡散係数，
+$N_m$は超粘性の次数(水平ラプラシアンの階数)，
+$N_h$は超拡散の次数(水平ラプラシアンの階数)である．

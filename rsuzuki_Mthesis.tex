@@ -287,8 +287,8 @@ ddd
 \end{figure}
 %
 %
-\def\intro2{先行研究}
-\section{\intro2}
+%\def\intro2{先行研究}
+\section{先行研究}
 \label{sec:intro2}
 巨大惑星の内部構造の観測が難しいこともあり，
 大気循環の力学的描像と理解は
@@ -435,8 +435,8 @@ $Q_e^* > 0$ は低気圧性渦，$Q_e^* < 0$ は高気圧性渦を表す．
 本論文の構成を簡単に述べる．
 \ref{chap:2}章では用いた1.5層浅水方程式系と
 数値実験の手法および設定について述べる．
-\ref{chap:3}章ではBurger 数，ニュートン冷却の緩和時間，
-低気圧性渦/高気圧性渦の割合，解像度，それぞれの
+\ref{chap:3}章ではBurger 数，放射緩和時間，
+低気圧性渦/高気圧性渦の割合，解像度のそれぞれの
 値を変化させたときの実験結果を示す．
 \ref{chap:4}章では
 東西ジェットと極渦のレジームに注目し考察を行う．
@@ -444,7 +444,6 @@ $Q_e^* > 0$ は低気圧性渦，$Q_e^* < 0$ は高気圧性渦を表す．
 %
 %
 \setcounter{table}{0}
-\setcounter{figure}{0}
 \def\chap2{モデルと手法}
 \chapter{\chap2}
 \label{chap:2}
@@ -453,7 +452,7 @@ $Q_e^* > 0$ は低気圧性渦，$Q_e^* < 0$ は高気圧性渦を表す．
 \section{支配方程式系}
 \label{sec:model1}
 本研究では球面上の1.5層浅水方程式系を用いる．
-これは\cite{Showman2007}で用いられたモデルと同じである．
+これは\cite{Showman2007}, \cite{Brueshaber2019}で用いられた系と同じである．
 このモデルにおいて上層と下層はそれぞれの層で密度一定であり，
 上層は活動的な層，下層は無限に深く静止したそうであると仮定する．
 上層に対する運動量方程式と質量保存の式は
@@ -464,31 +463,70 @@ $Q_e^* > 0$ は低気圧性渦，$Q_e^* < 0$ は高気圧性渦を表す．
 \end{align}
 %
 である\footnote{導出は付録 \ref{ape:A}を参照．}．
-ここで，$D$は数値粘性項，$h$は上層の厚さ，$g'$は低減重力加速度，
- $S_{storm}$は雷雲を模した質量強制項，$S_{rad}$ は放射緩和項である．
+ここで，$D$は計算が発散しないための数値粘性項\footnote{詳細は付録\ref{ape:B}を参照．}，$h$は上層の厚さ，$g'$は低減重力加速度，
+ $S_{storm}$は雷雲を想定した質量強制項，$S_{rad}$ は放射緩和項である．
 それぞれの強制項は
 \begin{align}
-&S_{storm} = s \cdot \exp \left [- \frac{R^2}{R_{storm}^2} - \frac{(t-t_0)}{\tau_{storm}^2} \right ], \label{eq:eq3}\\
+&S_{storm} = s \cdot \exp \left [- \frac{R^2}{R_{storm}^2} - \frac{(t-t_0)^2}{\tau_{storm}^2} \right ], \label{eq:eq3}\\
 &S_{rad}  = - \frac{\langle g'h \rangle - g'h_{eq}}{\tau_{mass}} - \frac{g'h - \langle g'h \rangle}{\tau_{APE}} \label{eq:eq4}
 \end{align}
 である．
 %
-%ここで，$s$は質量強制の最大値で$\pm 5.0, \pm 2.5, \pm 1.0$ の3つの値を用いる．
-%またその正負の割合を$\alpha$とする．つまり$\alpha=1.0$ のとき，
-%どのストームの$s$も正(高気圧性のストームが発生する)．
-%$R$は雷雲の中心位置からの距離，$R_{storm}$は雷雲の半径，
-%$t$は雷雲が発生してからの時間，$t_0$は雷雲がピークを迎える時間，
-%$\tau_{storm}$はストームの特徴的な時間スケール，
-%$\langle \rangle$ はその瞬間の水平平均，
-%$h_{eq}$は平衡状態での厚さ，
-%$\tau_{mass}$はエネルギーに影響を与えず，$\langle h \rangle $を$h_{eq}$に向かって平衡化するときの時間スケール，
-%$\tau_{APE}$は質量に影響を与えず，$h$を$\langle h \rangle$に向かって平衡化するときの時間スケールである．
-%\cite{Brueshaber2019} ではこれらの強制項に加え，加えた質量強制を層から差し引く
-%質量調整項を加えていたが，ここでは加えない．
+ここで，$s$は質量強制の最大値，
+またその正負の割合を$\alpha$とする．
+$\alpha=1.0$ のとき，正の質量強制のみが与えられる
+(つまり，高気圧性渦が質量強制を与えた場所で発生する)．
+$R$は質量強制の中心位置からの距離，
+$R_{storm}$は質量強制の半径，
+$t$は質量強制が局所的に与えられてからの時間，
+$t_0$は質量強制がピークを迎える時間，
+$\tau_{storm}$は質量強制の特徴的な時間スケール，
+$\langle \rangle$ はその瞬間の水平平均，
+$h_{eq}$は平衡状態での厚さ，
+$\tau_{mass}$はエネルギーに影響を与えず，
+$\langle h \rangle $を$h_{eq}$に向かって平衡化するときの時間スケール，
+$\tau_{APE}$は質量に影響を与えず，
+$h$を$\langle h \rangle$に向かって平衡化するときの時間スケールである．
+図\ref{fig5}に質量強制のスナップショットを示す．
+%
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[clip,width=6cm]{./fig/model/fig5.png}
+    \caption{
+      \footnotesize{質量強制 : $S_{storm}$ のスナップショット($s_{max} = 0.1, \alpha = 0.5$の場合)．
+ある時刻と位置に雷雲を想定した質量強制を式(\ref{eq:eq3})で与える．
+質量強制は$R > 2.2 R_{storm}, t > 2.2 \tau_{storm}$ で0とする．
+質量強制が与えられてから，$2.2 \tau{storm}$ 後に消滅．
+そこから$\tau_{interval}$ 後に違う位置に質量強制が与えられる．
+      }
+    }
+    \label{fig5}
+  \end{center}
+\end{figure}
+%
+質量強制は$R > 2.2 R_{storm}, t > 2.2 \tau_{storm}$ で0 とする．
+質量強制が与えられてから，$2.2 \tau_{storm}$が経過し，消滅後，
+そこから$\tau_{interval}$ 後に違う位置に質量強制が与えられる．
 
-
+式(\ref{eq:eq4}) の放射緩和項の右辺第1項は
+時間スケール$\tau_{mass}$ で$\langle h \rangle $を
+平衡厚さ$h_{eq}$に向かって，緩和する．
+%
+右辺第2項は時間スケール$\tau_{APE}$ で
+局所的な流体層の厚さの変化を$\langle h \rangle $に向かって，緩和する．
+%
+これら2つの項により，統計的定常状態を実現する．
+%
+\cite{Brueshaber2019} ではこれらの強制項に加え，加えた質量強制を層から差し引く
+質量調整項を加えていたが，ここでは\cite{Showman2007}にならい，加えない．
+%
 \section{実験手法・実験設定}
 \label{sec:model2}
+球面上の支配方程式系(\ref{eq:eq1}), (\ref{eq:eq2}) を解く．
+その際，運動量方程式はベクトル量である速度成分のままだと
+球面座標系では格子点が集中する極点付近で，計算が難しい．
+そのため，式(\ref{eq:eq1})を変形し渦度と発散に関する式を用いる\footnote{付録 \ref{ape:B} を参照．}．
+
 
 \clearpage
 \setcounter{table}{0}
@@ -535,8 +573,16 @@ def\thesection{\Alph{section}}
 \label{ape:A}
 \markright{\apeA}
 \input{./appendix/A/appendix_a.tex}
-
-
+%
+\newpage
+%
+%%  B  %%
+\def\apetitleB{: モデルで使用した方程式系}
+\def\apeB{\Alph{section} \apetitleB}
+\section{\apetitleB}
+\label{ape:B}
+\markright{\apeB}
+\input{./appendix/B/appendix_b.tex}
 
 %%%%%%%%%%%%%%%%
 \def\acknow{謝辞}
