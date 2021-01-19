@@ -32,6 +32,7 @@
 \usepackage{setspace}
 \usepackage[dvipdfmx]{hyperref}
 \usepackage{pxjahyper} % 日本語対応 (使わないともくじ部分が文字化けする)
+\usepackage{lscape}    % 表を横に
 \usepackage{url}
 \usepackage[numbers,sort]{natbib}
 %\usepackage[biblabel]{cite} % natbib と衝突する可能性があるので使わないことにする
@@ -50,7 +51,7 @@
 %%  { } は表題 (\maketitle) に書き出される.
 \Dtitle{修士学位論文}
 \Dauthor{鈴木 綾馬}
-\Ddate{2020/01/29}       % 提出期限日
+\Ddate{2021/01/29}       % 提出期限日
 \Dfile{rsuzuki\_Mthesis.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -363,8 +364,8 @@ ddd
 \cite{Brueshaber2019}は\cite{Showman2007}の雷雲を
 想定した強制浅水実験を極域(約$\sim 60^\circ$ の等緯度線より高緯度)で計算し，
 極渦とそのレジームに注目した．
-その結果，図\ref{fig4}に示すようにBurger 数 : $Bu = (L_d/a)^2$ と呼ばれる
-変形半径 : $L_d$ と惑星半径 : $a$ で書かれる無次元量の値によって，
+その結果，図\ref{fig4}に示すようにBurger 数 : $Bu = (L_{d0}/a)^2$ と呼ばれる
+極での変形半径 : $L_{d0}$ と惑星半径 : $a$ で書かれる無次元量の値によって，
 極渦のレジームが変化することがわかった．
 %
 Burger 数の値が$Bu \leq 2.40 \times 10^{-4}$の場合，
@@ -526,17 +527,216 @@ $h$を$\langle h \rangle$に向かって平衡化するときの時間スケー�
 その際，運動量方程式はベクトル量である速度成分のままだと
 球面座標系では格子点が集中する極点付近で，計算が難しい．
 そのため，式(\ref{eq:eq1})を変形し渦度と発散に関する式を用いる\footnote{付録 \ref{ape:B} を参照．}．
+%
+また，数値的な安定性を維持するために
+ラプラシアン4次の超粘性を加える．
+%
+空間離散化にはスペクトル法を用いる．
+時間離散化は数値粘性項についてはクランク・ニコルソン法，
+それ以外の項には4次のルンゲクッタ法を用いる．
+%
+また数値モデルの作成には地球流体電脳倶楽部の階層的地球スペクトルモデル集
+(SPMODEL; \cite{spmodel2006}, \cite{spmodel2013}) を使用する．
+%
+初期に上層は静止しており，$10 \tau_{interval}$ 経過する間に
+最大で50 個の雷雲を想定した質量強制がランダムに加えられる．
+%
+惑星半径と自転角速度は木星の値を用いる．
+また，計算時間は3000 地球日とする．
+%
+本研究で用いた共通パラメータを表\ref{table1} に示す．
+\begin{table}[t]
+  \caption{実験で用いた共通パラメータ}
+  \label{table1}
+  \begin{center}
+    \includegraphics[clip,width=8cm]{./fig/model/table1.png}
+  \end{center}
+\end{table}
+%
+表\ref{table2}に計算を行った数値実験のケースとその用いたパラメータを示す．
 
-
+以下ではA3 のケースを標準実験とし，\ref{sec:A3}節でその実験結果について述べる．
+%
+その次に，\ref{sec:case1}節では$g'h_{eq}$の値を変化させ，Burger 数の影響を調べた実験1の結果について示す．
+\ref{sec:case2}節では$\tau_{APE}$の値を変化させ，放射緩和の影響を調べた実験2の結果について示す．
+\ref{sec:case3}節では$\alpha$の値を変化させ，質量強制の正負の影響を調べた実験3の結果について示す．
+\ref{sec:case4}節では解像度の違いによる変化を調べた実験4の結果について示す．
+\newpage
+\begin{landscape}
+\begin{table}[t]
+  \caption{実験のケースと用いたパラメータ}
+  \label{table2}
+  \begin{center}
+    \includegraphics[clip,width=20cm]{./fig/model/table2.png}
+  \end{center}
+\end{table}
+\end{landscape}
+%
 \clearpage
-\setcounter{table}{0}
-\setcounter{figure}{0}
 
 \def\chap3{実験結果}
 \chapter{\chap3}
 \label{chap:3}
 \markright{3 \chap3}
-ddd
+%
+\section{標準実験結果 : A3}
+\label{sec:A3}
+ここでは，標準実験とした A3 のケースの結果を図\ref{fig:A3_1}-\ref{fig:A3_5}に示す．
+用いたパラメータは表\ref{table2}を参照．
+図\ref{fig:A3_1}の東西風速を見てわかるように，
+赤道域で幅が広く，風速が約$220 \rm{~m \cdot s^{-1}}$と強力な東風ジェットと
+緯度約$\pm 30^\circ$ で風速約$100 \rm{~m \cdot s^{-1}}$の西風ジェットが見られる．
+%
+また，その西風ジェットに対応して，図\ref{fig:A3_2}のジオポテンシャルが
+その領域で値が小さくなっている．
+%
+正(負)の質量強制の場合，流体層に局所的な膨らみ(窪み)を作る．
+この局所的に膨らんだ場所はコリオリ力により，高気圧性(低気圧性)渦を形成する．
+%
+このケースでは正の質量強制のみ与えられるため，
+図\ref{fig:A3_3}の相対渦度分布を見て分かるように，
+高気圧性渦が見て取れる．
+さらに，渦の正負を分かりやすくするために，無次元ポテンシャル渦度を定義する．
+%
+無次元ポテンシャル渦度 : $Q_e^*$は
+\begin{align}
+Q_e^* = \left [\frac{\zeta+f}{h}-\frac{f}{\langle h \rangle}\right]\cdot \frac{\langle h \rangle}{f_0}
+\end{align}
+である．ここで，$\zeta$は相対渦度，$f$はコリオリパラメータ，$f_0$は極でのコリオリパラメータの値である．
+%
+$Q_e^*=0$は静止流体(相対的な渦度や厚さの摂動はない)を表す．
+$Q_e^*>0$は低気圧性の渦度を表し，
+$Q_e^*<0$は高気圧性の渦度を表す．
+%
+図\ref{fig:A3_4}の極域を見てみると巨大な低気圧性渦の中に，複数の高気圧性渦が形成していることがわかる．
+%
+図\ref{fig:A3_5}に有効ポテンシャルエネルギー : APE と運動エネルギー : KE 
+\begin{align}
+APE &= \frac{1}{2} \int \left[(g'h)^2 - \langle g'h \rangle^2   \right] dA. \\
+KE  &= \frac{1}{2} \int g'h(u^2 + v^2) dA.
+\end{align}
+を示す．ここで，$A$ は計算領域の面積，$u, v$ はそれぞれ経度，緯度方向の速度である．
+%
+A3 のケースでは$\tau_{APE} = \infty$ のため，APE とKE は時間とともに増加する．
+\begin{figure}[b]
+  \begin{center}
+    \includegraphics[clip,width=10cm]{./fig/result/A3/A3_1.png}
+    \caption{
+      \footnotesize{A3の実験結果. 左 : 東西風速，右 : 東西平均した東西風速(3000 地球日)．
+      }
+    }
+    \label{fig:A3_1}
+  \end{center}
+\end{figure}
+%
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=12cm]{./fig/result/A3/A3_2.png}
+    \caption{
+      \footnotesize{A3の実験結果. ジオポテンシャル(3000 地球日)．
+左 : 緯度$0^\circ$，経度$0^\circ$から見た球面投影.
+中 : 緯度$90^\circ$，経度$0^\circ$から見た球面投影.
+右 : 緯度$-90^\circ$，経度$0^\circ$から見た球面投影.
+      }
+    }
+    \label{fig:A3_2}
+  \end{center}
+\end{figure}
+%
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=12cm]{./fig/result/A3/A3_3.png}
+    \caption{
+      \footnotesize{A3の実験結果. 相対渦度(3000 地球日)．
+左 : 緯度$0^\circ$，経度$0^\circ$から見た球面投影.
+中 : 緯度$90^\circ$，経度$0^\circ$から見た球面投影.
+右 : 緯度$-90^\circ$，経度$0^\circ$から見た球面投影.
+      }
+    }
+    \label{fig:A3_3}
+  \end{center}
+\end{figure}
+%
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=12cm]{./fig/result/A3/A3_4.png}
+    \caption{
+      \footnotesize{A3の実験結果. 無次元ポテンシャル渦度(3000 地球日)．
+左 : 緯度$0^\circ$，経度$0^\circ$から見た球面投影.
+中 : 緯度$90^\circ$，経度$0^\circ$から見た球面投影.
+右 : 緯度$-90^\circ$，経度$0^\circ$から見た球面投影.
+      }
+    }
+    \label{fig:A3_4}
+  \end{center}
+\end{figure}
+%
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=12cm]{./fig/result/A3/A3_5.jpg}
+    \caption{
+      \footnotesize{A3の実験結果. 有効ポテンシャルエネルギー : APE(実線) と運動エネルギー : KE(点線) の時間発展．
+      }
+    }
+    \label{fig:A3_5}
+  \end{center}
+\end{figure}
+%
+\clearpage
+\newpage
+\section{実験1 : Burger 数の変化による影響}
+\label{sec:case1}
+この節ではBurger 数 
+\begin{align}
+Bu = \left (\frac{L_{d0}}{a} \right )^2
+\end{align}
+の変化による影響を調べる．
+$a$は惑星半径，$L_{d0}$は極での変形半径
+\begin{align}
+L_{d0} = \frac{\sqrt{g'h_{eq}}}{f_0}, \qquad f_0 = 2 \Omega
+\end{align}
+である．\cite{Brueshaber2019}ではBurger 数を初期の値から
+変化しないように，質量強制によって加えられた質量を
+全球の流体層の厚さから取り除く項を入れているが，
+本研究では平衡厚さ$g'h_{eq}$でBurger 数を定義する．
+図\ref{fig:case1_1}にBurger 数を変化させて行った実験の
+無次元ポテンシャル渦度を示す．
+図の下に示されているアルファベットは\cite{Brueshaber2019}が
+Burger 数によって，分類した極渦のレジームを示している．
+それぞれ，次の特徴によって，分類されている．
+\begin{itemize}
+  \item J - 木星的レジーム
+  \begin{itemize}
+   \item 複数の渦が発生し，極に渦がとどまらない．
+  \end{itemize}
+  \item T - 遷移的レジーム
+  \item S - 土星的レジーム
+  \item I - 巨大氷惑星的レジーム
+\end{itemize}
+%
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=14cm]{./fig/result/case1/case1_1.png}
+    \caption{
+      \footnotesize{無次元ポテンシャル渦度(3000 地球日)．
+上にケース，下にBurger 数と\cite{Brueshaber2019}で分類された極渦のレジームを示している．
+      }
+    }
+    \label{fig:case1_1}
+  \end{center}
+\end{figure}
+%
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=14cm]{./fig/result/case1/case1_2.jpg}
+    \caption{
+      \footnotesize{東西平均した東西風速(3000 地球日)．
+上にケース，下にBurger 数と\cite{Brueshaber2019}で分類された極渦のレジームを示している．
+      }
+    }
+    \label{fig:case1_2}
+  \end{center}
+\end{figure}
 
 \def\chap4{考察}
 \chapter{\chap4}
@@ -583,6 +783,16 @@ def\thesection{\Alph{section}}
 \label{ape:B}
 \markright{\apeB}
 \input{./appendix/B/appendix_b.tex}
+%
+\newpage
+%
+%%  C  %%
+\def\apetitleC{: 実験図集}
+\def\apeC{\Alph{section} \apetitleC}
+\section{\apetitleC}
+\label{ape:C}
+\markright{\apeC}
+\input{./appendix/C/appendix_c.tex}
 
 %%%%%%%%%%%%%%%%
 \def\acknow{謝辞}

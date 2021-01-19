@@ -31,7 +31,7 @@
 \begin{align}
 \DP{\zeta}{t}&=-\Ddiv (\zeta+f)\Dvect{u} - D_\zeta ,\label{ape:B4} \\
 \DP{D}{t}&=\Dvect{k}\cdot \Drot (\zeta+f)\Dvect{u} 
--\nabla^2 \left(g' h  +\frac{\Dvect{u}\cdot \Dvect{u}}{2}\right) -D_D. \label{ape:B5}
+-\nabla^2 \left(g' h  +\frac{\Dvect{u}\cdot \Dvect{u}}{2}\right) -D_D \label{ape:B5}
 \end{align}
 である\footnote{
 式(\ref{ape:B5})の左辺第3項に回転演算子を作用させると
@@ -76,6 +76,13 @@ u \\
 &={\rm{\hat{\bf k}}} \cdot \Drot (\zeta+f)\Dvect{v}.\notag
 \end{align}ここで，ベクトル公式$\Ddiv (\Dvect{A}\times \Dvect{B})=\Dvect{B}\cdot (\Drot \Dvect{A})-\Dvect{A}\cdot \Drot \Dvect{B}$を用いた．
 }．
+ここで，渦度 : $\zeta$ と発散 : $D$ は
+\begin{align}
+\zeta &\equiv \Dvect{k}\cdot (\Drot \Dvect{u}) \notag \\
+&=\frac{1}{a\cos{\vartheta}}\left [ \DP{v}{\lambda}-\DP{u\cos{\vartheta}}{\vartheta}\right ], \\
+D &\equiv \Ddiv \Dvect{u} \notag \\
+&=\frac{1}{a\cos{\vartheta}}\left [ \DP{v}{\lambda}+\DP{u\cos{\vartheta}}{\vartheta}\right ].
+\end{align}
 球面座標系での物質微分，発散，勾配，回転は
 \begin{align}
 \frac{D\phi}{Dt}&=\DP{\phi}{t}+\frac{u}{a\cos{\vartheta}}\DP{\phi}{\lambda}
