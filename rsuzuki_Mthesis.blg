@@ -3,45 +3,45 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: rsuzuki_Mthesis.aux
 The style file: abbrvnat.bst
 Database file #1: ./reference/reference.bib
-You've used 15 entries,
+You've used 13 entries,
             2773 wiz_defined-function locations,
-            729 strings with 8915 characters,
-and the built_in function-call counts, 9124 in all, are:
-= -- 790
-> -- 748
-< -- 7
-+ -- 252
-- -- 237
-* -- 871
-:= -- 1471
-add.period$ -- 66
-call.type$ -- 15
-change.case$ -- 123
-chr.to.int$ -- 15
-cite$ -- 30
-duplicate$ -- 288
-empty$ -- 571
-format.name$ -- 258
-if$ -- 1830
+            712 strings with 8268 characters,
+and the built_in function-call counts, 8224 in all, are:
+= -- 706
+> -- 697
+< -- 6
++ -- 235
+- -- 222
+* -- 792
+:= -- 1334
+add.period$ -- 58
+call.type$ -- 13
+change.case$ -- 112
+chr.to.int$ -- 13
+cite$ -- 26
+duplicate$ -- 252
+empty$ -- 498
+format.name$ -- 239
+if$ -- 1642
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 12
-newline$ -- 104
-num.names$ -- 60
-pop$ -- 226
+missing$ -- 11
+newline$ -- 92
+num.names$ -- 52
+pop$ -- 205
 preamble$ -- 1
-purify$ -- 109
+purify$ -- 100
 quote$ -- 0
-skip$ -- 256
+skip$ -- 226
 stack$ -- 0
-substring$ -- 292
-swap$ -- 26
+substring$ -- 263
+swap$ -- 22
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 160
+type$ -- 138
 warning$ -- 0
-while$ -- 65
+while$ -- 57
 width$ -- 0
-write$ -- 239
+write$ -- 210
 is.kanji.str$ -- 0

@@ -406,25 +406,30 @@ $Q_e^* > 0$ は低気圧性渦，$Q_e^* < 0$ は高気圧性渦を表す．
 木星，土星で観測される雷雲を想定した強制を与えた浅水数値実験を
 \cite{Showman2007}は低緯度から中緯度の領域を計算し，
 赤道域のジェットと縞状構造に着目した．
+境界条件としては，経度方向に周期境界，緯度方向はfree - slip 境界 である．
 %
 一方，\cite{Brueshaber2019}は極域の領域で計算を行い，
 極渦のレジームに着目した．
+境界条件としては，周期境界だが，スポンジ層により，流れは減衰する．
 %
-どちらの先行研究も領域計算であり，このような
-領域の制限は流れ場全体の構造に影響を与える可能性がある．
+どちらの先行研究も領域計算であり，
+このような領域の制限は流れ場全体の構造に影響を与える可能性がある．
+例えば，\cite{Brueshaber2019} では低緯度からの運動量輸送が考慮できていなく，
+これは，現実的ではない．
 %
-例えば，\cite{Heimpel2007}は薄い球殻領域内の
-深部対流運動を全球の1/8 の領域で解き，
-縞状構造と赤道加速が共存する状態を数値的に再現した．
-しかし，この計算を全球で計算した
-\cite{Takehiro2015}では時間積分を進めると縞状構造が
-消滅するという結果がある．
 %
-そのため本論文では，雷雲を想定した
+%例えば，\cite{Heimpel2007}は薄い球殻領域内の
+%深部対流運動を全球の1/8 の領域で解き，
+%縞状構造と赤道加速が共存する状態を数値的に再現した．
+%しかし，この計算を全球で計算した
+%\cite{Takehiro2015}では時間積分を進めると縞状構造が
+%消滅するという結果がある．
+%
+そのため本研究では，雷雲を想定した
 強制浅水実験を全球で行い，
 低緯度から中緯度の主に東西ジェットの構造を
 \cite{Showman2007}の計算と比較，
-極域の主に渦の構造を\cite{Brueshaber2019}と比較する．
+極域の渦の構造を\cite{Brueshaber2019}と比較する．
 そして，雷雲を想定した強制により，
 \ref{sec:intro1}節で述べた巨大惑星の表層流の特徴が
 雷雲による強制により，形成されるのかを調べることが
@@ -460,16 +465,25 @@ $Q_e^* > 0$ は低気圧性渦，$Q_e^* < 0$ は高気圧性渦を表す．
 %
 \begin{align}
 & \DD{\Dvect{u}}{t}+ g' \Dgrad h + f \Dvect{k} \times \Dvect{u} = -\Dvect{D}_{\Dvect{u}},  \label{eq:eq1} \\
-& \DP{g'h}{t} + \Ddiv (g'h\Dvect{u}) = \Sigma S_{storm} + S_{rad} - D_h \label{eq:eq2} 
+& \DP{g'h}{t} + \Ddiv (g'h\Dvect{u}) = \Sigma S_{{\rm{storm}}} + S_{{\rm{rad}}} - D_h \label{eq:eq2} 
 \end{align}
 %
 である\footnote{導出は付録 \ref{ape:A}を参照．}．
-ここで，$D$は計算が発散しないための数値粘性項\footnote{詳細は付録\ref{ape:B}を参照．}，$h$は上層の厚さ，$g'$は低減重力加速度，
- $S_{storm}$は雷雲を想定した質量強制項，$S_{rad}$ は放射緩和項である．
+$\Dvect{u}$は水平風速，$g'$は有効重力加速度，
+$h$は上層の厚さ，$f$はコリオリパラメータ，
+$\Dvect{k}$は鉛直方向の単位ベクトル，
+$\Dvect{D}_h, D_h$はそれぞれ計算が
+発散しないための数値粘性・拡散項\footnote{詳細は付録\ref{ape:B}を参照．}，
+$S_{{\rm{storm}}}$は雷雲を想定した質量強制項，$S_{{\rm{rad}}}$ は放射緩和項である．
+また，物質微分は
+\begin{align}
+\DD{}{t} = \DP{}{t} + \frac{u}{a\cos{\vartheta}} \DP{}{\lambda}
++\frac{v}{a} \DP{}{\vartheta}.
+\end{align}
 それぞれの強制項は
 \begin{align}
-&S_{storm} = s \cdot \exp \left [- \frac{R^2}{R_{storm}^2} - \frac{(t-t_0)^2}{\tau_{storm}^2} \right ], \label{eq:eq3}\\
-&S_{rad}  = - \frac{\langle g'h \rangle - g'h_{eq}}{\tau_{mass}} - \frac{g'h - \langle g'h \rangle}{\tau_{APE}} \label{eq:eq4}
+&S_{{\rm{storm}}} = s \cdot \exp \left [- \frac{R^2}{R_{{\rm{storm}}}^2} - \frac{(t^*-t_0)^2}{\tau_{{\rm{storm}}}^2} \right ], \label{eq:eq3}\\
+&S_{{\rm{rad}}}  = - \frac{\langle g'h \rangle - g'h_{{\rm{eq}}}}{\tau_{{\rm{mass}}}} - \frac{g'h - \langle g'h \rangle}{\tau_{{\rm{APE}}}} \label{eq:eq4}
 \end{align}
 である．
 %
@@ -478,55 +492,65 @@ $Q_e^* > 0$ は低気圧性渦，$Q_e^* < 0$ は高気圧性渦を表す．
 $\alpha=1.0$ のとき，正の質量強制のみが与えられる
 (つまり，高気圧性渦が質量強制を与えた場所で発生する)．
 $R$は質量強制の中心位置からの距離，
-$R_{storm}$は質量強制の半径，
-$t$は質量強制が局所的に与えられてからの時間，
+$R_{{\rm{storm}}}$は質量強制の半径，
+$t^*$は質量強制が局所的に与えられてからの時間，
 $t_0$は質量強制がピークを迎える時間，
-$\tau_{storm}$は質量強制の特徴的な時間スケール，
+$\tau_{{\rm{storm}}}$は質量強制の特徴的な緩和時間，
 $\langle \rangle$ はその瞬間の水平平均，
-$h_{eq}$は平衡状態での厚さ，
-$\tau_{mass}$はエネルギーに影響を与えず，
-$\langle h \rangle $を$h_{eq}$に向かって平衡化するときの時間スケール，
-$\tau_{APE}$は質量に影響を与えず，
-$h$を$\langle h \rangle$に向かって平衡化するときの時間スケールである．
+$h_{{\rm{eq}}}$は平衡状態での厚さ，
+$\tau_{{\rm{mass}}}$はエネルギーに影響を与えず，
+$\langle h \rangle $を$h_{{\rm{eq}}}$に向かって平衡化するときの緩和時間，
+$\tau_{{\rm{APE}}}$は質量に影響を与えず，
+$h$を$\langle h \rangle$に向かって平衡化するときの緩和時間である．
 図\ref{fig5}に質量強制のスナップショットを示す．
 %
 \begin{figure}[t]
   \begin{center}
-    \includegraphics[clip,width=6cm]{./fig/model/fig5.png}
+    \includegraphics[clip,width=6cm]{./fig/model/fig5_v2.png}
     \caption{
-      \footnotesize{質量強制 : $S_{storm}$ のスナップショット($s_{max} = 0.1, \alpha = 0.5$の場合)．
+      \footnotesize{質量強制 : $S_{{\rm{storm}}}$ のスナップショット($s_{max} = 0.333$, $R_{{\rm{storm}}} = 2.62 \times 10^6 {\rm{~m~}}(2.1^{\circ})$
+, $\alpha = 0.5$の場合)．
 ある時刻と位置に雷雲を想定した質量強制を式(\ref{eq:eq3})で与える．
-質量強制は$R > 2.2 R_{storm}, t > 2.2 \tau_{storm}$ で0とする．
-質量強制が与えられてから，$2.2 \tau{storm}$ 後に消滅．
-そこから$\tau_{interval}$ 後に違う位置に質量強制が与えられる．
+質量強制は$R > 2.2 R_{{\rm{storm}}}, t^* > 2.2 \tau_{{\rm{storm}}}$ で0とする．
+質量強制が与えられてから，$2.2 \tau_{{\rm{storm}}}$ 秒後に消滅．
+そこから$\tau_{interval}$ 秒後に違う位置に質量強制が与えられる．
       }
     }
     \label{fig5}
   \end{center}
 \end{figure}
 %
-質量強制は$R > 2.2 R_{storm}, t > 2.2 \tau_{storm}$ で0 とする．
-質量強制が与えられてから，$2.2 \tau_{storm}$が経過し，消滅後，
-そこから$\tau_{interval}$ 後に違う位置に質量強制が与えられる．
+質量強制は$R > 2.2 R_{{\rm{storm}}}, t^* > 2.2 \tau_{{\rm{storm}}}$ で0 とする．
+質量強制が与えられてから，$2.2 \tau_{{\rm{storm}}}$ 秒が経過し，消滅後，
+そこから$\tau_{interval}$ 秒後に違う位置に質量強制が与えられる．
 
 式(\ref{eq:eq4}) の放射緩和項の右辺第1項は
-時間スケール$\tau_{mass}$ で$\langle h \rangle $を
-平衡厚さ$h_{eq}$に向かって，緩和する．
+緩和時間$\tau_{{\rm{mass}}}$ で$\langle h \rangle $を
+平衡厚さ$h_{{\rm{eq}}}$に向かって，緩和する．
 %
-右辺第2項は時間スケール$\tau_{APE}$ で
+右辺第2項は緩和時間$\tau_{{\rm{APE}}}$ で
 局所的な流体層の厚さの変化を$\langle h \rangle $に向かって，緩和する．
 %
 これら2つの項により，統計的定常状態を実現する．
 %
 \cite{Brueshaber2019} ではこれらの強制項に加え，加えた質量強制を層から差し引く
-質量調整項を加えていたが，ここでは\cite{Showman2007}にならい，加えない．
+質量調整項を加えていたが，ここでは\cite{Showman2007}にならい，加えない．使用する記号を表\ref{table:para}にまとめる．
+\begin{table}[t]
+  \caption{本論文中で使用する記号一覧}
+  \label{table:para}
+  \begin{center}
+    \includegraphics[clip,width=15cm]{./fig/model/table_para-2.jpg}
+  \end{center}
+\end{table}
 %
+\clearpage
+\newpage
 \section{実験手法・実験設定}
 \label{sec:model2}
 球面上の支配方程式系(\ref{eq:eq1}), (\ref{eq:eq2}) を解く．
-その際，運動量方程式はベクトル量である速度成分のままだと
+その際，運動量方程式はベクトル量である速度のままだと
 球面座標系では格子点が集中する極点付近で，計算が難しい．
-そのため，式(\ref{eq:eq1})を変形し渦度と発散に関する式を用いる\footnote{付録 \ref{ape:B} を参照．}．
+そのため，式(\ref{eq:eq1})を変形しスカラー量である渦度と発散に関する式を用いる\footnote{付録 \ref{ape:B} を参照．}．
 %
 また，数値的な安定性を維持するために
 ラプラシアン4次の超粘性を加える．
@@ -538,36 +562,36 @@ $h$を$\langle h \rangle$に向かって平衡化するときの時間スケー�
 また数値モデルの作成には地球流体電脳倶楽部の階層的地球スペクトルモデル集
 (SPMODEL; \cite{spmodel2006}, \cite{spmodel2013}) を使用する．
 %
-初期に上層は静止しており，$10 \tau_{interval}$ 経過する間に
-最大で50 個の雷雲を想定した質量強制がランダムに加えられる．
+初期に上層は静止しており，$10 \tau_{interval}$ 秒経過する間に
+最初の質量強制がランダムな位置に最大で50個加えられる．
 %
-惑星半径と自転角速度は木星の値を用いる．
+自転角速度は木星の値を用いる．
 また，計算時間は3000 地球日とする．
 %
 本研究で用いた共通パラメータを表\ref{table1} に示す．
-\begin{table}[t]
+表\ref{table2}に計算を行った数値実験のケースとその用いたパラメータを示す．
+
+以下ではA1 のケースを標準実験とし，\ref{sec:A1}節でその実験結果について述べる．
+%
+その次に，\ref{sec:case1}節では$g'h_{{\rm{eq}}}$の値を変化させ，Burger 数の影響を調べた実験1の結果について示す．
+\ref{sec:case2}節では$\tau_{{\rm{APE}}}$の値を変化させ，放射緩和の影響を調べた実験2の結果について示す．
+\ref{sec:case3}節では$\alpha$の値を変化させ，質量強制の正負の影響を調べた実験3の結果について示す．
+\ref{sec:case4}節では解像度の違いによる変化を調べた実験4の結果について示す．
+\begin{table}[ht]
   \caption{実験で用いた共通パラメータ}
   \label{table1}
   \begin{center}
-    \includegraphics[clip,width=8cm]{./fig/model/table1.png}
+    \includegraphics[clip,width=8cm]{./fig/model/table1.jpg}
   \end{center}
 \end{table}
 %
-表\ref{table2}に計算を行った数値実験のケースとその用いたパラメータを示す．
-
-以下ではA3 のケースを標準実験とし，\ref{sec:A3}節でその実験結果について述べる．
-%
-その次に，\ref{sec:case1}節では$g'h_{eq}$の値を変化させ，Burger 数の影響を調べた実験1の結果について示す．
-\ref{sec:case2}節では$\tau_{APE}$の値を変化させ，放射緩和の影響を調べた実験2の結果について示す．
-\ref{sec:case3}節では$\alpha$の値を変化させ，質量強制の正負の影響を調べた実験3の結果について示す．
-\ref{sec:case4}節では解像度の違いによる変化を調べた実験4の結果について示す．
 \newpage
 \begin{landscape}
 \begin{table}[t]
   \caption{実験のケースと用いたパラメータ}
   \label{table2}
   \begin{center}
-    \includegraphics[clip,width=20cm]{./fig/model/table2.png}
+    \includegraphics[clip,width=20cm]{./fig/model/table2_v2.png}
   \end{center}
 \end{table}
 \end{landscape}
@@ -579,22 +603,22 @@ $h$を$\langle h \rangle$に向かって平衡化するときの時間スケー�
 \label{chap:3}
 \markright{3 \chap3}
 %
-\section{標準実験結果 : A3}
-\label{sec:A3}
-ここでは，標準実験とした A3 のケースの結果を図\ref{fig:A3_1}-\ref{fig:A3_5}に示す．
+\section{標準実験結果 : A1}
+\label{sec:A1}
+ここでは，標準実験とした A1 のケースの結果を図\ref{fig:A1_1}-\ref{fig:A1_5}に示す．
 用いたパラメータは表\ref{table2}を参照．
-図\ref{fig:A3_1}の東西風速を見てわかるように，
+図\ref{fig:A1_1}の東西風速を見てわかるように，
 赤道域で幅が広く，風速が約$220 \rm{~m \cdot s^{-1}}$と強力な東風ジェットと
 緯度約$\pm 30^\circ$ で風速約$100 \rm{~m \cdot s^{-1}}$の西風ジェットが見られる．
 %
-また，その西風ジェットに対応して，図\ref{fig:A3_2}のジオポテンシャルが
+また，その西風ジェットに対応して，図\ref{fig:A1_2}のジオポテンシャルが
 その領域で値が小さくなっている．
 %
 正(負)の質量強制の場合，流体層に局所的な膨らみ(窪み)を作る．
 この局所的に膨らんだ場所はコリオリ力により，高気圧性(低気圧性)渦を形成する．
 %
 このケースでは正の質量強制のみ与えられるため，
-図\ref{fig:A3_3}の相対渦度分布を見て分かるように，
+図\ref{fig:A1_3}の相対渦度分布を見て分かるように，
 高気圧性渦が見て取れる．
 さらに，渦の正負を分かりやすくするために，無次元ポテンシャル渦度を定義する．
 %
@@ -608,77 +632,77 @@ $Q_e^*=0$は静止流体(相対的な渦度や厚さの摂動はない)を表す
 $Q_e^*>0$は低気圧性の渦度を表し，
 $Q_e^*<0$は高気圧性の渦度を表す．
 %
-図\ref{fig:A3_4}の極域を見てみると巨大な低気圧性渦の中に，複数の高気圧性渦が形成していることがわかる．
+図\ref{fig:A1_4}の極域を見てみると巨大な低気圧性渦の中に，複数の高気圧性渦が形成していることがわかる．
 %
-図\ref{fig:A3_5}に有効ポテンシャルエネルギー : APE と運動エネルギー : KE 
+図\ref{fig:A1_5}に有効ポテンシャルエネルギー : APE と運動エネルギー : KE 
 \begin{align}
 APE &= \frac{1}{2} \int \left[(g'h)^2 - \langle g'h \rangle^2   \right] dA. \\
 KE  &= \frac{1}{2} \int g'h(u^2 + v^2) dA.
 \end{align}
 を示す．ここで，$A$ は計算領域の面積，$u, v$ はそれぞれ経度，緯度方向の速度である．
 %
-A3 のケースでは$\tau_{APE} = \infty$ のため，APE とKE は時間とともに増加する．
+A1 のケースでは$\tau_{{\rm{APE}}} = \infty$ のため，APE とKE は時間とともに増加する．
 \begin{figure}[b]
   \begin{center}
-    \includegraphics[clip,width=10cm]{./fig/result/A3/A3_1.png}
+    \includegraphics[clip,width=10cm]{./fig/result/A1/A1_1.png}
     \caption{
-      \footnotesize{A3の実験結果. 左 : 東西風速，右 : 東西平均した東西風速(3000 地球日)．
+      \footnotesize{A1の実験結果. 左 : 東西風速，右 : 東西平均した東西風速(3000 地球日)．
       }
     }
-    \label{fig:A3_1}
+    \label{fig:A1_1}
   \end{center}
 \end{figure}
 %
 \begin{figure}[ht]
   \begin{center}
-    \includegraphics[clip,width=12cm]{./fig/result/A3/A3_2.png}
+    \includegraphics[clip,width=12cm]{./fig/result/A1/A1_2.png}
     \caption{
-      \footnotesize{A3の実験結果. ジオポテンシャル(3000 地球日)．
+      \footnotesize{A1の実験結果. ジオポテンシャル(3000 地球日)．
 左 : 緯度$0^\circ$，経度$0^\circ$から見た球面投影.
 中 : 緯度$90^\circ$，経度$0^\circ$から見た球面投影.
 右 : 緯度$-90^\circ$，経度$0^\circ$から見た球面投影.
       }
     }
-    \label{fig:A3_2}
+    \label{fig:A1_2}
   \end{center}
 \end{figure}
 %
 \begin{figure}[ht]
   \begin{center}
-    \includegraphics[clip,width=12cm]{./fig/result/A3/A3_3.png}
+    \includegraphics[clip,width=12cm]{./fig/result/A1/A1_3.png}
     \caption{
-      \footnotesize{A3の実験結果. 相対渦度(3000 地球日)．
+      \footnotesize{A1の実験結果. 相対渦度(3000 地球日)．
 左 : 緯度$0^\circ$，経度$0^\circ$から見た球面投影.
 中 : 緯度$90^\circ$，経度$0^\circ$から見た球面投影.
 右 : 緯度$-90^\circ$，経度$0^\circ$から見た球面投影.
       }
     }
-    \label{fig:A3_3}
+    \label{fig:A1_3}
   \end{center}
 \end{figure}
 %
 \begin{figure}[ht]
   \begin{center}
-    \includegraphics[clip,width=12cm]{./fig/result/A3/A3_4.png}
+    \includegraphics[clip,width=12cm]{./fig/result/A1/A1_4.png}
     \caption{
-      \footnotesize{A3の実験結果. 無次元ポテンシャル渦度(3000 地球日)．
+      \footnotesize{A1の実験結果. 無次元ポテンシャル渦度(3000 地球日)．
 左 : 緯度$0^\circ$，経度$0^\circ$から見た球面投影.
 中 : 緯度$90^\circ$，経度$0^\circ$から見た球面投影.
 右 : 緯度$-90^\circ$，経度$0^\circ$から見た球面投影.
       }
     }
-    \label{fig:A3_4}
+    \label{fig:A1_4}
   \end{center}
 \end{figure}
 %
 \begin{figure}[ht]
   \begin{center}
-    \includegraphics[clip,width=12cm]{./fig/result/A3/A3_5.jpg}
+    \includegraphics[clip,width=12cm]{./fig/result/A1/A1_5.jpg}
     \caption{
-      \footnotesize{A3の実験結果. 有効ポテンシャルエネルギー : APE(実線) と運動エネルギー : KE(点線) の時間発展．
+      \footnotesize{A1の実験結果. 有効ポテンシャルエネルギー : APE (実線) と運動エネルギー : KE (点線) の時間発展．
       }
     }
-    \label{fig:A3_5}
+    \label{fig:A1_5}
   \end{center}
 \end{figure}
 %
@@ -693,12 +717,12 @@ Bu = \left (\frac{L_{d0}}{a} \right )^2
 の変化による影響を調べる．
 $a$は惑星半径，$L_{d0}$は極での変形半径
 \begin{align}
-L_{d0} = \frac{\sqrt{g'h_{eq}}}{f_0}, \qquad f_0 = 2 \Omega
+L_{d0} = \frac{\sqrt{g'h_{{\rm{eq}}}}}{f_0}, \qquad f_0 = 2 \Omega
 \end{align}
 である．\cite{Brueshaber2019}ではBurger 数を初期の値から
 変化しないように，質量強制によって加えられた質量を
 全球の流体層の厚さから取り除く項を入れているが，
-本研究では平衡厚さ$g'h_{eq}$でBurger 数を定義する．
+本研究では平衡厚さ$g'h_{{\rm{eq}}}$でBurger 数を定義する．
 図\ref{fig:case1_1}にBurger 数を変化させて行った実験の
 無次元ポテンシャル渦度を示す．
 図の下に示されているアルファベットは\cite{Brueshaber2019}が
