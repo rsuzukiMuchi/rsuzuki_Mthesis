@@ -351,8 +351,10 @@ ddd
   \begin{center}
     \includegraphics[clip,width=9cm]{./fig/intro/fig3.png}
     \caption{
-      \footnotesize{\cite{Showman2007}のジオポテンシャルと
+      \footnotesize{ジオポテンシャルと
 速度ベクトルの計算結果(4190地球日，中緯度の変形半径 : $L_d \sim 1200$ km)．
+ジオポテンシャルの値の範囲は$0.21 - 2.7 \times 10^5 \rm{~m^2 \cdot s^{-2}}$．
+\cite{Showman2007} Fig.1 より引用．
       }
     }
     \label{fig3}
@@ -364,8 +366,8 @@ ddd
 \cite{Brueshaber2019}は\cite{Showman2007}の雷雲を
 想定した強制浅水実験を極域(約$\sim 60^\circ$ の等緯度線より高緯度)で計算し，
 極渦とそのレジームに注目した．
-その結果，図\ref{fig4}に示すようにBurger 数 : $Bu = (L_{d0}/a)^2$ と呼ばれる
-極での変形半径 : $L_{d0}$ と惑星半径 : $a$ で書かれる無次元量の値によって，
+その結果，図\ref{fig4}に示すようにBurger 数(式(\ref{burger}))と呼ばれる
+極での変形半径 : $L_{d0}$ と惑星半径 : $a$ の比で書かれる無次元量の値によって，
 極渦のレジームが変化することがわかった．
 %
 Burger 数の値が$Bu \leq 2.40 \times 10^{-4}$の場合，
@@ -376,7 +378,7 @@ Burger 数の値が$Bu \leq 2.40 \times 10^{-4}$の場合，
 Burger 数の値が$4.00 \times 10^{-4 } \leq  Bu \leq  8.16 \times 10^{-4}$の場合，
 高気圧性渦と低気圧性渦が混在するレジームがあらわれる．
 Burger 数が木星的レジームと土星的レジームの間にあるため
-このレジームを遷移状態と分類した．
+このレジームを遷移レジームと分類した．
 %
 Burger 数の値が$8.16 \times 10^{-4 } \leq Bu \leq  2.50 \times 10^{-3}$の場合，
 土星で観測されるような極を中心とした単一の低気圧性渦が形成する．
@@ -388,12 +390,14 @@ Burger 数の値が$Bu \geq 4.44 \times 10^{-3 }$の場合，
 %
 \begin{figure}[H]
   \begin{center}
-    \includegraphics[clip,width=14cm]{./fig/intro/fig4_1.png}
+    \includegraphics[clip,width=14cm]{./fig/intro/fig4_2.png}
     \caption{
-      \footnotesize{\cite{Brueshaber2019}の無次元ポテンシャル渦度 : $Q_e^*$ (式(\ref{eq:nonqv}))の計算結果(20000地球日)．
+      \footnotesize{無次元ポテンシャル渦度 : $Q_e^*$ (式(\ref{eq:nonqv}))の計算結果(20000地球日)．
+上に\cite{Brueshaber2019}が分類した各レジーム名を示す．
 Burger 数の値に応じて巨大惑星で観測されるような極渦のレジームが変化する．
 $Q_e^* = 0$ は静止流体(相対渦度や流体層の厚さの水平平均からの変化はない)，
 $Q_e^* > 0$ は低気圧性渦，$Q_e^* < 0$ は高気圧性渦を表す．
+\cite{Brueshaber2019} Fig.7 より引用．
       }
     }
     \label{fig4}
@@ -573,10 +577,11 @@ $h$を$\langle h \rangle$に向かって平衡化するときの緩和時間で�
 
 以下ではA1 のケースを標準実験とし，\ref{sec:A1}節でその実験結果について述べる．
 %
-その次に，\ref{sec:case1}節では$g'h_{{\rm{eq}}}$の値を変化させ，Burger 数の影響を調べた実験1の結果について示す．
-\ref{sec:case2}節では$\tau_{{\rm{APE}}}$の値を変化させ，放射緩和の影響を調べた実験2の結果について示す．
+その次に，\ref{sec:case1}節では$g'h_{{\rm{eq}}}$，または$a$を変化させ，Burger 数の影響を調べた実験1の結果について示す．
+\ref{sec:case2}節では$\tau_{{\rm{APE}}}$の値を変化させ，放射緩和項の緩和時間の影響を調べた実験2の結果について示す．
 \ref{sec:case3}節では$\alpha$の値を変化させ，質量強制の正負の影響を調べた実験3の結果について示す．
-\ref{sec:case4}節では解像度の違いによる変化を調べた実験4の結果について示す．
+\ref{sec:case4}節では解像度をかえ，質量強制の空間的大きさの影響を調べた実験4の結果について示す．
+それぞれの実験について，表\ref{table:exp}にまとめる．
 \begin{table}[ht]
   \caption{実験で用いた共通パラメータ}
   \label{table1}
@@ -584,6 +589,7 @@ $h$を$\langle h \rangle$に向かって平衡化するときの緩和時間で�
     \includegraphics[clip,width=8cm]{./fig/model/table1.jpg}
   \end{center}
 \end{table}
+%
 %
 \newpage
 \begin{landscape}
@@ -596,16 +602,24 @@ $h$を$\langle h \rangle$に向かって平衡化するときの緩和時間で�
 \end{table}
 \end{landscape}
 %
+\begin{table}[ht]
+  \caption{各実験の説明}
+  \label{table:exp}
+  \begin{center}
+    \includegraphics[clip,width=14cm]{./fig/model/table_exp.jpg}
+  \end{center}
+\end{table}
+%
 \clearpage
-
 \def\chap3{実験結果}
 \chapter{\chap3}
 \label{chap:3}
 \markright{3 \chap3}
 %
+%%%%%%%%%%%%%%%%%% 標準実験 : A1 %%%%%%%%%%%%%%%%%%%
 \section{標準実験結果 : A1}
 \label{sec:A1}
-ここでは，標準実験とした A1 のケースの結果を図\ref{fig:A1_1}-\ref{fig:A1_5}に示す．
+この節では，標準実験とした A1 のケースの結果を図\ref{fig:A1_1}-\ref{fig:A1_5}に示す．
 用いたパラメータは表\ref{table2}を参照．
 図\ref{fig:A1_1}の東西風速を見てわかるように，
 赤道域で幅が広く，風速が約$220 \rm{~m \cdot s^{-1}}$と強力な東風ジェットと
@@ -613,6 +627,7 @@ $h$を$\langle h \rangle$に向かって平衡化するときの緩和時間で�
 %
 また，その西風ジェットに対応して，図\ref{fig:A1_2}のジオポテンシャルが
 その領域で値が小さくなっている．
+
 %
 正(負)の質量強制の場合，流体層に局所的な膨らみ(窪み)を作る．
 この局所的に膨らんだ場所はコリオリ力により，高気圧性(低気圧性)渦を形成する．
@@ -641,7 +656,14 @@ KE  &= \frac{1}{2} \int g'h(u^2 + v^2) dA.
 \end{align}
 を示す．ここで，$A$ は計算領域の面積，$u, v$ はそれぞれ経度，緯度方向の速度である．
 %
-A1 のケースでは$\tau_{{\rm{APE}}} = \infty$ のため，APE とKE は時間とともに増加する．
+A1 のケースでは$\tau_{{\rm{APE}}} = \infty$ のため，局所的な緩和が効かず，APE とKE は時間とともに増加する．
+
+このケースは\cite{Showman2007}のA3 のケースに対応するが，
+極域でジオポテンシャルが負になる領域があることがわかった(他のケースについては表\ref{table2} 備考を参照．)．
+この系の上端の境界条件は剛体表面なので，物理的にはありえない．
+\cite{Showman2007} が用いた$g'h_{\rm{eq}}$の値によっては，
+そのような数値解が得られてしまうことがわかった．
+%
 \begin{figure}[b]
   \begin{center}
     \includegraphics[clip,width=10cm]{./fig/result/A1/A1_1.png}
@@ -706,13 +728,14 @@ A1 のケースでは$\tau_{{\rm{APE}}} = \infty$ のため，APE とKE は時�
   \end{center}
 \end{figure}
 %
+%%%%%%%%%%%%%%%%%% case1 : Burger %%%%%%%%%%%%%%%%%%%
 \clearpage
 \newpage
 \section{実験1 : Burger 数の変化による影響}
 \label{sec:case1}
 この節ではBurger 数 
 \begin{align}
-Bu = \left (\frac{L_{d0}}{a} \right )^2
+Bu = \left (\frac{L_{d0}}{a} \right )^2 \label{burger}
 \end{align}
 の変化による影響を調べる．
 $a$は惑星半径，$L_{d0}$は極での変形半径
@@ -723,12 +746,26 @@ L_{d0} = \frac{\sqrt{g'h_{{\rm{eq}}}}}{f_0}, \qquad f_0 = 2 \Omega
 変化しないように，質量強制によって加えられた質量を
 全球の流体層の厚さから取り除く項を入れているが，
 本研究では平衡厚さ$g'h_{{\rm{eq}}}$でBurger 数を定義する．
-図\ref{fig:case1_1}にBurger 数を変化させて行った実験の
+%
+図\ref{fig:case1_a}に$a$を
+図\ref{fig:case1_gh}に$g'h_{\rm{eq}}$を変化させた実験の
 無次元ポテンシャル渦度を示す．
+%
 図の下に示されているアルファベットは\cite{Brueshaber2019}が
 Burger 数によって，分類した極渦のレジームを示している．
-それぞれ，表\ref{table:regime} の特徴によって，分類されている．
-
+表\ref{table:regime} に\cite{Brueshaber2019}が分類した極渦のレジームの特徴と
+そのBurger 数の値の範囲を示す．
+%%%%%%%%%%%%%%%%%%%%%%%%
+%  B1 - B4 の結果が出た後にまとめる．
+%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{table}[h]
+  \caption{極渦のレジームの分類とその特徴}
+  \label{table:regime}
+  \begin{center}
+    \includegraphics[clip,width=15cm]{./fig/model/table_regime.jpg}
+  \end{center}
+\end{table}
 %
 \begin{figure}[ht]
   \begin{center}
@@ -736,9 +773,23 @@ Burger 数によって，分類した極渦のレジームを示している．
     \caption{
       \footnotesize{無次元ポテンシャル渦度(3000 地球日)．
 上にケース，下にBurger 数と\cite{Brueshaber2019}で分類された極渦のレジームを示している．
+$a$ を変化させ，Burger 数の値をかえた．
       }
     }
-    \label{fig:case1_1}
+    \label{fig:case1_a}
+  \end{center}
+\end{figure}
+%
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=14cm]{./fig/result/case1/case1_1.png}
+    \caption{
+      \footnotesize{無次元ポテンシャル渦度(3000 地球日)．
+上にケース，下にBurger 数と\cite{Brueshaber2019}で分類された極渦のレジームを示している．
+$g'h_{\rm{eq}}$ を変化させ，Burger 数の値をかえた．
+      }
+    }
+    \label{fig:case1_gh}
   \end{center}
 \end{figure}
 %
@@ -753,7 +804,41 @@ Burger 数によって，分類した極渦のレジームを示している．
     \label{fig:case1_2}
   \end{center}
 \end{figure}
+%
+%%%%%%%%%%%%%%%%%% case2 : tau_APE %%%%%%%%%%%%%%%%%%%
+\clearpage
+\newpage
+\section{実験2 : $\tau_{\rm{APE}}$ の変化による影響}
+\label{sec:case2}
+この節では放射緩和項の$\tau_{\rm{APE}}$の変化による影響を調べる．
+$\tau_{\rm{APE}}$は局所的な流体層の厚さの変化を
+$\langle h_{\rm{eq}} \rangle $ に向かって緩和する．
+行ったケースは$\tau_{\rm{APE}} = \infty, 10^8, 10^7, 10^6, 10^5, 10^3$ である．
+%%%%%%%%%%%%%%%%%% case3 : alpha %%%%%%%%%%%%%%%%%%%
+\clearpage
+\newpage
+\section{実験3 : $\alpha$ の変化による影響}
+\label{sec:case3}
+この節では質量強制の正負の割合である$\alpha$ の変化による影響を調べる．
+$\alpha = 1.0 (0.0)$ のとき正(負)の質量強制のみが与えられ，強制が与えられた位置で高気圧性(低気圧性)渦を形成する．
+行ったケースは$\alpha = 1, 0.5, 0.0$ である．
+%%%%%%%%%%%%%%%%%% case4 : R_storm %%%%%%%%%%%%%%%%%%%
+\clearpage
+\newpage
+\section{実験4 : $R_{\rm{storm}}$ の変化による影響}
+\label{sec:case4}
+この節では質量強制の空間的大きさである$R_{\rm{storm}}$ の変化による影響を調べる．
+\cite{Showman2007} によれば，$R_{\rm{storm}}$の中に
+最低でも3個の格子点を含むとされている．
+そのため，$R_{\rm{storm}}$を小さくすると
+それに従い，解像度をあげなければならない．
+行ったケースは$T341 : R_{\rm{storm}} = 8.72 \times 10^5 ~(0.7^\circ), 
+T170 : R_{\rm{storm}} = 2.62 \times 10^6 ~(2.1^\circ)$ であり，
+それぞれのケースで$R_{\rm{storm}}$の中に最低でも3個の格子点を含んでいる．
 
+
+%
+%
 \def\chap4{考察}
 \chapter{\chap4}
 \label{chap:4}
