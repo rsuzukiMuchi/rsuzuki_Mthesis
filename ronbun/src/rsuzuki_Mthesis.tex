@@ -414,7 +414,7 @@ $Q_e^* > 0$ は低気圧性渦，$Q_e^* < 0$ は高気圧性渦を表す．
 %
 一方，\cite{Brueshaber2019}は極域の領域で計算を行い，
 極渦のレジームに着目した．
-境界条件としては，周期境界だが，スポンジ層により，流れは減衰する．
+境界条件としては，周期境界だがスポンジ層により，流れは減衰する．
 %
 どちらの先行研究も領域計算であり，
 このような領域の制限は流れ場全体の構造に影響を与える可能性がある．
@@ -476,7 +476,7 @@ $Q_e^* > 0$ は低気圧性渦，$Q_e^* < 0$ は高気圧性渦を表す．
 $\Dvect{u}$は水平風速，$g'$は有効重力加速度，
 $h$は上層の厚さ，$f$はコリオリパラメータ，
 $\Dvect{k}$は鉛直方向の単位ベクトル，
-$\Dvect{D}_h, D_h$はそれぞれ計算が
+$\Dvect{D}_u, D_h$はそれぞれ計算が
 発散しないための数値粘性・拡散項\footnote{詳細は付録\ref{ape:B}を参照．}，
 $S_{{\rm{storm}}}$は雷雲を想定した質量強制項，$S_{{\rm{rad}}}$ は放射緩和項である．
 また，物質微分は
@@ -503,9 +503,9 @@ $\tau_{{\rm{storm}}}$は質量強制の特徴的な緩和時間，
 $\langle \rangle$ はその瞬間の水平平均，
 $h_{{\rm{eq}}}$は平衡状態での厚さ，
 $\tau_{{\rm{mass}}}$はエネルギーに影響を与えず，
-$\langle h \rangle $を$h_{{\rm{eq}}}$に向かって平衡化するときの緩和時間，
+$\langle g'h \rangle $を$g'h_{{\rm{eq}}}$に向かって平衡化するときの緩和時間，
 $\tau_{{\rm{APE}}}$は質量に影響を与えず，
-$h$を$\langle h \rangle$に向かって平衡化するときの緩和時間である．
+$g'h$を$\langle g'h \rangle$に向かって平衡化するときの緩和時間である．
 図\ref{fig5}に質量強制のスナップショットを示す．
 %
 \begin{figure}[t]
@@ -517,7 +517,7 @@ $h$を$\langle h \rangle$に向かって平衡化するときの緩和時間で�
 ある時刻と位置に雷雲を想定した質量強制を式(\ref{eq:eq3})で与える．
 質量強制は$R > 2.2 R_{{\rm{storm}}}, t^* > 2.2 \tau_{{\rm{storm}}}$ で0とする．
 質量強制が与えられてから，$2.2 \tau_{{\rm{storm}}}$ 秒後に消滅．
-そこから$\tau_{interval}$ 秒後に違う位置に質量強制が与えられる．
+そこから$\tau_{{\rm{interval}}}$ 秒後に違う位置に質量強制が与えられる．
       }
     }
     \label{fig5}
@@ -526,14 +526,14 @@ $h$を$\langle h \rangle$に向かって平衡化するときの緩和時間で�
 %
 質量強制は$R > 2.2 R_{{\rm{storm}}}, t^* > 2.2 \tau_{{\rm{storm}}}$ で0 とする．
 質量強制が与えられてから，$2.2 \tau_{{\rm{storm}}}$ 秒が経過し，消滅後，
-そこから$\tau_{interval}$ 秒後に違う位置に質量強制が与えられる．
+そこから$\tau_{{\rm{interval}}}$ 秒後に違う位置に質量強制が与えられる．
 
 式(\ref{eq:eq4}) の放射緩和項の右辺第1項は
-緩和時間$\tau_{{\rm{mass}}}$ で$\langle h \rangle $を
-平衡厚さ$h_{{\rm{eq}}}$に向かって，緩和する．
+緩和時間$\tau_{{\rm{mass}}}$ で$\langle g'h \rangle $を
+平衡厚さ$g'h_{{\rm{eq}}}$に向かって，緩和する．
 %
 右辺第2項は緩和時間$\tau_{{\rm{APE}}}$ で
-局所的な流体層の厚さの変化を$\langle h \rangle $に向かって，緩和する．
+局所的な$g'h$を$\langle g'h \rangle $に向かって，緩和する．
 %
 これら2つの項により，統計的定常状態を実現する．
 %
@@ -564,9 +564,12 @@ $h$を$\langle h \rangle$に向かって平衡化するときの緩和時間で�
 それ以外の項には4次のルンゲクッタ法を用いる．
 %
 また数値モデルの作成には地球流体電脳倶楽部の階層的地球スペクトルモデル集
-(SPMODEL; \cite{spmodel2006}, \cite{spmodel2013}) を使用する．
+(SPMODEL; \cite{spmodel2006}, \cite{spmodel2013}) を使用する
+\footnote{テスト計算のために1層浅水系でのテストセットを提案した
+\cite{Williamson1992}をスキームの確認と並列化効率の測定のために実行した．
+付録\ref{Williamson}を参照．}．
 %
-初期に上層は静止しており，$10 \tau_{interval}$ 秒経過する間に
+初期に上層は静止しており，$10 \tau_{{\rm{interval}}}$ 秒経過する間に
 最初の質量強制がランダムな位置に最大で50個加えられる．
 %
 自転角速度は木星の値を用いる．
@@ -626,22 +629,22 @@ $h$を$\langle h \rangle$に向かって平衡化するときの緩和時間で�
 緯度約$\pm 30^\circ$ で風速約$100 \rm{~m \cdot s^{-1}}$の西風ジェットが見られる．
 %
 また，その西風ジェットに対応して，図\ref{fig:A1_2}のジオポテンシャルが
-その領域で値が小さくなっている．
-
+その領域で値が大きくなっている．
 %
 正(負)の質量強制の場合，流体層に局所的な膨らみ(窪み)を作る．
-この局所的に膨らんだ場所はコリオリ力により，高気圧性(低気圧性)渦を形成する．
+この膨らみ(窪み)はコリオリ力により，高気圧性(低気圧性)渦を形成する．
 %
 このケースでは正の質量強制のみ与えられるため，
-図\ref{fig:A1_3}の相対渦度分布を見て分かるように，
-高気圧性渦が見て取れる．
-さらに，渦の正負を分かりやすくするために，無次元ポテンシャル渦度を定義する．
+図\ref{fig:A1_3}を見て分かるように，
+高気圧性渦が見られる．
 %
-無次元ポテンシャル渦度 : $Q_e^*$は
+また，ポテンシャル渦度はほぼラグランジュ的に保存するため，流体の性質を見るために役立つ．
+\cite{Brueshaber2019} では背景場のポテンシャル渦度からの
+渦の性質を知るために，次の無次元ポテンシャル渦度 : $Q_e^*$ を定義した．
 \begin{align}
-Q_e^* = \left [\frac{\zeta+f}{h}-\frac{f}{\langle h \rangle}\right]\cdot \frac{\langle h \rangle}{f_0} \label{eq:nonqv}
+Q_e^* = \left [\frac{\zeta+f}{h}-\frac{f}{\langle h \rangle}\right]\cdot \frac{\langle h \rangle}{f_0}. \label{eq:nonqv}
 \end{align}
-である．ここで，$\zeta$は相対渦度，$f$はコリオリパラメータ，$f_0$は極でのコリオリパラメータの値である．
+ここで，$\zeta$は相対渦度，$f$はコリオリパラメータ，$f_0$は極でのコリオリパラメータの値である．
 %
 $Q_e^*=0$は静止流体(相対的な渦度や厚さの摂動はない)を表す．
 $Q_e^*>0$は低気圧性の渦度を表し，
@@ -657,7 +660,6 @@ KE  &= \frac{1}{2} \int g'h(u^2 + v^2) dA.
 を示す．ここで，$A$ は計算領域の面積，$u, v$ はそれぞれ経度，緯度方向の速度である．
 %
 A1 のケースでは$\tau_{{\rm{APE}}} = \infty$ のため，局所的な緩和が効かず，APE とKE は時間とともに増加する．
-
 このケースは\cite{Showman2007}のA3 のケースに対応するが，
 極域でジオポテンシャルが負になる領域があることがわかった(他のケースについては表\ref{table2} 備考を参照．)．
 この系の上端の境界条件は剛体表面なので，物理的にはありえない．
@@ -811,13 +813,13 @@ $g'h_{\rm{eq}}$ を変化させ，Burger 数の値をかえた．
 \section{実験2 : $\tau_{\rm{APE}}$ の変化による影響}
 \label{sec:case2}
 この節では放射緩和項の$\tau_{\rm{APE}}$の変化による影響を調べる．
-$\tau_{\rm{APE}}$は局所的な流体層の厚さの変化を
-$\langle h_{\rm{eq}} \rangle $ に向かって緩和する．
+$\tau_{\rm{APE}}$は$g'h$を$\langle g'h \rangle $ に向かって緩和する．
 行ったケースは$\tau_{\rm{APE}} = \infty, 10^8, 10^7, 10^6, 10^5, 10^3$ である．
+
 %%%%%%%%%%%%%%%%%% case3 : alpha %%%%%%%%%%%%%%%%%%%
 \clearpage
 \newpage
-\section{実験3 : $\alpha$ の変化による影響}
+\section{実験3 : {$\alpha$} の変化による影響}
 \label{sec:case3}
 この節では質量強制の正負の割合である$\alpha$ の変化による影響を調べる．
 $\alpha = 1.0 (0.0)$ のとき正(負)の質量強制のみが与えられ，強制が与えられた位置で高気圧性(低気圧性)渦を形成する．
@@ -832,9 +834,9 @@ $\alpha = 1.0 (0.0)$ のとき正(負)の質量強制のみが与えられ，強
 最低でも3個の格子点を含むとされている．
 そのため，$R_{\rm{storm}}$を小さくすると
 それに従い，解像度をあげなければならない．
-行ったケースは$T341 : R_{\rm{storm}} = 8.72 \times 10^5 ~(0.7^\circ), 
-T170 : R_{\rm{storm}} = 2.62 \times 10^6 ~(2.1^\circ)$ であり，
-それぞれのケースで$R_{\rm{storm}}$の中に最低でも3個の格子点を含んでいる．
+行ったケースは${\rm{T341}} : R_{\rm{storm}} = 8.72 \times 10^5 ~(0.7^\circ), 
+{\rm{T170}} : R_{\rm{storm}} = 2.62 \times 10^6 ~(2.1^\circ)$ であり，
+それぞれのケースで$R_{\rm{storm}}$の中に約3個の格子点を含んでいる．
 
 
 %
@@ -887,12 +889,22 @@ def\thesection{\Alph{section}}
 %
 \newpage
 %
-%%  C  %%
-\def\apetitleC{: 実験図集}
-\def\apeC{\Alph{section} \apetitleC}
-\section{\apetitleC}
-\label{ape:C}
-\markright{\apeC}
+%%  Williamson  %%
+\def\apetitleW{: Williamson et al. (1992) のテスト計算}
+\def\apeW{\Alph{section} \apetitleW}
+\section{\apetitleW}
+\label{Williamson}
+\markright{\apeW}
+\input{./appendix/Williamson/appendix_w.tex}
+%
+\newpage
+%
+%%  Fig  %%
+\def\apetitleFig{: 実験図集}
+\def\apeFig{\Alph{section} \apetitleFig}
+\section{\apetitleFig}
+\label{ape:Fig}
+\markright{\apeFig}
 \input{./appendix/C/appendix_c.tex}
 
 %%%%%%%%%%%%%%%%

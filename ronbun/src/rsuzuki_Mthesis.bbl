@@ -1,4 +1,4 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{14}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -106,6 +106,16 @@ G.~K. Vallis.
 \newblock Cambridge University Press, 2017.
 \newblock \doi{10.1017/9781107588417}.
 \newblock URL \url{https://doi.org/10.1017/9781107588417}.
+
+\bibitem[Williamson et~al.(1992)Williamson, Drake, Hack, Jakob, and
+  Swarztrauber]{Williamson1992}
+D.~L. Williamson, J.~B. Drake, J.~J. Hack, R.~Jakob, and P.~N. Swarztrauber.
+\newblock A standard test set for numerical approximations to the shallow water
+  equations in spherical geometry.
+\newblock \emph{Journal of Computational Physics}, 102\penalty0 (1):\penalty0
+  211--224, Sept. 1992.
+\newblock \doi{10.1016/s0021-9991(05)80016-6}.
+\newblock URL \url{https://doi.org/10.1016/s0021-9991(05)80016-6}.
 
 \bibitem[Yoden and Yamada(1993)]{Yoden1993}
 S.~Yoden and M.~Yamada.
