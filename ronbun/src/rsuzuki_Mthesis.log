@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2020.3.7)  21 JAN 2021 23:05
+This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2020.3.7)  21 JAN 2021 23:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -577,9 +577,9 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ]
 第 章 章
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 200.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 201.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 200.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 201.
 File: ./fig/intro/fig1.jpg Graphic file (type bmp)
 <./fig/intro/fig1.jpg>
 [1
@@ -605,12 +605,12 @@ File: ./fig/model/fig5_v2.png Graphic file (type bmp)
 File: ./fig/model/table_para-2.jpg Graphic file (type bmp)
 <./fig/model/table_para-2.jpg>
 
-Overfull \hbox (8.79134pt too wide) in paragraph at lines 546--547
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 547--548
  [] 
  []
 
 
-LaTeX Warning: Float too large for page by 36.32951pt on input line 548.
+LaTeX Warning: Float too large for page by 36.32951pt on input line 549.
 
 [7] [8]
 File: ./fig/model/table1.jpg Graphic file (type bmp)
@@ -622,7 +622,7 @@ File: ./fig/model/table2_v2.png Graphic file (type bmp)
 <./fig/model/table2_v2.png>
 
 
-LaTeX Warning: Float too large for page by 23.97775pt on input line 605.
+LaTeX Warning: Float too large for page by 23.97775pt on input line 606.
 
 [10]
 File: ./fig/model/table_exp.jpg Graphic file (type bmp)
@@ -649,7 +649,7 @@ File: ./fig/result/A1/A1_5.jpg Graphic file (type bmp)
 File: ./fig/model/table_regime.jpg Graphic file (type bmp)
 <./fig/model/table_regime.jpg>
 
-Overfull \hbox (8.79134pt too wide) in paragraph at lines 768--769
+Overfull \hbox (8.79134pt too wide) in paragraph at lines 769--770
  [] 
  []
 
@@ -664,49 +664,49 @@ File: ./fig/result/case1/case1_2.jpg Graphic file (type bmp)
 ] [16]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 813.
+(hyperref)                removing `math shift' on input line 814.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tau' on input line 813.
+(hyperref)                removing `\tau' on input line 814.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 813.
+(hyperref)                removing `subscript' on input line 814.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 813.
+(hyperref)                removing `math shift' on input line 814.
 
 [17
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 822.
+(hyperref)                removing `math shift' on input line 823.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 822.
+(hyperref)                removing `\alpha' on input line 823.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 822.
+(hyperref)                removing `math shift' on input line 823.
 
 [18
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 830.
+(hyperref)                removing `math shift' on input line 831.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 830.
+(hyperref)                removing `subscript' on input line 831.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 830.
+(hyperref)                removing `math shift' on input line 831.
 
 [19
 
@@ -726,12 +726,43 @@ File: ./appendix/A/fig/one-half-fig1.png Graphic file (type bmp)
 ] [23] [24]) [25] [26]
 (./appendix/B/appendix_b.tex [27] [28] [29]) [30]
 (./appendix/Williamson/appendix_w.tex) [31] (./appendix/C/appendix_c.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 19.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 19.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\times' on input line 19.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 19.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 19.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\cdot' on input line 19.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 19.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 19.
+
 File: ./appendix/C/fig_colle/case1/a1_13/1.png Graphic file (type bmp)
 <./appendix/C/fig_colle/case1/a1_13/1.png>
 File: ./appendix/C/fig_colle/case1/a1_13/2.png Graphic file (type bmp)
 <./appendix/C/fig_colle/case1/a1_13/2.png>
-)
-[32] [33] [34
+) [32] [33] [34
 
 ] (./rsuzuki_Mthesis.bbl
 
@@ -751,27 +782,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--129
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 926.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 927.
  [37]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 926.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 927.
  (./rsuzuki_Mthesis.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 926.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 926.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 927.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 927.
 Package rerunfilecheck Info: File `rsuzuki_Mthesis.out' has not changed.
-(rerunfilecheck)             Checksum: B2E7CA1413D76EE4E5CED1B3958D9E9E;1810.
+(rerunfilecheck)             Checksum: 3D40F655397CE766CD4F966B6DFB65CA;1940.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 926.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 927.
  ) 
 Here is how much of TeX's memory you used:
- 8979 strings out of 493226
- 130592 string characters out of 6144096
- 254840 words of memory out of 5000000
- 12720 multiletter control sequences out of 15000+600000
+ 8980 strings out of 493226
+ 130610 string characters out of 6144096
+ 254955 words of memory out of 5000000
+ 12721 multiletter control sequences out of 15000+600000
  29838 words of font info for 119 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  31i,18n,31p,1087b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on rsuzuki_Mthesis.dvi (40 pages, 138480 bytes).
+Output written on rsuzuki_Mthesis.dvi (40 pages, 138980 bytes).

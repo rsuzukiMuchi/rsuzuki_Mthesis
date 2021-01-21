@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {B}: モデルで使用した方程式系}{27}{section.1.2}% 
 \contentsline {section}{\numberline {C}: Williamson et al. (1992) のテスト計算}{31}{section.1.3}% 
 \contentsline {section}{\numberline {D}: 実験図集}{32}{section.1.4}% 
-\contentsline {subsection}{\numberline {D.1}実験1}{32}{subsection.1.4.1}% 
+\contentsline {subsection}{\numberline {D.1}実験1 : Burger 数の変化による影響}{32}{subsection.1.4.1}% 
 \contentsline {subsubsection}{\numberline {D.1.1}A1 : $g'h_{\rm {eq}} = 6 \times 10^4 \rm {\nobreakspace {}m^2 \cdot s^{-3}}$}{32}{subsubsection.1.4.1.1}% 
 \contentsline {chapter}{謝辞}{34}{chapter*.19}% 
 \contentsline {chapter}{参考文献}{35}{chapter*.19}% 
