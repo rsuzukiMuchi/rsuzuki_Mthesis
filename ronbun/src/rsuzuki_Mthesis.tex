@@ -383,14 +383,14 @@ Burger 数の値が$8.16 \times 10^{-4 } \leq Bu \leq  2.50 \times 10^{-3}$の�
 この特徴からこのレジームを土星的と分類した．
 %
 Burger 数の値が$Bu \geq 4.44 \times 10^{-3 }$の場合，
-土星的レジームよりも強力な極を中心とした単一の低気圧性渦が形成する．
+土星的レジームよりも風速が大きい極を中心とした単一の低気圧性渦が形成する．
 この特徴からこのレジームを氷巨大惑星的と分類した．
 %
 \begin{figure}[H]
   \begin{center}
     \includegraphics[clip,width=14cm]{./fig/intro/fig4_1.png}
     \caption{
-      \footnotesize{\cite{Brueshaber2019}の無次元ポテンシャル渦度 : $Q_e^*$ の計算結果(20000地球日)．
+      \footnotesize{\cite{Brueshaber2019}の無次元ポテンシャル渦度 : $Q_e^*$ (式(\ref{eq:nonqv}))の計算結果(20000地球日)．
 Burger 数の値に応じて巨大惑星で観測されるような極渦のレジームが変化する．
 $Q_e^* = 0$ は静止流体(相対渦度や流体層の厚さの水平平均からの変化はない)，
 $Q_e^* > 0$ は低気圧性渦，$Q_e^* < 0$ は高気圧性渦を表す．
@@ -624,7 +624,7 @@ $h$を$\langle h \rangle$に向かって平衡化するときの緩和時間で�
 %
 無次元ポテンシャル渦度 : $Q_e^*$は
 \begin{align}
-Q_e^* = \left [\frac{\zeta+f}{h}-\frac{f}{\langle h \rangle}\right]\cdot \frac{\langle h \rangle}{f_0}
+Q_e^* = \left [\frac{\zeta+f}{h}-\frac{f}{\langle h \rangle}\right]\cdot \frac{\langle h \rangle}{f_0} \label{eq:nonqv}
 \end{align}
 である．ここで，$\zeta$は相対渦度，$f$はコリオリパラメータ，$f_0$は極でのコリオリパラメータの値である．
 %
@@ -727,16 +727,8 @@ L_{d0} = \frac{\sqrt{g'h_{{\rm{eq}}}}}{f_0}, \qquad f_0 = 2 \Omega
 無次元ポテンシャル渦度を示す．
 図の下に示されているアルファベットは\cite{Brueshaber2019}が
 Burger 数によって，分類した極渦のレジームを示している．
-それぞれ，次の特徴によって，分類されている．
-\begin{itemize}
-  \item J - 木星的レジーム
-  \begin{itemize}
-   \item 複数の渦が発生し，極に渦がとどまらない．
-  \end{itemize}
-  \item T - 遷移的レジーム
-  \item S - 土星的レジーム
-  \item I - 巨大氷惑星的レジーム
-\end{itemize}
+それぞれ，表\ref{table:regime} の特徴によって，分類されている．
+
 %
 \begin{figure}[ht]
   \begin{center}
