@@ -397,7 +397,7 @@ Burger 数の値が$Bu \geq 4.44 \times 10^{-3 }$の場合，
 上に\cite{Brueshaber2019}が分類した各レジーム名を示す．
 Burger 数の値に応じて巨大惑星で観測されるような極渦のレジームが変化する．
 $Q_e^* = 0$ は静止流体(相対渦度や流体層の厚さの水平平均からの変化はない)，
-$Q_e^* > 0$ は低気圧性渦，$Q_e^* < 0$ は高気圧性渦を表す．
+北半球で $Q_e^* > 0$ は低気圧性渦，$Q_e^* < 0$ は高気圧性渦を表す．
 \cite{Brueshaber2019} Fig.7 より引用．
       }
     }
@@ -565,11 +565,10 @@ $g'h$を$\langle g'h \rangle$に向かって平衡化するときの緩和時間
 それ以外の項には4次のルンゲクッタ法を用いる．
 %
 また数値モデルの作成には地球流体電脳倶楽部の階層的地球スペクトルモデル集
-(SPMODEL; \cite{spmodel2006}, \cite{spmodel2013}) を使用する
-\footnote{テスト計算のために1層浅水系でのテストセットを提案した
-\cite{Williamson1992}をスキームの確認と並列化効率の測定のために実行した．
-付録\ref{Williamson}を参照．}．
-%
+(SPMODEL; \cite{spmodel2006}, \cite{spmodel2013}) を使用する．
+テスト計算のために1層浅水系でのテストセットを提案した
+\cite{Williamson1992}をスキームの確認と並列化効率の測定のために実行した\footnote{付録\ref{Williamson}を参照．}．
+
 初期に上層は静止しており，$10 \tau_{{\rm{interval}}}$ 秒経過する間に
 最初の質量強制がランダムな位置に最大で50個加えられる．
 %
@@ -648,7 +647,7 @@ Q_e^* = \left [\frac{\zeta+f}{h}-\frac{f}{\langle h \rangle}\right]\cdot \frac{\
 ここで，$\zeta$は相対渦度，$f$はコリオリパラメータ，$f_0$は極でのコリオリパラメータの値である．
 %
 $Q_e^*=0$は静止流体(相対的な渦度や厚さの摂動はない)を表す．
-$Q_e^*>0$は低気圧性の渦度を表し，
+北半球で $Q_e^*>0$は低気圧性の渦度を表し，
 $Q_e^*<0$は高気圧性の渦度を表す．
 %
 図\ref{fig:A1_4}の極域を見てみると巨大な低気圧性渦の中に，複数の高気圧性渦が形成していることがわかる．
@@ -671,7 +670,7 @@ A1 のケースでは$\tau_{{\rm{APE}}} = \infty$ のため，局所的な緩和
   \begin{center}
     \includegraphics[clip,width=10cm]{./fig/result/A1/A1_1.png}
     \caption{
-      \footnotesize{A1の実験結果. 左 : 東西風速，右 : 東西平均した東西風速(3000 地球日)．
+      \footnotesize{A1の実験結果. 左 : 緯度$0^\circ$，経度$0^\circ$から見た球面投影の東西風速，右 : 東西平均した東西風速(3000 地球日)．
       }
     }
     \label{fig:A1_1}
@@ -684,8 +683,8 @@ A1 のケースでは$\tau_{{\rm{APE}}} = \infty$ のため，局所的な緩和
     \caption{
       \footnotesize{A1の実験結果. ジオポテンシャル(3000 地球日)．
 左 : 緯度$0^\circ$，経度$0^\circ$から見た球面投影.
-中 : 緯度$90^\circ$，経度$0^\circ$から見た球面投影.
-右 : 緯度$-90^\circ$，経度$0^\circ$から見た球面投影.
+中 : 緯度$90^\circ$ から見た球面投影.
+右 : 緯度$-90^\circ$ から見た球面投影.
       }
     }
     \label{fig:A1_2}
@@ -698,8 +697,8 @@ A1 のケースでは$\tau_{{\rm{APE}}} = \infty$ のため，局所的な緩和
     \caption{
       \footnotesize{A1の実験結果. 相対渦度(3000 地球日)．
 左 : 緯度$0^\circ$，経度$0^\circ$から見た球面投影.
-中 : 緯度$90^\circ$，経度$0^\circ$から見た球面投影.
-右 : 緯度$-90^\circ$，経度$0^\circ$から見た球面投影.
+中 : 緯度$90^\circ$ から見た球面投影.
+右 : 緯度$-90^\circ$ から見た球面投影.
       }
     }
     \label{fig:A1_3}
@@ -712,8 +711,8 @@ A1 のケースでは$\tau_{{\rm{APE}}} = \infty$ のため，局所的な緩和
     \caption{
       \footnotesize{A1の実験結果. 無次元ポテンシャル渦度(3000 地球日)．
 左 : 緯度$0^\circ$，経度$0^\circ$から見た球面投影.
-中 : 緯度$90^\circ$，経度$0^\circ$から見た球面投影.
-右 : 緯度$-90^\circ$，経度$0^\circ$から見た球面投影.
+中 : 緯度$90^\circ$ から見た球面投影.
+右 : 緯度$-90^\circ$ から見た球面投影.
       }
     }
     \label{fig:A1_4}
@@ -774,7 +773,7 @@ Burger 数によって，分類した極渦のレジームを示している．
   \begin{center}
     \includegraphics[clip,width=14cm]{./fig/result/case1/case1_1.png}
     \caption{
-      \footnotesize{無次元ポテンシャル渦度(3000 地球日)．
+      \footnotesize{緯度$90^\circ$ から見た球面投影の無次元ポテンシャル渦度(3000 地球日)．
 上にケース，下にBurger 数と\cite{Brueshaber2019}で分類された極渦のレジームを示している．
 $a$ を変化させ，Burger 数の値をかえた．
       }
@@ -787,7 +786,7 @@ $a$ を変化させ，Burger 数の値をかえた．
   \begin{center}
     \includegraphics[clip,width=14cm]{./fig/result/case1/case1_1.png}
     \caption{
-      \footnotesize{無次元ポテンシャル渦度(3000 地球日)．
+      \footnotesize{緯度$90^\circ$ から見た球面投影の無次元ポテンシャル渦度(3000 地球日)．
 上にケース，下にBurger 数と\cite{Brueshaber2019}で分類された極渦のレジームを示している．
 $g'h_{\rm{eq}}$ を変化させ，Burger 数の値をかえた．
       }
@@ -816,6 +815,52 @@ $g'h_{\rm{eq}}$ を変化させ，Burger 数の値をかえた．
 この節では放射緩和項の$\tau_{\rm{APE}}$の変化による影響を調べる．
 $\tau_{\rm{APE}}$は$g'h$を$\langle g'h \rangle $ に向かって緩和する．
 行ったケースは$\tau_{\rm{APE}} = \infty, 10^8, 10^7, 10^6, 10^5, 10^3$ である．
+図\ref{fig:case2_nonqv}，図\ref{fig:case2_vellon} に
+それぞれのケースの無次元ポテンシャル渦度と東西平均した東西風速を示す．
+また，それぞれのケースのAPE とKE の値を図\ref{fig:case2_apeke} に示す．
+図\ref{fig:casse2_nonqv}，図\ref{case2_vellon} を
+見てわかるように$\tau_{\rm{APE}}$ の値が小さくなるに従い，
+局所的な緩和が効くため，質量強制が
+与えられた領域の$g'h$ が $\langle g'h \rangle$に向かってすぐさま緩和する．
+それにより，\ref{sec:case1} で見られた特徴的な極渦レジームと東西風速が見られなくなる．
+%
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=14cm]{./fig/result/case2/case2_nonqv.png}
+    \caption{
+      \footnotesize{緯度$90^\circ$ から見た球面投影の無次元ポテンシャル渦度(3000 地球日)．
+上に$\tau_{\rm{APE}}$ の値とケースを示す．
+      }
+    }
+    \label{fig:case2_nonqv}
+  \end{center}
+\end{figure}
+%
+%
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=14cm]{./fig/result/case2/case2_vellon.png}
+    \caption{
+      \footnotesize{東西平均した東西風速(3000 地球日)．
+上に$\tau_{\rm{APE}}$ の値とケースを示す．
+      }
+    }
+    \label{fig:case2_vellon}
+  \end{center}
+\end{figure}
+%
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=12cm]{./fig/result/case2/case2_apeke.png}
+    \caption{
+      \footnotesize{実験2の実験結果. 上 : 有効ポテンシャルエネルギー : APE (実線) ，
+下 : 運動エネルギー : KE (点線) の時間発展．右上に$\tau_{\rm{APE}}$ の値と各線のケースを示す．
+      }
+    }
+    \label{fig:case2_apeke}
+  \end{center}
+\end{figure}
+%
 
 %%%%%%%%%%%%%%%%%% case3 : alpha %%%%%%%%%%%%%%%%%%%
 \clearpage
