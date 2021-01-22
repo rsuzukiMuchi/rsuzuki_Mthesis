@@ -1,4 +1,4 @@
-\begin{thebibliography}{14}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -57,6 +57,20 @@ P.~J. Gierasch, A.~P. Ingersoll, D.~Banfield, S.~P. Ewald, P.~Helfenstein,
 \newblock \doi{10.1038/35001017}.
 \newblock URL \url{https://doi.org/10.1038/35001017}.
 
+\bibitem[Jakob et~al.(1993)Jakob, Hack, and Williamson]{Jakob1993}
+R.~Jakob, J.~Hack, and D.~Williamson.
+\newblock Solutions to the shallow water test set using the spectral transform
+  method.
+\newblock Technical report, 1993.
+\newblock URL \url{http://opensky.ucar.edu/islandora/object/technotes:155}.
+
+\bibitem[Odaka(2005)]{OdakaWilliamson}
+M.~Odaka.
+\newblock Spmodel 球面浅水モデルを用いた williamson et al. (1992) のテスト,
+  2005.
+\newblock URL
+  \url{http://www.gfd-dennou.org/library/numexp/spshallow-zd_bench/exp/}.
+
 \bibitem[Porco(2005)]{Porco2005}
 C.~C. Porco.
 \newblock Cassini imaging science: Initial results on saturn's atmosphere.
@@ -85,6 +99,12 @@ A.~P. Showman.
 \bibitem[Showman et~al.(2009)Showman, Cho, and Menou]{showman2009atmospheric}
 A.~P. Showman, J.~Y.-K. Cho, and K.~Menou.
 \newblock Atmospheric circulation of exoplanets, 2009.
+
+\bibitem[Takehiro(2004)]{TakehiroWilliamson}
+S.~Takehiro.
+\newblock 球面浅水方程式モデル:渦度発散型, 2004.
+\newblock URL
+  \url{https://www.gfd-dennou.org/library/numexp/spshallow-zd_bench/pub/spshallow-zd.pdf}.
 
 \bibitem[Takehiro et~al.(2006)Takehiro, Odaka, Ishioka, Ishiwatari, and
   Hayashi]{spmodel2006}

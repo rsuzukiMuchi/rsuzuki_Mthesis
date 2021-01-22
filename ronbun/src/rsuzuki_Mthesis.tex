@@ -536,6 +536,9 @@ $g'h$を$\langle g'h \rangle$に向かって平衡化するときの緩和時間
 右辺第2項は緩和時間$\tau_{{\rm{APE}}}$ で
 局所的な$g'h$を$\langle g'h \rangle $に向かって，緩和する．
 %
+これは物理的には潜熱を放出する雷雲のような大気の暖かい領域が
+冷たい領域よりも早く冷えるという効果をあらわしている．
+%
 これら2つの項により，統計的定常状態を実現する．
 %
 \cite{Brueshaber2019} ではこれらの強制項に加え，加えた質量強制を層から差し引く
@@ -654,8 +657,8 @@ $Q_e^*<0$は高気圧性の渦度を表す．
 %
 図\ref{fig:A1_5}に有効ポテンシャルエネルギー : APE と運動エネルギー : KE 
 \begin{align}
-APE &= \frac{1}{2} \int \left[(g'h)^2 - \langle g'h \rangle^2   \right] dA. \\
-KE  &= \frac{1}{2} \int g'h(u^2 + v^2) dA.
+APE &= \frac{1}{2} \int \left[(g'h)^2 - \langle g'h \rangle^2   \right] dA. \label{eq:APE} \\
+KE  &= \frac{1}{2} \int g'h(u^2 + v^2) dA. \label{eq:KE}
 \end{align}
 を示す．ここで，$A$ は計算領域の面積，$u, v$ はそれぞれ経度，緯度方向の速度である．
 %
@@ -774,7 +777,7 @@ Burger 数によって，分類した極渦のレジームを示している．
     \includegraphics[clip,width=14cm]{./fig/result/case1/case1_1.png}
     \caption{
       \footnotesize{緯度$90^\circ$ から見た球面投影の無次元ポテンシャル渦度(3000 地球日)．
-上にケース，下にBurger 数と\cite{Brueshaber2019}で分類された極渦のレジームを示している．
+上にケース名，下にBurger 数と\cite{Brueshaber2019}で分類された極渦のレジームを示している．
 $a$ を変化させ，Burger 数の値をかえた．
       }
     }
@@ -787,7 +790,7 @@ $a$ を変化させ，Burger 数の値をかえた．
     \includegraphics[clip,width=14cm]{./fig/result/case1/case1_1.png}
     \caption{
       \footnotesize{緯度$90^\circ$ から見た球面投影の無次元ポテンシャル渦度(3000 地球日)．
-上にケース，下にBurger 数と\cite{Brueshaber2019}で分類された極渦のレジームを示している．
+上にケース名，下にBurger 数と\cite{Brueshaber2019}で分類された極渦のレジームを示している．
 $g'h_{\rm{eq}}$ を変化させ，Burger 数の値をかえた．
       }
     }
@@ -800,7 +803,7 @@ $g'h_{\rm{eq}}$ を変化させ，Burger 数の値をかえた．
     \includegraphics[clip,width=14cm]{./fig/result/case1/case1_2.jpg}
     \caption{
       \footnotesize{東西平均した東西風速(3000 地球日)．
-上にケース，下にBurger 数と\cite{Brueshaber2019}で分類された極渦のレジームを示している．
+上にケース名，下にBurger 数と\cite{Brueshaber2019}で分類された極渦のレジームを示している．
       }
     }
     \label{fig:case1_2}
@@ -817,19 +820,31 @@ $\tau_{\rm{APE}}$は$g'h$を$\langle g'h \rangle $ に向かって緩和する�
 行ったケースは$\tau_{\rm{APE}} = \infty, 10^8, 10^7, 10^6, 10^5, 10^3$ である．
 図\ref{fig:case2_nonqv}，図\ref{fig:case2_vellon} に
 それぞれのケースの無次元ポテンシャル渦度と東西平均した東西風速を示す．
-また，それぞれのケースのAPE とKE の値を図\ref{fig:case2_apeke} に示す．
-図\ref{fig:casse2_nonqv}，図\ref{case2_vellon} を
+図\ref{fig:case2_nonqv}，図\ref{fig:case2_vellon} を
 見てわかるように$\tau_{\rm{APE}}$ の値が小さくなるに従い，
 局所的な緩和が効くため，質量強制が
 与えられた領域の$g'h$ が $\langle g'h \rangle$に向かってすぐさま緩和する．
-それにより，\ref{sec:case1} で見られた特徴的な極渦レジームと東西風速が見られなくなる．
+そのため，実験\ref{sec:case1}で見られたような特徴的な極渦が現れない．
+特に，C4, C5 のケースではほとんど，強制の影響がみられない．
+%
+東西平均した東西風速も$\tau_{\rm{APE}}$の値が小さくなるに従い，
+その大きさが小さくなり，C4, C5 のケースでほとんど0となる．
+赤道域のジェットC4, C5 以外のケースで\ref{sec:case1} 節と同様，東風ジェットとなる．
+
+それぞれのケースのAPE(式(\ref{eq:APE})) とKE(式(\ref{eq:KE})) の値を図\ref{fig:case2_apeke} に示す．
+$\tau_{\rm{APE}}=\infty$ の A1 のケースでは，APE とKE は時間とともに増加していくが
+(縦軸に対数をとっていない図は\ref{sec:A1}節の図\ref{fig:A1_5}を参照．)，
+$\tau_{\rm{APE}}$が有限値の場合，ある時間でエネルギーの注入率と除去率が
+平衡し，一定の値付近で振動することがわかる．
+また，計算をはじめてからエネルギーが
+平衡化するまでの時間は$\tau_{\rm{APE}}$が小さくなるにつれて，みじかくなる．
 %
 \begin{figure}[ht]
   \begin{center}
     \includegraphics[clip,width=14cm]{./fig/result/case2/case2_nonqv.png}
     \caption{
       \footnotesize{緯度$90^\circ$ から見た球面投影の無次元ポテンシャル渦度(3000 地球日)．
-上に$\tau_{\rm{APE}}$ の値とケースを示す．
+上に$\tau_{\rm{APE}}$ の値とケース名を示す．
       }
     }
     \label{fig:case2_nonqv}
@@ -842,7 +857,7 @@ $\tau_{\rm{APE}}$は$g'h$を$\langle g'h \rangle $ に向かって緩和する�
     \includegraphics[clip,width=14cm]{./fig/result/case2/case2_vellon.png}
     \caption{
       \footnotesize{東西平均した東西風速(3000 地球日)．
-上に$\tau_{\rm{APE}}$ の値とケースを示す．
+上に$\tau_{\rm{APE}}$ の値とケース名を示す．
       }
     }
     \label{fig:case2_vellon}
@@ -853,8 +868,8 @@ $\tau_{\rm{APE}}$は$g'h$を$\langle g'h \rangle $ に向かって緩和する�
   \begin{center}
     \includegraphics[clip,width=12cm]{./fig/result/case2/case2_apeke.png}
     \caption{
-      \footnotesize{実験2の実験結果. 上 : 有効ポテンシャルエネルギー : APE (実線) ，
-下 : 運動エネルギー : KE (点線) の時間発展．右上に$\tau_{\rm{APE}}$ の値と各線のケースを示す．
+      \footnotesize{実験2の実験結果. 上 : 有効ポテンシャルエネルギー : APE ，
+下 : 運動エネルギー : KE の時間発展．右上に$\tau_{\rm{APE}}$ の値と各線のケース名を示す．
       }
     }
     \label{fig:case2_apeke}
@@ -868,8 +883,46 @@ $\tau_{\rm{APE}}$は$g'h$を$\langle g'h \rangle $ に向かって緩和する�
 \section{実験3 : {$\alpha$} の変化による影響}
 \label{sec:case3}
 この節では質量強制の正負の割合である$\alpha$ の変化による影響を調べる．
-$\alpha = 1.0 (0.0)$ のとき正(負)の質量強制のみが与えられ，強制が与えられた位置で高気圧性(低気圧性)渦を形成する．
+$\alpha = 1.0 (~0.0)$ のとき正(負)の質量強制のみが与えられ，強制が与えられた位置で高気圧性(低気圧性)渦を形成する．
 行ったケースは$\alpha = 1, 0.5, 0.0$ である．
+図\ref{fig:case3_nonqv}，図\ref{fig:case3_vellon} に
+それぞれのケースの無次元ポテンシャル渦度と東西平均した東西風速を示す．
+このケースのBurger 数は$Bu = 4.64\times 10^{-4}$で\cite{Brueshaber2019}によれば
+高気圧・低気圧性渦が共存する遷移レジームである．
+図\ref{fig:case3_nonqv}を見てみると，確かにそのような特徴が見られ，
+その特徴は$\alpha$の値によって，北極・南極域ともに変化しない．
+また，東西平均した東西風速も赤道域の東風ジェットの大きさ(約$-120 \rm{~m \cdot s^{-1}}$)や幅，
+中緯度の西風ジェットが形成する緯度(約$\pm 30^\circ$)も目立った変化は見られない．
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=9cm]{./fig/result/case3/case3_nonqv.png}
+    \caption{
+      \footnotesize{無次元ポテンシャル渦度(3000 地球日)．
+左 : 緯度$90^\circ$ から見た球面投影.
+右 : 緯度$-90^\circ$ から見た球面投影.
+上に$\alpha$ の値とケース名を示す．
+      }
+    }
+    \label{fig:case3_nonqv}
+  \end{center}
+\end{figure}
+\clearpage
+%
+%
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=14cm]{./fig/result/case3/case3_vellon.png}
+    \caption{
+      \footnotesize{東西平均した東西風速(3000 地球日)．
+上に$\alpha$ の値とケース名を示す．
+      }
+    }
+    \label{fig:case3_vellon}
+  \end{center}
+\end{figure}
+%
+
+
 %%%%%%%%%%%%%%%%%% case4 : R_storm %%%%%%%%%%%%%%%%%%%
 \clearpage
 \newpage

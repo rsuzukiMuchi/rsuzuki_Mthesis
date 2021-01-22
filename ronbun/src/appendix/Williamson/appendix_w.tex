@@ -11,4 +11,105 @@
 \renewcommand{\thefigure}{\Alph{section}.\arabic{subsection}.\arabic{figure}}
 \renewcommand{\thetable}{\Alph{section}.\arabic{subsection}.\arabic{table}}
 %
+ここでは，\cite{Williamson1992}によって，提案されたテストケースの実験を行い，
+コードのチェックと数値スキームの評価を行う．
+また，テストケース2 は並列化効率を調べるためにも用いられるため，
+数値モデルの作成に使用した
+地球流体電脳倶楽部の階層的地球スペクトルモデル集(SPMODEL; \cite{spmodel2006}, \cite{spmodel2013} )
+のver. 1 とver. 2 の並列化効率の比較を行う．
+この計算をするにあたり，\cite{TakehiroWilliamson}, \cite{OdakaWilliamson} を参考にした．
+%%%% case1 %%%%
+\subsection{テストケース1 : 極をこえるcos 型の山の移流}
+このケースは剛体回転の流れ場にcos 型の山を置き移流させる実験である．
+経度，緯度方向速度 $u, v$ を定常とし，連続の式のみを計算する．
+方程式は表面変位$h$の移流方程式となる．
+$u, v$の初期値は
+\begin{align}
+u &= u_0 (\cos{\theta}\cos{\alpha} + \sin{\theta}\cos{\lambda}\sin{\alpha}), \\
+v &= -u_0 \sin{\lambda} \sin{\alpha}.
+\end{align}
+流線関数と速度ポテンシャルは
+\begin{align}
+\psi &= -a u_0 (\sin{\theta} \cos{\alpha} - \cos{\lambda} \cos{\theta} \sin{\alpha}), \\
+\chi &=0.
+\end{align}
+$\alpha$は剛体回転流の回転軸と球面座標系の極軸とのなす角である．
+初期の山の分布は
+\begin{equation}
+h(\lambda, \theta) = 
+\begin{cases}
+(h_0/2)(1+\cos{(\pi r/R)}) &  r < R \\
+0 &  r \ge R
+\end{cases}.
+\end{equation}
+ここで，$h_0=1000 $m，$r$は$(\lambda, \theta)$から山の中心との大円距離である．初期の山の中心は$(\lambda_c, \theta_c)=(3\pi/2, 0)$である．$r$は
+\begin{align}
+r=a \arccos[\sin \theta_c \sin \theta + \cos \theta_c \cos \theta \cos(\lambda- \lambda_c)].
+\end{align}
+山の半径は$R=a/3$，移流風速速度は$u_0=2\pi a/(12 days)$，これは約$40 $m/sに相当する．この解は形を変えることなく，移動する．
+誤差測定のために全球の離散近似積分$I$を定義する．
+\begin{equation}
+I(h)=\frac{1}{4\pi}\int^{2\pi}_0 \int^{\pi/2}_{-\pi/2}h(\lambda,\theta)\cos{\theta}\Dd \theta d\lambda.
+\end{equation}
+正規化した表面変位の全球誤差は
+\begin{align}
+l_1(h)&=\frac{I[|h(\lambda,\theta)-h_T(\lambda,\theta)|]}{I[|h_T(\lambda,\theta)|]}, \label{l1h} \\
+l_2(h)&=\frac{\{I[(h(\lambda,\theta)-h_T(\lambda,\theta))^2]\}^{1/2}}{\{I[h_T(\lambda,\theta)^2]\}^{1/2}}, \label{l2h} \\
+l_\infty(h)&=\frac{{\rm{max_{all}}} |h(\lambda,\theta)-h_T(\lambda,\theta)|}{{\rm{max_{all}}}|h_T(\lambda,\theta)|} . \label{linfh}
+\end{align}
+ここで$h_T$は真の解である．
+表面変位の計算結果を図\ref{case1_h}に示す．
+%
+式(\ref{l1h}), (\ref{l2h}), (\ref{linfh}) の表面変位の全球誤差を図\ref{case1_lh} に示す．
+図\ref{case1_Jakob} はこのテストケースの計算を行った\cite{Jakob1993}の計算結果である．
+\cite{Jakob1993} と同程度の精度で計算できることがわかる．
+また並列数を増やしても，問題ないことが確認できる．
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=14cm]{./appendix/Williamson/fig/case1/case1_h.png}
+ \end{center}
+ \caption{\footnotesize{表面変位(T42, 並列数 : ip = 2, $\alpha=\pi/2$).上から0，1.5, 3, 4.5日の計算結果．
+緯度$60^\circ$，経度$230^\circ$から見た球面投影.
+}
+}
+ \label{case1_h}
+\end{figure}
+\clearpage
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=8cm]{./appendix/Williamson/fig/case1/case1_lh.png}
+ \end{center}
+ \caption{\footnotesize{表面変位の全球誤差(T42, $\alpha=\pi/2 -0.05 $)．$l_1$ は黒線，$l_2$ は青線，$l_\infty$ は赤線．
+2, 4, 8, 16 並列の計算結果．
+}
+}
+ \label{case1_lh}
+\end{figure}
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=7cm]{./appendix/Williamson/fig/case1/case1_Jakob.jpg}
+ \end{center}
+ \caption{\footnotesize{表面変位の全球誤差(T42, $\alpha=\pi/2 -0.05 $)．\cite{Jakob1993} 図1.3 より引用．
+}
+}
+ \label{case1_Jakob}
+\end{figure}
+\clearpage
+
+%%%% case2 %%%%
+%
+\subsection{テストケース2 : 定常な非線形帯状地衡流}
+\subsubsection{SPMODEL ver.1, ver.2 の並列化効率の比較}
+%
+%%%% case3 %%%%
+\subsection{テストケース3 : 局在した定常非線形帯状地衡流}
+%%%% case4 %%%%
+\subsection{テストケース4 : 移動する低気圧を持つ強制された流れ}
+%%%% case5 %%%%
+\subsection{テストケース5 : 孤立した山を越える帯状流}
+%%%% case6 %%%%
+\subsection{テストケース6 : ロスビーハウルヴィッツ波}
 
