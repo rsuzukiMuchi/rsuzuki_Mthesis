@@ -497,9 +497,9 @@ I_i(\xi(t)=\frac{I[\xi(\lambda,\theta,t)]-I[\xi(\lambda,\theta,0)]}{I[\xi(\lambd
  \begin{center}
  \includegraphics[clip,width=14cm]{./appendix/Williamson/fig/case5/case5_error1.png}
  \end{center}
- \caption{\footnotesize{正規化した誤差(T213, 並列数 : ip = 32)，上から質量，全エネルギー，ポテンシャルエンストロフィー．
+ \caption{\footnotesize{正規化した誤差．上から質量，全エネルギー，ポテンシャルエンストロフィー．
 左 : \cite{Jakob1993} の計算結果 (彼らの図5.4 より引用)．
-右 : 計算結果．
+右 : 計算結果 (T42 : 黒線，T63 : 赤線).
 }
 }
  \label{case5_error1}
@@ -510,9 +510,9 @@ I_i(\xi(t)=\frac{I[\xi(\lambda,\theta,t)]-I[\xi(\lambda,\theta,0)]}{I[\xi(\lambd
  \begin{center}
  \includegraphics[clip,width=14cm]{./appendix/Williamson/fig/case5/case5_error2.png}
  \end{center}
- \caption{\footnotesize{正規化した誤差(T213, 並列数 : ip = 32)，上から渦度，発散．
+ \caption{\footnotesize{正規化した誤差．上から渦度，発散．
 左 : \cite{Jakob1993} の計算結果 (彼らの図5.5 より引用)．
-右 : 計算結果．
+右 : 計算結果 (T42 : 黒線，T63 : 赤線).．
 }
 }
  \label{case5_error2}
@@ -521,4 +521,90 @@ I_i(\xi(t)=\frac{I[\xi(\lambda,\theta,t)]-I[\xi(\lambda,\theta,0)]}{I[\xi(\lambd
 
 %%%% case6 %%%%
 \subsection{テストケース6 : ロスビー・ハウルヴィッツ波}
+ロスビー・ハウルヴィッツ波は球面での非線形順圧渦度方程式の解である．
+初期の流線関数は
+\begin{align}
+\psi = -a^2 \omega \sin \theta + a^2 K \cos^R \theta \sin \theta \cos R \lambda.
+\end{align}
+ここで，$\omega, K, R$は定数である．
+速度成分は
+\begin{align}
+u&=a \omega \cos \theta + a K \cos^{R-1} \theta(R \sin^2 \theta - \cos^2 \theta)\cos R\lambda ,\\
+v&=-a K R \cos^{R-1}\theta \sin \theta \sin R \lambda.
+\end{align}
+渦度と発散は
+\begin{align}
+\zeta &= 2\omega \sin \theta - K \sin \theta \cos^R \theta (R^2 + 3R +2)\cos R \lambda, \\
+D &= 0.
+\end{align}
+$h$は
+\begin{align}
+gh &= gh_0 + a^2 A(\theta) + a^2 B(\theta) \cos R \lambda
+ + a^2 C(\theta)\cos 2R\lambda, \\
+A(\theta) &=\frac{\omega}{2}(2\Omega + \omega)\cos^2 \theta +
+\frac{1}{4}K^2 \cos^{2R}\theta [(R+1)\cos^2 \theta + (2R^2 -R-2)-2R^2\cos^{-2}], \\
+B(\theta) &=\frac{2(\Omega + \omega)K}{(R+1)(R+2)}\cos^R \theta
+[(R^2 + 2R +2)-(R+1)^2 \cos^2 \theta], \\
+C(\theta) &= \frac{1}{4}K^2 \cos^{2R}\theta [(R+1)\cos^2 \theta -(R+2)]
+\end{align}
+で与えられる．
+ここで，$\omega=K=7.848\times 10^{-6} {\rm{s^{-1}}},h_0=8\times 10^3 \rm{m}$である．
 
+自由表面の計算結果を図\ref{case6_h}に示す．
+帯状流の蛇行を確認できる．
+%
+また，図\ref{case6_hcomp}，\ref{case6_error1}，\ref{case6_error2} を見てわかるように，
+\cite{Jakob1993}との計算結果と大きな違いはない．
+全球保存量もかなりの精度で保存していることがわかる．
+%
+%
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=14cm]{./appendix/Williamson/fig/case6/case6_h.png}
+ \end{center}
+ \caption{\footnotesize{自由表面と速度ベクトル(T213, 並列数 : ip = 32).上から0，5, 10, 14日の計算結果．
+緯度$45^\circ$，経度$0^\circ$から見た球面投影.
+}
+}
+ \label{case6_h}
+\end{figure}
+\clearpage
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=14cm]{./appendix/Williamson/fig/case6/case6_hcomp.png}
+ \end{center}
+ \caption{\footnotesize{自由表面(T213, 並列数 : ip = 2)．上 : \cite{Jakob1993} の計算結果 (彼らの図6.1 より引用)．
+下 : 計算結果．等値線の間隔はどちらも 100 m．
+}
+}
+ \label{case6_hcomp}
+\end{figure}
+\clearpage
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=14cm]{./appendix/Williamson/fig/case6/case6_error1.png}
+ \end{center}
+ \caption{\footnotesize{正規化した誤差．上から質量，全エネルギー，ポテンシャルエンストロフィー．
+左 : \cite{Jakob1993} の計算結果 (彼らの図6.7 より引用)．
+右 : 計算結果 (T42 : 黒線，T63 : 赤線).
+}
+}
+ \label{case6_error1}
+\end{figure}
+\clearpage
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=14cm]{./appendix/Williamson/fig/case6/case6_error2.png}
+ \end{center}
+ \caption{\footnotesize{正規化した誤差．上から渦度，発散．
+左 : \cite{Jakob1993} の計算結果 (彼らの図6.8 より引用)．
+右 : 計算結果 (T42 : 黒線，T63 : 赤線).
+}
+}
+ \label{case6_error2}
+\end{figure}
+\clearpage

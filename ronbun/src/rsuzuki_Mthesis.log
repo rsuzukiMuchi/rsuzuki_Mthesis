@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2020.3.7)  23 JAN 2021 18:26
+This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2020.3.7)  23 JAN 2021 23:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -808,10 +808,30 @@ File: ./appendix/Williamson/fig/case5/case5_error2.png Graphic file (type bmp)
  [56
 
 
-]) [57
+]
+Overfull \hbox (13.0774pt too wide) detected at line 549
+[]
+ []
+
+File: ./appendix/Williamson/fig/case6/case6_h.png Graphic file (type bmp)
+<./appendix/Williamson/fig/case6/case6_h.png>
+[57
+
+] [58]
+File: ./appendix/Williamson/fig/case6/case6_hcomp.png Graphic file (type bmp)
+<./appendix/Williamson/fig/case6/case6_hcomp.png>
+ [59
 
 ]
-(./appendix/C/appendix_c.tex
+File: ./appendix/Williamson/fig/case6/case6_error1.png Graphic file (type bmp)
+<./appendix/Williamson/fig/case6/case6_error1.png>
+ [60]
+File: ./appendix/Williamson/fig/case6/case6_error2.png Graphic file (type bmp)
+<./appendix/Williamson/fig/case6/case6_error2.png>
+ [61
+
+
+]) (./appendix/C/appendix_c.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 19.
@@ -848,7 +868,9 @@ File: ./appendix/C/fig_colle/case1/a1_13/1.png Graphic file (type bmp)
 <./appendix/C/fig_colle/case1/a1_13/1.png>
 File: ./appendix/C/fig_colle/case1/a1_13/2.png Graphic file (type bmp)
 <./appendix/C/fig_colle/case1/a1_13/2.png>
-) [58] [59] [60
+) [62
+
+] [63] [64
 
 ] (./rsuzuki_Mthesis.bbl
 
@@ -859,7 +881,7 @@ LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
 (Font)              using `JY1/gt/m/n' instead on input line 20.
 
-[61
+[65
 
 ]
 Underfull \hbox (badness 2932) in paragraph at lines 71--73
@@ -867,7 +889,7 @@ Underfull \hbox (badness 2932) in paragraph at lines 71--73
  / library / numexp / spshallow-[]zd _ bench /
  []
 
-[62]
+[66]
 Underfull \hbox (badness 10000) in paragraph at lines 147--149
 []\OT1/cmr/m/n/12 URL [][]$\OT1/cmtt/m/n/12 https : / / doi . org / 10 . 1175 /
  1520-[]0469(1993 ) 050<[]0631 : aneotd >[] 2 . 0 .
@@ -875,14 +897,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--149
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1025.
- [63]
+ [67]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1025.
  (./rsuzuki_Mthesis.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1025.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1025.
 
 Package rerunfilecheck Info: File `rsuzuki_Mthesis.out' has not changed.
-(rerunfilecheck)             Checksum: 4807BC7D2BEDC1F4149F023A0412130C;2743.
+(rerunfilecheck)             Checksum: AD89EEBF3811D1D00D60A485B10FF2B3;2746.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -890,12 +912,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1025.
  ) 
 Here is how much of TeX's memory you used:
- 9106 strings out of 493226
- 134455 string characters out of 6144096
- 258738 words of memory out of 5000000
- 12808 multiletter control sequences out of 15000+600000
+ 9124 strings out of 493226
+ 135078 string characters out of 6144096
+ 259242 words of memory out of 5000000
+ 12820 multiletter control sequences out of 15000+600000
  29838 words of font info for 119 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  31i,18n,31p,1087b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on rsuzuki_Mthesis.dvi (67 pages, 212736 bytes).
+Output written on rsuzuki_Mthesis.dvi (71 pages, 222248 bytes).
