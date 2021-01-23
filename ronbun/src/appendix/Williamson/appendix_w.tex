@@ -22,7 +22,7 @@
 \subsection{テストケース1 : 極をこえるcos 型の山の移流}
 このケースは剛体回転の流れ場にcos 型の山を置き移流させる実験である．
 経度，緯度方向速度 $u, v$ を定常とし，連続の式のみを計算する．
-方程式は表面変位$h$の移流方程式となる．
+方程式は自由表面$h$の移流方程式となる．
 $u, v$の初期値は
 \begin{align}
 u &= u_0 (\cos{\theta}\cos{\alpha} + \sin{\theta}\cos{\lambda}\sin{\alpha}), \\
@@ -46,18 +46,19 @@ h(\lambda, \theta) =
 \begin{align}
 r=a \arccos[\sin \theta_c \sin \theta + \cos \theta_c \cos \theta \cos(\lambda- \lambda_c)].
 \end{align}
-山の半径は$R=a/3$，移流風速速度は$u_0=2\pi a/(12 days)$，これは約$40 $m/sに相当する．この解は形を変えることなく，移動する．
+山の半径は$R=a/3$，移流風速速度は$u_0=2\pi a/(12 \rm{~days})$，これは約$40 \rm{~m \cdot s^{-1}}$に相当する．この解は形を変えることなく，移動する．
 誤差測定のために全球の離散近似積分$I$を定義する．
 \begin{equation}
-I(h)=\frac{1}{4\pi}\int^{2\pi}_0 \int^{\pi/2}_{-\pi/2}h(\lambda,\theta)\cos{\theta}\Dd \theta d\lambda.
+I(h)=\frac{1}{4\pi}\int^{2\pi}_0 \int^{\pi/2}_{-\pi/2}h(\lambda,\theta)\cos{\theta}\Dd \theta d\lambda. \label{eq:I}
 \end{equation}
-正規化した表面変位の全球誤差は
+正規化した$h$の全球誤差は
 \begin{align}
 l_1(h)&=\frac{I[|h(\lambda,\theta)-h_T(\lambda,\theta)|]}{I[|h_T(\lambda,\theta)|]}, \label{l1h} \\
 l_2(h)&=\frac{\{I[(h(\lambda,\theta)-h_T(\lambda,\theta))^2]\}^{1/2}}{\{I[h_T(\lambda,\theta)^2]\}^{1/2}}, \label{l2h} \\
 l_\infty(h)&=\frac{{\rm{max_{all}}} |h(\lambda,\theta)-h_T(\lambda,\theta)|}{{\rm{max_{all}}}|h_T(\lambda,\theta)|} . \label{linfh}
 \end{align}
 ここで$h_T$は真の解である．
+
 表面変位の計算結果を図\ref{case1_h}に示す．
 %
 式(\ref{l1h}), (\ref{l2h}), (\ref{linfh}) の表面変位の全球誤差を図\ref{case1_lh} に示す．
@@ -69,7 +70,7 @@ l_\infty(h)&=\frac{{\rm{max_{all}}} |h(\lambda,\theta)-h_T(\lambda,\theta)|}{{\r
  \begin{center}
  \includegraphics[clip,width=14cm]{./appendix/Williamson/fig/case1/case1_h.png}
  \end{center}
- \caption{\footnotesize{表面変位(T42, 並列数 : ip = 2, $\alpha=\pi/2$).上から0，1.5, 3, 4.5日の計算結果．
+ \caption{\footnotesize{表面変位と速度ベクトル(T42, 並列数 : ip = 2, $\alpha=\pi/2$).上から0，1.5, 3, 4.5日の計算結果．
 緯度$60^\circ$，経度$230^\circ$から見た球面投影.
 }
 }
@@ -92,7 +93,7 @@ l_\infty(h)&=\frac{{\rm{max_{all}}} |h(\lambda,\theta)-h_T(\lambda,\theta)|}{{\r
  \begin{center}
  \includegraphics[clip,width=7cm]{./appendix/Williamson/fig/case1/case1_Jakob.jpg}
  \end{center}
- \caption{\footnotesize{表面変位の全球誤差(T42, $\alpha=\pi/2 -0.05 $)．\cite{Jakob1993} 図1.3 より引用．
+ \caption{\footnotesize{表面変位の全球誤差(T42, $\alpha=\pi/2 -0.05 $)．$l_1$ は破線，$l_2$ は点線，$l_\infty$ は実線．\cite{Jakob1993} 図1.3 より引用．
 }
 }
  \label{case1_Jakob}
@@ -102,14 +103,349 @@ l_\infty(h)&=\frac{{\rm{max_{all}}} |h(\lambda,\theta)-h_T(\lambda,\theta)|}{{\r
 %%%% case2 %%%%
 %
 \subsection{テストケース2 : 定常な非線形帯状地衡流}
+このケースは非線形球面浅水方程式系の定常解として得られる
+剛体回転の流れ場と，それに地衡流平衡する表面変位の分布を初期に与える．
+$u, v$の初期値は
+\begin{align}
+u&=u_0(\cos \theta \cos \alpha + \cos \lambda \sin \theta \sin \alpha), \\
+v&=-u_0 \sin \lambda \sin \alpha.
+\end{align}
+流線関数と速度ポテンシャルは
+\begin{align}
+\psi &= -a u_0 (\sin \theta \cos \alpha - \cos \lambda \cos \theta \sin \alpha), \\
+\chi &= 0.
+\end{align}
+絶対渦度は
+\begin{align}
+\eta = \left (\frac{2u_0}{a}+ 2\Omega \right)(-\cos \lambda \cos \theta \sin \alpha + \sin \theta \cos \alpha).
+\end{align}
+解析的な高度場は
+\begin{align}
+gh = gh_0 - \left (a \Omega u_0 +\frac{u_0^2}{2} \right)(-\cos \lambda \cos \theta \sin \alpha + \sin \theta \cos \alpha)^2.
+\end{align}
+コリオリパラメータは
+\begin{align}
+f=2\Omega (-\cos \lambda \cos \theta \sin \alpha + \sin \theta \cos \alpha).
+\end{align}
+使用するパラメータはケース1と同様の$u_0=2\pi a /(12 \rm{~days})$，そして$gh_0=2.94\times 10^4 ~\rm{m^2/s^2}$を使用する．
+
+表面変位の計算結果を図\ref{case2_h}に示す．
+%
+式(\ref{linfh}) の表面変位の全球誤差$l_\infty$を図\ref{case2_lh} に示す．
+図\ref{case2_Jakob} はこのテストケースの計算を行った\cite{Jakob1993}の計算結果である．
+\cite{Jakob1993} に比べて誤差が大きいが，計算に影響があるような誤差は見られない．
+%
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=14cm]{./appendix/Williamson/fig/case2/case2_h.png}
+ \end{center}
+ \caption{\footnotesize{表面変位と速度ベクトル(T42, 並列数 : ip = 2, $\alpha=\pi/2$).上から0，1.5, 3, 4.5日の計算結果．
+緯度$0^\circ$，経度$0^\circ$から見た球面投影.
+}
+}
+ \label{case2_h}
+\end{figure}
+\clearpage
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=12cm]{./appendix/Williamson/fig/case2/case2_lh.png}
+ \end{center}
+ \caption{\footnotesize{表面変位の$l_\infty$ (T42)．$\alpha = 0$ は黒線，$\alpha = 0.05 $ は赤線，
+$\alpha = \pi/2 - 0.05 $ は緑線，
+$\alpha = \pi/2$ は青線．
+}
+}
+ \label{case2_lh}
+\end{figure}
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=7cm]{./appendix/Williamson/fig/case2/case2_Jakob.jpg}
+ \end{center}
+ \caption{\footnotesize{表面変位の$l_\infty$ (T42)．$\alpha = 0$ は太い実線，$\alpha = 0.05 $ は細い実線，
+$\alpha = \pi/2 - 0.05 $ は細い破線，
+$\alpha = \pi/2$ は太い破線と記載してあったが，どの線が対応するのかわからなかった．
+\cite{Jakob1993} 図2.1 より引用．
+}
+}
+ \label{case2_Jakob}
+\end{figure}
+\clearpage
 \subsubsection{SPMODEL ver.1, ver.2 の並列化効率の比較}
 %
+計算に使用したCPU はIntel(R) Core(TM) i7-9700K CPU @ 3.60GHz である．
+ver.1 とver.2 の実行時間を図\ref{para_1}に示す．
+8並列の実行が一番はやくなる．
+さらに並列数を増やすと実行時間が長くなる．
+これは，ノード間での通信による時間が影響していると考えられる．
+%
+また，ver.1 に比べ，ver.2 が約4.6倍はやくなる．
+ver.2 では緯度方向の格子点に加え，スペクトルデータが東西波数方向に分割され，
+実行時間が短くなると考えられる．
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=13cm]{./appendix/Williamson/fig/case2/parallel/p_1.png}
+ \end{center}
+ \caption{\footnotesize{ver.1 とver.2 の実行時間の比較(T213)．左 : 実行時間．ver.1 が赤線，ver.2 (スレッド数は1) が青線．
+右 : ver.1 / ver.2 .
+}
+}
+ \label{para_1}
+\end{figure}
+%
 %%%% case3 %%%%
+\newpage
 \subsection{テストケース3 : 局在した定常非線形帯状地衡流}
+このケースはケース2と同様，定常解として得られる帯状な流れを与えるが，
+限られた領域でのみ流れが存在する．
+%
+このケースはまず自転軸と極が一致する座標系$(\lambda', \theta')$\footnote{つまり，$\alpha=0$の座標系．}で書き，
+次にジェットが座標線に平行ではない座標系$(\lambda, \theta)$へ，角度$\alpha$の回転を行うのがもっとも簡単である．
+変換する前の$(\lambda', \theta')$の速度成分$(u', v')$は
+%
+\begin{align}
+u' &= u_0 b(x) b(x_e-x) e^{4/x_e}, \\
+v' &=0.
+\end{align}
+ここで，
+\begin{align}
+b(x)= 
+\begin{cases}
+0 & x \le 0 \\
+e^{-x^{-1}} & 0 < x, \notag
+\end{cases}
+\end{align}
+\begin{align}
+x=x_e(\theta'-\theta_b)(\theta_e-\theta_b)^{-1}.
+\end{align}
+流線関数と速度ポテンシャルは
+\begin{align}
+\psi' &= -a \frac{\theta_e-\theta_b}{x_e}  u_0  e^{4/x_e} \int^x_{x_e} e^{-x_e/x'(x_e-x')} dx', \\
+\chi' &=  0.
+\end{align}
+$u',v'$から$u, v$へのは変換は以下のように行う．まず座標は
+\begin{align}
+\sin \theta' &= \sin \theta \cos \alpha - \cos \theta \cos \lambda \sin \alpha, \\
+\sin \lambda' \cos \theta' &= \sin \lambda \cos \theta.
+\end{align}
+$\lambda'$ を決める際には
+\begin{align}
+\lambda' = 
+\begin{cases}
+\lambda'_p & \cos \alpha \cos \lambda \cos \theta + \sin \alpha \sin \theta \ge 0 \\
+\pi - \lambda'_p & \cos \alpha \cos \lambda \cos \theta + \sin \alpha \sin \theta < 0. \notag
+\end{cases}
+\end{align}
+ここで，$\lambda'_p$は$\lambda$の主値である．
+コリオリパラメータは
+\begin{align}
+f &= 2\Omega(-\cos \lambda \cos \theta \sin \alpha + \sin \theta \cos \alpha)
+\end{align}
+である．ただし，変換前の座標系では$f=2\Omega \sin {\theta'}$である．
+%
+\newpage
+%
+定常解のために$h'$は次の式を満たさなければならない．
+\begin{align}
+\frac{u'^2 \tan \theta'}{a} + \frac{g}{a} \DP{h'}{\theta'}+ fu'=0. \label{geobalance}
+\end{align}
+これは，球面での運動量方程式の$v$成分の地衡流平衡の関係式から得られる\footnote{
+球面での運動量方程式の$v$成分は
+\begin{align}
+\DP{v'}{t} + ( \Dvect{u'} \cdot \nabla)v + \left(f + \frac{u'}{a}\tan{\theta'} \right )u' + \frac{g}{a} \DP{h'}{\theta'}  = 0.
+\end{align}
+地衡流平衡の状態を考えるため，時間変化項と移流項を無視すると
+\begin{align}
+\frac{u'^2 \tan \theta'}{a} + \frac{g}{a} \DP{h'}{\theta'}+ fu'=0
+\end{align}
+となり，式(\ref{geobalance})が得られる．
+}．
+%
+$h'$はこの式を積分することで得られ
+\begin{align}
+h=h_0 - \frac{a}{g}\int^{\theta'}_{-\pi/2} \left (2\Omega \sin \tau + \frac{u'(\tau)\tan \tau}{a} \right)u'(\tau) d\tau
+\end{align}
+となる．$h_0$はケース2と同様に
+$gh_0=2.94 \times 10^4 ~\rm{m^2/s^2}$で与えられる．
+パラメータは$u_0 = 2\pi a/ (12 {\rm{~days}}), \theta_b=-\pi/6, \theta_e = \pi/2, x_e = 0.3$を用いる．
+%
+
+表面変位の計算結果を図\ref{case3_h}に示す．
+%
+式(\ref{linfh}) の表面変位の全球誤差$l_\infty$を図\ref{case3_lh} に示す．
+図\ref{case3_Jakob} はこのテストケースの計算を行った\cite{Jakob1993}の計算結果である．
+\cite{Jakob1993} に比べて誤差がかなり大きい．
+誤差が大きい原因として，初期値に与える表面変位を台形公式を用いて，
+計算したがその精度が悪いことが考えられる．
+%
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=14cm]{./appendix/Williamson/fig/case3/case3_h.png}
+ \end{center}
+ \caption{\footnotesize{表面変位と速度ベクトル(T42, 並列数 : ip = 2, $\alpha=\pi/2$).上から0，1.5, 3, 4.5日の計算結果．
+緯度$0^\circ$，経度$0^\circ$から見た球面投影.
+}
+}
+ \label{case3_h}
+\end{figure}
+\clearpage
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=12cm]{./appendix/Williamson/fig/case3/case3_lh.png}
+ \end{center}
+ \caption{\footnotesize{表面変位の$l_\infty$ ．$\alpha = \pi/3$ (T63) は黒線，$\alpha = \pi/3$ (T42) は赤線，
+$\alpha = 0$ (T42) は青線．
+}
+}
+ \label{case3_lh}
+\end{figure}
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=7cm]{./appendix/Williamson/fig/case3/case3_Jakob.jpg}
+ \end{center}
+ \caption{\footnotesize{表面変位の$l_\infty$ (T42)．$\alpha = \pi/3$ (T63) は細い実線，$\alpha = \pi/3$ (T42) は点線，
+$\alpha = 0$ (T42)  は太い実線．
+\cite{Jakob1993} 図3.1 より引用．
+}
+}
+ \label{case3_Jakob}
+\end{figure}
+\clearpage
+%
 %%%% case4 %%%%
 \subsection{テストケース4 : 移動する低気圧を持つ強制された流れ}
+このケースは移動する低気圧をあらわす次の強制項を加え，
+非線形非定常方程式に対する評価を行う．
+強制項は
+\begin{align}
+F_u &= \DD{\tilde{u}}{t}-\frac{\tilde{u}\tilde{v}\tan \theta}{a}
++\frac{g}{a \cos \theta}\DP{\tilde{h}}{\lambda}-f\tilde{v}, \\
+F_v &= \DD{\tilde{v}}{t}+\frac{\tilde{u}\tilde{u}\tan \theta}{a}
++\frac{g}{a}\DP{\tilde{h}}{\theta}+f\tilde{u}, \\
+F_h &= \DD{\tilde{h}}{t} + \frac{\tilde{h}}{a \cos \theta}\left [\DP{\tilde{u}}{\lambda}+ \DP{\tilde{v}\cos \theta}{\theta} \right ]
+\end{align}
+で与えられる．
+$\tilde{u}, \tilde{v}, \tilde{h}$ は
+\begin{align}
+\tilde{u} &= \bar{u} - \bar{\psi}_\theta, \\
+\tilde{v} &= \frac{\bar{\psi}_\lambda}{a \cos \theta}, \\
+g \tilde{h} &= g \bar{h} + f \bar{\psi},
+\end{align}
+ここで，
+\begin{align}
+\bar{u} &= u_0 \sin^{14} (2\theta), \\
+g\bar{h} &= gh_0 - \int^\theta_{-\pi/2} [a f(\tau) + \bar{u}(\tau) \tan \tau] \bar{u}(\tau) d\tau, \\
+\bar{\psi}(\lambda, \theta, t) &= \psi_0 e^{- \sigma ((1-C)/(1+C))}.
+\end{align}
+$\psi_0=-0.03(gh_0/f_0), \sigma=(12.74244)^2, gh_0=10^5 ~{\rm{m^2/s^2}}, f_0=2\Omega \sin(\pi/4)$である．$C$は
+\begin{align}
+C= \sin \theta_0 \sin \theta + \cos \theta_0 \cos \theta \cos \left (\lambda - \frac{u_0}{a}t-\lambda_0 \right ).
+\end{align}
+初期の低気圧の中心は$(\lambda_0,\theta_0)=(0,\pi/4)$に位置している．
+流線関数と速度ポテンシャルは
+\begin{align}
+\psi(\lambda, \theta, t) &= - \int^\theta_{-\pi/2} a\bar{u}(\tau)d\tau + \bar{\psi}(\lambda, \theta, t), \\
+\chi &= 0.
+\end{align}
+
+表面変位の解析解と計算結果を図\ref{case4_h}に示す．
+計算結果では解析解とは違い，強制として与えている
+低気圧の値が時間とともに小さくなってしまう．
+速度場も低気圧の周りで，解析解と異なっている．
+%
+また，式(\ref{linfh}) の表面変位の全球誤差$l_\infty$を図\ref{case4_lh} に示す．
+図\ref{case4_Jakob} はこのテストケースの計算を行った\cite{Jakob1993}の計算結果である．
+\cite{Jakob1993} に比べて誤差がかなり大きい．
+誤差が大きい原因として，ケース3 と同様，表面変位の積分を計算する必要があり，
+その影響が考えられる．
+また，強制項の与え方，コードの記述の仕方を確かめる必要がある．
+%
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=14cm]{./appendix/Williamson/fig/case4/case4_h.png}
+ \end{center}
+ \caption{\footnotesize{表面変位と速度ベクトル(T42, 並列数 : ip = 2, $u_0 = 20 $~m/s).
+左 ：解析解，右 : 数値解.
+上から0，1.5, 3, 4.5日の計算結果．
+緯度$0^\circ$，経度$45^\circ$から見た球面投影.
+}
+}
+ \label{case4_h}
+\end{figure}
+\clearpage
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=12cm]{./appendix/Williamson/fig/case4/case4_lh.png}
+ \end{center}
+ \caption{\footnotesize{表面変位の$l_\infty$ (T42)．$u_0 = 20$~m/s は黒線，$u_0 = 40$~m/s は赤線．
+}
+}
+ \label{case4_lh}
+\end{figure}
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=12cm]{./appendix/Williamson/fig/case4/case4_Jakob.jpg}
+ \end{center}
+ \caption{\footnotesize{表面変位の$l_\infty$ (T42)．$u_0 = 20$~m/s は細い実線，$u_0 = 40$~m/s は太い実線．
+\cite{Jakob1993} 図4.6 より引用．
+}
+}
+ \label{case4_Jakob}
+\end{figure}
+\clearpage
+%
 %%%% case5 %%%%
 \subsection{テストケース5 : 孤立した山を越える帯状流}
+このケースは中緯度に孤立した山を置き，
+それによる流体の応答を調べるものである．
+初期の速度場と表面変位はケース2と
+同様で，帯状流が孤立した山に衝突している．
+山の高さ$h_s$は
+\begin{align}
+h_s = h_{s0} (1-r/R).
+\end{align}
+ここで，$h_{s0}=2000 ~$m，$R=\pi/9, r^2= {\rm{min}}[R^2, (\lambda-\lambda_c)^2 + (\theta-\theta_c)^2]$である．
+\\
+\quad
+山の中心は$\lambda_c=3\pi/2，~\theta_c=\pi/6$とする．
+このケースは解析解が知られていないので，保存量を確認する．
+ある保存量$\xi$を用いて，正規化した保存量$I_i(\xi)$は
+\begin{equation}
+I_i(\xi(t)=\frac{I[\xi(\lambda,\theta,t)]-I[\xi(\lambda,\theta,0)]}{I[\xi(\lambda,\theta,0)]}. 
+\end{equation}
+ここで，$I$は式(\ref{eq:I})で定義されたものである．保存量は
+\\質量($i=1$)
+\begin{equation}
+\xi=h^*
+\end{equation}
+全エネルギー($i=2$)
+\begin{equation}
+\xi=\frac{1}{2}h^* \Dvect{u}^2 + \frac{1}{2}g(h^2-h^2_s)
+\end{equation}
+ポテンシャルエンストロフィー($i=3$)
+\begin{equation}
+\xi=0.5(\zeta+f)^2/h^*
+\end{equation}
+である．ここで，$h^*$は流体層の厚さである\footnote{自由表面$h$は$h=h^*+h_s$で書かれる．}．
+渦度と発散は初期値が0なので非正規化積分である以下を示す必要がある．
+\\渦度($i=4$)
+\begin{equation}
+\xi=\zeta
+\end{equation}
+発散($i=5$)
+\begin{equation}
+\xi=\delta.
+\end{equation}
+
 %%%% case6 %%%%
 \subsection{テストケース6 : ロスビーハウルヴィッツ波}
 
