@@ -119,7 +119,7 @@ v&=-u_0 \sin \lambda \sin \alpha.
 \begin{align}
 \eta = \left (\frac{2u_0}{a}+ 2\Omega \right)(-\cos \lambda \cos \theta \sin \alpha + \sin \theta \cos \alpha).
 \end{align}
-解析的な高度場は
+解析的な$gh$は
 \begin{align}
 gh = gh_0 - \left (a \Omega u_0 +\frac{u_0^2}{2} \right)(-\cos \lambda \cos \theta \sin \alpha + \sin \theta \cos \alpha)^2.
 \end{align}
@@ -405,7 +405,7 @@ C= \sin \theta_0 \sin \theta + \cos \theta_0 \cos \theta \cos \left (\lambda - \
 %
 %%%% case5 %%%%
 \subsection{テストケース5 : 孤立した山を越える帯状流}
-このケースは中緯度に孤立した山を置き，
+このケースは中緯度に孤立した山(図\ref{case5_htopo})を置き，
 それによる流体の応答を調べるものである．
 初期の速度場と表面変位はケース2と
 同様で，帯状流が孤立した山に衝突している．
@@ -416,7 +416,9 @@ h_s = h_{s0} (1-r/R).
 ここで，$h_{s0}=2000 ~$m，$R=\pi/9, r^2= {\rm{min}}[R^2, (\lambda-\lambda_c)^2 + (\theta-\theta_c)^2]$である．
 \\
 \quad
-山の中心は$\lambda_c=3\pi/2，~\theta_c=\pi/6$とする．
+山の中心は$\lambda_c=\pi/2，~\theta_c=\pi/6$とする(\footnote{\cite{Williamson1992}では$\lambda_c=3\pi/2$．})．
+%
+%
 このケースは解析解が知られていないので，保存量を確認する．
 ある保存量$\xi$を用いて，正規化した保存量$I_i(\xi)$は
 \begin{equation}
@@ -445,7 +447,78 @@ I_i(\xi(t)=\frac{I[\xi(\lambda,\theta,t)]-I[\xi(\lambda,\theta,0)]}{I[\xi(\lambd
 \begin{equation}
 \xi=\delta.
 \end{equation}
+%
+\begin{figure}[t]
+ \begin{center}
+ \includegraphics[clip,width=12cm]{./appendix/Williamson/fig/case5/case5_htopo.png}
+ \end{center}
+ \caption{\footnotesize{山の分布(T213, 並列数 : ip = 32).
+緯度$30^\circ$，経度$90^\circ$から見た球面投影.
+}
+}
+ \label{case5_htopo}
+\end{figure}
+%
+
+自由表面の計算結果を図\ref{case5_h}に示す．
+帯状流が山にぶつかり，山の南側を回り込む流れが確認できる．
+%
+また，図\ref{case5_hcomp}，\ref{case5_error1}，\ref{case5_error2} を見てわかるように，
+\cite{Jakob1993}との計算結果と大きな違いはない．
+全球保存量もかなりの精度で保存していることがわかる．
+%
+%
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=14cm]{./appendix/Williamson/fig/case5/case5_h.png}
+ \end{center}
+ \caption{\footnotesize{自由表面と速度ベクトル(T213, 並列数 : ip = 32).上から0，5, 10, 15日の計算結果．
+緯度$30^\circ$，経度$90^\circ$から見た球面投影.
+}
+}
+ \label{case5_h}
+\end{figure}
+\clearpage
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=14cm]{./appendix/Williamson/fig/case5/case5_hcomp.png}
+ \end{center}
+ \caption{\footnotesize{自由表面(T213, 並列数 : ip = 32)．上 : \cite{Jakob1993} の計算結果 (彼らの図5.1 より引用)．
+下 : 計算結果．等値線の間隔はどちらも 50 m．
+}
+}
+ \label{case5_hcomp}
+\end{figure}
+\clearpage
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=14cm]{./appendix/Williamson/fig/case5/case5_error1.png}
+ \end{center}
+ \caption{\footnotesize{正規化した誤差(T213, 並列数 : ip = 32)，上から質量，全エネルギー，ポテンシャルエンストロフィー．
+左 : \cite{Jakob1993} の計算結果 (彼らの図5.4 より引用)．
+右 : 計算結果．
+}
+}
+ \label{case5_error1}
+\end{figure}
+\clearpage
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=14cm]{./appendix/Williamson/fig/case5/case5_error2.png}
+ \end{center}
+ \caption{\footnotesize{正規化した誤差(T213, 並列数 : ip = 32)，上から渦度，発散．
+左 : \cite{Jakob1993} の計算結果 (彼らの図5.5 より引用)．
+右 : 計算結果．
+}
+}
+ \label{case5_error2}
+\end{figure}
+\clearpage
 
 %%%% case6 %%%%
-\subsection{テストケース6 : ロスビーハウルヴィッツ波}
+\subsection{テストケース6 : ロスビー・ハウルヴィッツ波}
 
