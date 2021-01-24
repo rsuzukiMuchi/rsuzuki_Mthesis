@@ -177,11 +177,11 @@ $\alpha = \pi/2$ $B$OB@$$GK@~$H5-:\$7$F$"$C$?$,!$$I$N@~$,BP1~$9$k$N$+$o$+$i$J$+
 %
 $B7W;;$K;HMQ$7$?(BCPU $B$O(BIntel(R) Core(TM) i7-9700K CPU @ 3.60GHz $B$G$"$k!%(B
 ver.1 $B$H(Bver.2 $B$N<B9T;~4V$r?^(B\ref{para_1}$B$K<($9!%(B
-8$BJBNs$N<B9T$,0lHV$O$d$/$J$k!%(B
-$B$5$i$KJBNs?t$rA}$d$9$H<B9T;~4V$,D9$/$J$k!%(B
+$B%W%m%;%9$N(B8$BJBNs<B9T$,0lHV$O$d$/$J$j!$(B
+ver.1 $B$KHf$Y!$(Bver.2 $B$,Ls(B4.6$BG\$O$d$/$J$k!%(B
+8$BJBNs$h$j!$JBNs?t$rA}$d$9$H<B9T;~4V$,D9$/$J$k!%(B
 $B$3$l$O!$%N!<%I4V$G$NDL?.$K$h$k;~4V$,1F6A$7$F$$$k$H9M$($i$l$k!%(B
 %
-$B$^$?!$(Bver.1 $B$KHf$Y!$(Bver.2 $B$,Ls(B4.6$BG\$O$d$/$J$k!%(B
 ver.2 $B$G$O0^EYJ}8~$N3J;RE@$K2C$(!$%9%Z%/%H%k%G!<%?$,El@>GH?tJ}8~$KJ,3d$5$l!$(B
 $B<B9T;~4V$,C;$/$J$k$H9M$($i$l$k!%(B
 %
@@ -189,13 +189,73 @@ ver.2 $B$G$O0^EYJ}8~$N3J;RE@$K2C$(!$%9%Z%/%H%k%G!<%?$,El@>GH?tJ}8~$KJ,3d$5$l!$
  \begin{center}
  \includegraphics[clip,width=13cm]{./appendix/Williamson/fig/case2/parallel/p_1.png}
  \end{center}
- \caption{\footnotesize{ver.1 $B$H(Bver.2 $B$N<B9T;~4V$NHf3S(B(T213)$B!%:8(B : $B<B9T;~4V!%(Bver.1 $B$,@V@~!$(Bver.2 ($B%9%l%C%I?t$O(B1) $B$,@D@~!%(B
-$B1&(B : ver.1 / ver.2 .
+ \caption{\footnotesize{ver.1 $B$H(Bver.2 $B$N<B9T;~4V$NHf3S(B(T213)$B!%:8<4(B : $B<B9T;~4V!%(Bver.1 $B$,@V@~!$(Bver.2 ($B%9%l%C%I?t$O(B1) $B$,@D@~!%(B
+$B1&<4(B : ver.1 / ver.2 .
 }
 }
  \label{para_1}
 \end{figure}
 %
+
+$BJBNs=hM}$NB.EY8~>eN((B$S_p$$B$HJBNs2=8zN((B$E_p$$B$O(B
+\begin{align}
+S_p &= T_1/ T_p, \\
+E_p &= S_p/ p
+\end{align}
+$B$G=q$+$l$k!%$3$3$G!$(B$T_1$$B$O(B1$B%3%"$G$N<B9T;~4V!$(B
+$p$$B$O%3%"$N8D?t!$(B$T_p$ $B$O(B$p$$B8D$N%3%"$r;HMQ$7$?$H$-$N<B9T;~4V$G$"$k!%(B
+$S_p$$B$H(B$E_p$$B$r$=$l$>$l!$?^(B\ref{s_p}, \ref{e_p} $B$K<($9!%(B
+$S_p$$B$O(B8$BJBNs$^$G$OM}A[D>@~(B$S_p = p$ $B$HF1$8$h$&$K(B
+$BB.EY$,8~>e$7$F$$$k!%(B
+$E_p$ $B$O(B2$BJBNs$G:GBg$K$J$j!$$=$N8e!$(B
+$BJBNs?t$rA}$d$9$4$H$KJBNs2=8zN($,0-$/$J$k!%(B
+%
+%\footnote{
+%$BC`<!=hM}$K$*$1$k<B9T;~4V(B$T$$B$,JBNs=hM}2DG=ItJ,$N<B9T;~4V(B$T_a$$B$H(B
+%$BJBNs=hM}IT2DG=ItJ,$N<B9T;~4V(B$T_b$$B$+$i@.$k$H2>Dj$9$k!%(B
+%\begin{align}
+%T=T_a + T_b.
+%\end{align}
+%$T_a$$B$N=hM}ItJ,$K$*$$$F!$(B$p$$B8D$N%3%"$rMQ$$$F!$(B
+%$BM}A[E*$JJBNs2=$,$G$-$?$H$9$k$H!$(B
+%$p$$BJBNs$G$N<B9T;~4V$O(B
+%\begin{align}
+%T(p) = T_a + T_b/p 
+%\end{align}
+%$B$H$J$k!%(B$p$$B$rL58BBg$K$9$k$H(B
+%\begin{align}
+%T = T_a 
+%\end{align}
+%$B$H$J$k!%$^$?!$JBNs2=8zN((B$E_p$$B$O(B
+%\begin{align}
+%E_p &= S_p/p \notag \\ 
+%    &= \frac{(T_a + T_b)/T_a}{p} \notag \\
+%    &= 0.
+%\end{align}
+%$B$D$^$j!$JBNs2=8zN($O(B0$B$K$J$k!%(B
+%$B$3$l$r%"%`%@!<%k$NK!B'$H8@$$!$(B
+%$BJBNs=hM}IT2DG=ItJ,$K$h$j!$JBNs2=8zN($,N'B.$5$l$k!%(B
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=12cm]{./appendix/Williamson/fig/case2/parallel/s_p.png}
+ \end{center}
+ \caption{\footnotesize{ver.1 $B$H(Bver.2 $B$NB.EY8~>eN($NHf3S(B(T213)$B!%(Bver.1 $B$,@V@~!$(Bver.2 ($B%9%l%C%I?t$O(B1) $B$,@D@~!%(B$S_p = p$$B$r3%?'$NB@@~$G<($9!%(B
+}
+}
+ \label{s_p}
+\end{figure}
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=12cm]{./appendix/Williamson/fig/case2/parallel/e_p.png}
+ \end{center}
+ \caption{\footnotesize{ver.1 $B$H(Bver.2 $B$NJBNs2=8zN($NHf3S(B(T213)$B!%(Bver.1 $B$,@V@~!$(Bver.2 ($B%9%l%C%I?t$O(B1) $B$,@D@~!%(B$E_p = 1$$B$r3%?'$NB@@~$G<($9!%(B
+}
+}
+ \label{e_p}
+\end{figure}
+\clearpage
 %%%% case3 %%%%
 \newpage
 \subsection{$B%F%9%H%1!<%9(B3 : $B6I:_$7$?Dj>oHs@~7ABS>uCO9UN.(B}
