@@ -722,6 +722,7 @@ A1 のケースでは$\tau_{{\rm{APE}}} = \infty$ のため，局所的な緩和
 左 : 緯度$0^\circ$，経度$0^\circ$から見た球面投影.
 中 : 緯度$90^\circ$ から見た球面投影.
 右 : 緯度$-90^\circ$ から見た球面投影.
+無次元ポテンシャル渦度のトーン値の範囲は$-1:1$である．
       }
     }
     \label{fig:A1_4}
@@ -757,6 +758,7 @@ L_{d0} = \frac{\sqrt{g'h_{{\rm{eq}}}}}{f_0}, \qquad f_0 = 2 \Omega
 変化しないように，質量強制によって加えられた質量を
 全球の流体層の厚さから取り除く項を入れているが，
 本研究では平衡厚さ$g'h_{{\rm{eq}}}$でBurger 数を定義する．
+
 %
 図\ref{fig:case1_nonqv_a}に$a$を
 図\ref{fig:case1_nonqv_gh}に$g'h_{\rm{eq}}$を変化させた実験の
@@ -766,8 +768,60 @@ L_{d0} = \frac{\sqrt{g'h_{{\rm{eq}}}}}{f_0}, \qquad f_0 = 2 \Omega
 Burger 数によって，分類した極渦のレジームを示している．
 表\ref{table:regime} に\cite{Brueshaber2019}が分類した極渦のレジームの特徴と
 そのBurger 数の値の範囲を示す．
+%
+
+結果(仮)
 %%%%%%%%%%%%%%%%%%%%%%%%
-%  B1 - B4 の結果が出た後にまとめる．
+\begin{itemize}
+\item{Burger 数の値によって，極渦のレジームが異なる．}
+\item{風速分布は$Bu \leq 1.46 \times 10^{-3} $ で
+赤道域で東風ジェット，中緯度域では帯状構造と
+緯度約$\pm 20^\circ - 30^\circ$で西風ジェットが形成．
+\cite{Showman2007} に比べ，赤道域のジェットの風速が大きい．}
+\end{itemize}
+%
+
+文章(仮) 
+
+図\ref{fig:case1_nonqv_a}, 図\ref{fig:case1_nonqv_gh} を見て分かるように，
+B1, A1 ($Bu = 9.72\times 10^{-5}$) では，
+複数の高気圧性渦が見られる．
+これは\cite{Brueshaber2019} の木星的レジームに対応し，
+その特徴と一致している．
+%
+B2, A2 ($Bu = 4.86\times 10^{-4}$) は
+遷移レジームに対応し，
+A2 は比較的大きい高気圧性渦と低気圧性渦が混在するが，B2 はその特徴が見られない．
+%
+A3 ($Bu = 1.46\times 10^{-3}$) は
+土星的レジームに対応し，
+極中心に単一の低気圧性渦が形成する．
+%
+B3, A4 ($Bu = 4.44 \times 10^{-3}$), 
+B4, A5 ($Bu = 1.00 \times 10^{-2}$) は
+巨大氷惑星的レジームに対応する．
+A5 を除き，土星的レジームと同様， 
+極中心に単一の低気圧性渦が形成する．
+この低気圧性渦による極域の風速は
+図\ref{fig:case1_vellon_a}, 図\ref{fig:case1_vellon_gh} を
+見て分かるように低緯度の風速に比べて大きい．
+これは巨大氷惑星的レジームの特徴であり，
+\cite{Brueshaber2019} の結果と一致している．
+%
+
+東西風分布を見てみると，
+$Bu \leq 1.46 \times 10^{-3} $ の場合で，
+赤道域の東風ジェット，中緯度域では帯状構造と
+緯度約$\pm 20 - 30^\circ$で西風ジェットが形成している．
+また風速は$Bu$ が大きくなるにつれて，小さくなる．
+%
+\cite{Showman2007} との東西風分布の比較を図\ref{fig:case1_rms_comp} に示す．
+\cite{Showman2007} と比較して，我々の計算では
+赤道域の東風ジェットの風速が大きい．
+これは，\cite{Showman2007} では領域計算のため，
+考慮出来なかった南半球からのエネルギー輸送が要因のひとつとして考えられる．
+% 
+
 %%%%%%%%%%%%%%%%%%%%%%%%
 %
 \begin{table}[h]
@@ -785,6 +839,7 @@ Burger 数によって，分類した極渦のレジームを示している．
       \footnotesize{緯度$90^\circ$ から見た球面投影の無次元ポテンシャル渦度(3000 地球日)．
 上にケース名，下にBurger 数と\cite{Brueshaber2019}で分類された極渦のレジームを示している．
 $a$ を変化させ，Burger 数の値をかえた．
+無次元ポテンシャル渦度のトーン値の範囲は$-1:1$である．
       }
     }
     \label{fig:case1_nonqv_a}
@@ -798,6 +853,7 @@ $a$ を変化させ，Burger 数の値をかえた．
       \footnotesize{緯度$90^\circ$ から見た球面投影の無次元ポテンシャル渦度(3000 地球日)．
 上にケース名，下にBurger 数と\cite{Brueshaber2019}で分類された極渦のレジームを示している．
 $g'h_{\rm{eq}}$ を変化させ，Burger 数の値をかえた．
+無次元ポテンシャル渦度のトーン値の範囲は左から，$-1:1, -1:1, -0.5:0.5, -0.1:0.1, -0.05:0.05$である．
       }
     }
     \label{fig:case1_nonqv_gh}
@@ -834,6 +890,20 @@ $g'h_{\rm{eq}}$ を変化させ，Burger 数の値をかえた．
   \end{center}
 \end{figure}
 %
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=14cm]{./fig/result/case1/case1_rms_comp.png}
+    \caption{
+      \footnotesize{東西平均した東西風速の比較(2200 地球日)．
+左 : \cite{Showman2007} の結果(彼らのFig. 5 より引用)．
+右 : 計算結果.
+実線は東西平均した東西風速，破線は二乗平均速度との差．
+      }
+    }
+    \label{fig:case1_rms_comp}
+  \end{center}
+\end{figure}
+%
 %
 %%%%%%%%%%%%%%%%%% case2 : tau_APE %%%%%%%%%%%%%%%%%%%
 \clearpage
@@ -844,19 +914,40 @@ $g'h_{\rm{eq}}$ を変化させ，Burger 数の値をかえた．
 $\tau_{\rm{APE}}$は$g'h$を$\langle g'h \rangle $ に向かって緩和する．
 行ったケースは$\tau_{\rm{APE}} = \infty, 10^8, 10^7, 10^6, 10^5, 10^3$ である．
 図\ref{fig:case2_nonqv}，図\ref{fig:case2_vellon} に
-それぞれのケースの無次元ポテンシャル渦度と東西平均した東西風速を示す．
-図\ref{fig:case2_nonqv}，図\ref{fig:case2_vellon} を
-見てわかるように$\tau_{\rm{APE}}$ の値が小さくなるに従い，
+
+結果(仮)
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item{$\tau_{\rm{APE}}$の値が小さくなるにつれて，極渦，ジオポテンシャルの
+空間スケールが小さくなる．}
+\item{$\tau_{\rm{APE}}$の値が小さくなるにつれて，風速が弱くなる．
+赤道域でジェットが形成する場合，東風となる．}
+\end{itemize}
+%
+
+文章(仮) 
+
+図\ref{fig:case2_nonqv}，\ref{fig:case2_phi1}，\ref{fig:case2_phi2} に
+無次元ポテンシャル渦度とジオポテンシャルを示す．
+%
+$\tau_{\rm{APE}}$ の値が小さくなるに従い，
 局所的な緩和が効くため，質量強制が
 与えられた領域の$g'h$ が $\langle g'h \rangle$に向かってすぐさま緩和する．
-そのため，実験\ref{sec:case1}で見られたような特徴的な極渦が現れない．
+そのため，実験\ref{sec:case1}で見られたような特徴的な極渦や
+空間スケールの大きい渦が現れない．
 特に，C4, C5 のケースではほとんど，強制の影響がみられない．
 %
-東西平均した東西風速も$\tau_{\rm{APE}}$の値が小さくなるに従い，
-その大きさが小さくなり，C4, C5 のケースでほとんど0となる．
-赤道域のジェットC4, C5 以外のケースで\ref{sec:case1} 節と同様，東風ジェットとなる．
+これは，質量強制による小スケールのエネルギーが
+逆カスケードする前に緩和が効き，エネルギーが取り除かれ，
+結果的に空間スケールの小さい構造が形成すると考えられる．
+%
+図\ref{fig:case2_vellon} の東西平均した東西風速も
+$\tau_{\rm{APE}}$の値が小さくなるに従い，
+風速が小さくなり，C4, C5 のケースでほとんど0となる．
+赤道域のジェットが形成する場合，\ref{sec:case1} 節と同様，東風となる．
+%
 
-それぞれのケースのAPE(式(\ref{eq:APE})) とKE(式(\ref{eq:KE})) の値を図\ref{fig:case2_apeke} に示す．
+APE(式(\ref{eq:APE})) とKE(式(\ref{eq:KE})) の値を図\ref{fig:case2_apeke} に示す．
 $\tau_{\rm{APE}}=\infty$ の A1 のケースでは，APE とKE は時間とともに増加していくが
 (縦軸に対数をとっていない図は\ref{sec:A1}節の図\ref{fig:A1_5}を参照．)，
 $\tau_{\rm{APE}}$が有限値の場合，ある時間でエネルギーの注入率と除去率が
@@ -870,9 +961,38 @@ $\tau_{\rm{APE}}$が有限値の場合，ある時間でエネルギーの注入
     \caption{
       \footnotesize{緯度$90^\circ$ から見た球面投影の無次元ポテンシャル渦度(3000 地球日)．
 上に$\tau_{\rm{APE}}$ の値とケース名を示す．
+無次元ポテンシャル渦度のトーン値の範囲は$-1:1$である．
       }
     }
     \label{fig:case2_nonqv}
+  \end{center}
+\end{figure}
+%
+%
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=14cm]{./fig/result/case2/case2_phi.png}
+    \caption{
+      \footnotesize{ジオポテンシャルと速度ベクトル(3000 地球日)．
+上に$\tau_{\rm{APE}}$ の値とケース名を示す．
+トーン値の範囲は$0:2 \times 10^5$である．
+      }
+    }
+    \label{fig:case2_phi1}
+  \end{center}
+\end{figure}
+%
+%
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=14cm]{./fig/result/case2/case2_phi2.png}
+    \caption{
+      \footnotesize{ジオポテンシャルと速度ベクトル(3000 地球日)．
+上に$\tau_{\rm{APE}}$ の値とケース名を示す．
+トーン値の範囲は$0:2 \times 10^5$である．
+      }
+    }
+    \label{fig:case2_phi2}
   \end{center}
 \end{figure}
 %
@@ -900,7 +1020,6 @@ $\tau_{\rm{APE}}$が有限値の場合，ある時間でエネルギーの注入
     \label{fig:case2_apeke}
   \end{center}
 \end{figure}
-%
 
 %%%%%%%%%%%%%%%%%% case3 : alpha %%%%%%%%%%%%%%%%%%%
 \clearpage
@@ -910,14 +1029,29 @@ $\tau_{\rm{APE}}$が有限値の場合，ある時間でエネルギーの注入
 この節では質量強制の正負の割合である$\alpha$ の変化による影響を調べる．
 $\alpha = 1.0 (~0.0)$ のとき正(負)の質量強制のみが与えられ，強制が与えられた位置で高気圧性(低気圧性)渦を形成する．
 行ったケースは$\alpha = 1, 0.5, 0.0$ である．
+
+結果(仮)
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item{$\alpha$ の値によって，極渦の空間スケール・レジームは変化しない．}
+\item{$\alpha$ の値によって，東西風は変化しない．}
+\end{itemize}
+%
+
+文章(仮) 
+
 図\ref{fig:case3_nonqv}，図\ref{fig:case3_vellon} に
 それぞれのケースの無次元ポテンシャル渦度と東西平均した東西風速を示す．
 このケースのBurger 数は$Bu = 4.64\times 10^{-4}$で\cite{Brueshaber2019}によれば
 高気圧・低気圧性渦が共存する遷移レジームである．
+%
 図\ref{fig:case3_nonqv}を見てみると，確かにそのような特徴が見られ，
-その特徴は$\alpha$の値によって，北極・南極域ともに変化しない．
-また，東西平均した東西風速も赤道域の東風ジェットの大きさ(約$-120 \rm{~m \cdot s^{-1}}$)や幅，
+その特徴は$\alpha$の値によって，空間スケールやレジームが北極・南極域ともに変化しない．
+%
+また，図\ref{fig:case3_vellon}の東西平均した東西風速も
+赤道域の東風ジェットの大きさ(約$-120 \rm{~m \cdot s^{-1}}$)や幅，
 中緯度の西風ジェットが形成する緯度(約$\pm 30^\circ$)も目立った変化は見られない．
+%
 \begin{figure}[ht]
   \begin{center}
     \includegraphics[clip,width=9cm]{./fig/result/case3/case3_nonqv.png}
@@ -926,6 +1060,7 @@ $\alpha = 1.0 (~0.0)$ のとき正(負)の質量強制のみが与えられ，�
 左 : 緯度$90^\circ$ から見た球面投影.
 右 : 緯度$-90^\circ$ から見た球面投影.
 上に$\alpha$ の値とケース名を示す．
+無次元ポテンシャル渦度のトーン値の範囲は$-1:1$である．
       }
     }
     \label{fig:case3_nonqv}
@@ -946,8 +1081,7 @@ $\alpha = 1.0 (~0.0)$ のとき正(負)の質量強制のみが与えられ，�
   \end{center}
 \end{figure}
 %
-
-
+%
 %%%%%%%%%%%%%%%%%% case4 : R_storm %%%%%%%%%%%%%%%%%%%
 \clearpage
 \newpage
@@ -961,7 +1095,61 @@ $\alpha = 1.0 (~0.0)$ のとき正(負)の質量強制のみが与えられ，�
 行ったケースは${\rm{T341}} : R_{\rm{storm}} = 8.72 \times 10^5 ~(0.7^\circ), 
 {\rm{T170}} : R_{\rm{storm}} = 2.62 \times 10^6 ~(2.1^\circ)$ であり，
 それぞれのケースで$R_{\rm{storm}}$の中に約3個の格子点を含んでいる．
+%
 
+結果(仮)
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item{$R_{\rm{storm}}$ の値によって，極渦の空間スケール・レジームは変化しない．}
+\item{$R_{\rm{storm}}$ の値によって，東西風速の大きさ中緯度の西風ジェットが形成する緯度が変化する．}
+\end{itemize}
+%
+
+文章(仮) 
+
+図\ref{fig:case4_nonqv}に無次元ポテンシャル渦度を示す．
+このケースのBurger 数は$Bu = 4.64\times 10^{-4}$で\cite{Brueshaber2019}によれば
+高気圧・低気圧性渦が共存する遷移レジームである．
+%
+$R_{\rm{storm}}$ の値をA1 に比べて，3分の1にしたE1 でも
+遷移レジームの特徴が見られた．
+%
+東西平均した東西風速を見てみると
+赤道域で東風ジェットが形成する．
+また，$R_{\rm{storm}}$ を小さくしたことにより，注入されるエネルギーが減少，
+結果として，赤道域の東風ジェットの風速が
+A1 の約$200 \rm{m\cdot s^{-1}}$に比べ，
+E1 では約$60 \rm{m \cdot s^{-1}}$となり，約3分の1小さくなる．
+%
+中緯度の西風ジェットが形成する緯度は，
+A1 で約$\pm 30^\circ$, E1で約$\pm 20^\circ$ となる．
+%
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=10cm]{./fig/result/case4/case4_nonqv.png}
+    \caption{
+      \footnotesize{緯度$90^\circ$ から見た球面投影の無次元ポテンシャル渦度(2000 地球日)．
+上に解像度と$R_{\rm{storm}}$ の値とケース名を示す．
+無次元ポテンシャル渦度のトーン値の範囲は$-1:1$である．
+      }
+    }
+    \label{fig:case4_nonqv}
+  \end{center}
+\end{figure}
+%
+%
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=10cm]{./fig/result/case4/case4_vellon.png}
+    \caption{
+      \footnotesize{東西平均した東西風速(2000 地球日)．
+上に解像度と$R_{\rm{storm}}$ の値とケース名を示す．
+      }
+    }
+    \label{fig:case4_vellon}
+  \end{center}
+\end{figure}
+%
 
 %
 %
@@ -969,7 +1157,9 @@ $\alpha = 1.0 (~0.0)$ のとき正(負)の質量強制のみが与えられ，�
 \chapter{\chap4}
 \label{chap:4}
 \markright{4 \chap4}
-ddd
+%
+\section{赤道域の東風ジェット形成}
+\label{sec:}
 
 \def\chap5{結論}
 \chapter{\chap5}
