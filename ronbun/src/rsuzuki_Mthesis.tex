@@ -180,7 +180,7 @@
 \large{\bf 要旨}
 \end{center}
 \thispagestyle{empty}
-\setcounter{page}{0}
+%\setcounter{page}{0}
 \input{./abstract/abstract.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -456,7 +456,7 @@ $Q_e^* = 0$ は静止流体(相対渦度や流体層の厚さの水平平均か�
 低気圧性渦/高気圧性渦の割合，解像度のそれぞれの
 値を変化させたときの実験結果を示す．
 \ref{chap:4}章では
-東西ジェットと極渦のレジームに注目し考察を行う．
+東西ジェットと極渦のレジームに注目し議論を行う．
 \ref{chap:5}章で本論文の結論を述べる．
 %
 %
@@ -1153,7 +1153,7 @@ A1 で約$\pm 30^\circ$, E1で約$\pm 20^\circ$ となる．
 
 %
 %
-\def\chap4{考察}
+\def\chap4{議論}
 \chapter{\chap4}
 \label{chap:4}
 \markright{4 \chap4}
@@ -1161,8 +1161,8 @@ A1 で約$\pm 30^\circ$, E1で約$\pm 20^\circ$ となる．
 以下では，\ref{chap:3}章での実験結果で得られた
 Burger 数が大きい場合で得られる低気圧性極渦と
 緩和が大きくない場合，全てのケースで見られた赤道域の東風ジェットと
-中緯度域の西風ジェットの形成について考察を行う．
-\section{極域での低気圧性渦の集積}
+中緯度域の西風ジェットの形成について議論を行う．
+\section{極域への低気圧性渦度の集積}
 \label{sec:considpolar}
 \ref{sec:case1} 節の実験では質量強制の正負の割合$\alpha$ は$1.0$ のため，
 図\ref{fig:consid_nonqv_a3} の5日目の計算結果を見て分かるように
@@ -1220,7 +1220,7 @@ q = \frac{\zeta + f}{h}. \label{qv}
     \label{fig:betadrift}
   \end{center}
 \end{figure}
-
+\clearpage
 %
 \newpage
 \section{赤道域の東風ジェット・中緯度の西風ジェットの形成}
@@ -1259,7 +1259,7 @@ Burger 数の値が大きくなると，赤道域のジェットは見られな�
 
 局所的な緩和の時間スケールである$\tau_{\rm{APE}}$ の値によって，
 渦の空間スケールや東西風速の大きさが変化することがわかった．
-$\tau_{\rm{APE} = \infty }$ のケースでは，質量強制により，
+$\tau_{\rm{APE}} = \infty $ のケースでは，質量強制により，
 エネルギーが継続的に増加し，空間スケールの大きな渦や風速の大きな
 赤道域の東風ジェットを形成する．
 $\tau_{\rm{APE}}$が有限の場合，エネルギーが逆カスケードするまえに
@@ -1278,6 +1278,7 @@ APE とKE が平衡することがわかった．
 今後は今回の計算結果の詳細な解析と
 考慮しなかったら質量強制の分布など
 他のパラメータ依存性を調べる必要がある．
+
 %%% Appendix %%%
 %%%%%%%%%%%%%%%%
 %\setcounter{chapter}{1} % chapter の番号をゼロにリセットする
@@ -1287,7 +1288,7 @@ APE とKE が平衡することがわかった．
 
 \renewcommand{\thesection}{\Alph{section}} % 数字ではなくアルファベットで数える
 
-def\thesection{\Alph{section}}
+\def\thesection{\Alph{section}}
 \def\theequation{\Alph{section}.\arabic{equation}}
 
 \chapter*{付録}
