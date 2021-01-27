@@ -1,4 +1,4 @@
-\begin{thebibliography}{17}
+\begin{thebibliography}{19}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -39,6 +39,15 @@ S.~R. Brueshaber, K.~M. Sayanagi, and T.~E. Dowling.
 \newblock \doi{10.1016/j.icarus.2019.02.001}.
 \newblock URL \url{https://doi.org/10.1016/j.icarus.2019.02.001}.
 
+\bibitem[Cho and Polvani(1996)]{Cho1996}
+J.~Y.-K. Cho and L.~M. Polvani.
+\newblock The emergence of jets and vortices in freely evolving, shallow-water
+  turbulence on a sphere.
+\newblock \emph{Physics of Fluids}, 8\penalty0 (6):\penalty0 1531--1552, June
+  1996.
+\newblock \doi{10.1063/1.868929}.
+\newblock URL \url{https://doi.org/10.1063/1.868929}.
+
 \bibitem[Christensen(2002)]{CHRISTENSEN2002}
 U.~R. Christensen.
 \newblock Zonal flow driven by strongly supercritical convection in rotating
@@ -56,6 +65,15 @@ P.~J. Gierasch, A.~P. Ingersoll, D.~Banfield, S.~P. Ewald, P.~Helfenstein,
 \newblock \emph{Nature}, 403\penalty0 (6770):\penalty0 628--630, Feb. 2000.
 \newblock \doi{10.1038/35001017}.
 \newblock URL \url{https://doi.org/10.1038/35001017}.
+
+\bibitem[Ingersoll et~al.(2000)Ingersoll, Gierasch, Banfield, Vasavada, and
+  Team]{Ingersoll2000}
+A.~P. Ingersoll, P.~J. Gierasch, D.~Banfield, A.~R. Vasavada, and G.~I. Team.
+\newblock Moist convection as an energy source for the large-scale motions in
+  jupiter's atmosphere.
+\newblock \emph{Nature}, 403\penalty0 (6770):\penalty0 630--632, Feb. 2000.
+\newblock \doi{10.1038/35001021}.
+\newblock URL \url{https://doi.org/10.1038/35001021}.
 
 \bibitem[Jakob et~al.(1993)Jakob, Hack, and Williamson]{Jakob1993}
 R.~Jakob, J.~Hack, and D.~Williamson.
