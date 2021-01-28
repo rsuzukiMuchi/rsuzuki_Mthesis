@@ -1,0 +1,73 @@
+%% Appendix betadrift %%
+%%%%%%%%%%%%%%%%
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+\renewcommand{\thesubsection}{\Alph{section}.\arabic{subsection}} 
+\renewcommand{\thesubsubsection}{\Alph{section}.\arabic{subsection}.\arabic{subsubsection}} 
+\renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
+\renewcommand{\thetable}{\Alph{section}.\arabic{table}}
+%
+正(負)の質量強制の場合，流体層に局所的な膨らみ(窪み)を作る．
+この膨らみ(窪み)はコリオリ力により，
+高気圧性(低気圧性)渦を形成する．
+%
+正の質量強制のみを加えた場合でも，
+図\ref{fig:consid_nonqv_a3} の無次元ポテンシャル渦度をみてわかるように
+50日目になると，低気圧性渦が形成し始め，
+3000 日になると，極を中心に強力な低気圧性渦が出来る．
+%
+極域への低気圧性渦度の集積が起こる原因として，
+低気圧性の渦度が極域に集まる理由として
+ベータドリフトが考えられている．
+%
+ベータドリフトとは惑星渦度の緯度方向勾配による
+ベータ効果により，渦が自身のまわりに
+2次的な渦を作り出し，その渦の効果で移動するというものである．
+これは，次のように理解することができる．
+強制散逸のない球面浅水系では
+ポテンシャル渦度 : $q$ が保存する．
+\begin{align}
+q = \frac{\zeta + f}{h}. \label{qv}
+\end{align}
+ここで，図\ref{fig:betadrift}のように
+北半球のある緯度に低気圧性渦が置かれている状況を考える.
+この渦の上下にある流体がこの低気圧性渦の影響を受け，
+移動したとする．
+低緯度側に移動してきた流体は$f$が小さくなるが
+式(\ref{qv})は保存しなければならないため，$\zeta$ が増えなければいけない.
+高緯度側に移動した流体も同様の効果を受け，渦度を持つ．
+その結果，その2次的な渦の影響を受け，
+元々の低気圧性渦が高緯度へ移動する．
+初期に高気圧性渦が位置していた場合，同様に考えると低緯度側へ移動する．
+その結果，極での低気圧性渦度の累積が起きると考えられる．
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=14cm]{./appendix/betadrift/fig/nonqv_a3.png}
+    \caption{
+      \footnotesize{緯度$90^\circ$ から見た球面投影の無次元ポテンシャル渦度．
+上にケース名を示す．
+左から5, 50, 500, 3000 日の計算結果．
+無次元ポテンシャル渦度のトーン値の範囲は$-0.1:0.1$である．
+      }
+    }
+    \label{fig:consid_nonqv_a3}
+  \end{center}
+\end{figure}
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[clip,width=14cm]{./appendix/betadrift/fig/betadrift_1.png}
+    \caption{
+      \footnotesize{ベータドリフトの模式図．
+上 : 初期に位置している低気圧性渦．
+下 : 低気圧性渦のまわりの流体が移動し，2次的な渦を形成．
+低気圧性渦自体を高緯度へ移流させる．
+      }
+    }
+    \label{fig:betadrift}
+  \end{center}
+\end{figure}
+\clearpage
+

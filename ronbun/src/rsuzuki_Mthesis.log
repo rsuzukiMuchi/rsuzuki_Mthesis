@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2020.3.7)  28 JAN 2021 20:29
+This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2020.3.7)  28 JAN 2021 21:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -740,42 +740,36 @@ File: ./fig/result/case4/case4_vellon.png Graphic file (type bmp)
 
 ]
 第 章 章
-File: ./fig/consideration/nonqv_a3.png Graphic file (type bmp)
-<./fig/consideration/nonqv_a3.png>
-File: ./fig/consideration/betadrift_1.png Graphic file (type bmp)
-<./fig/consideration/betadrift_1.png>
 [27
 
-] [28] [29
-
-] [30] (./appendix/A/appendix_a.tex
+] [28] (./appendix/A/appendix_a.tex
 File: ./appendix/A/fig/one-half-fig1.png Graphic file (type bmp)
 <./appendix/A/fig/one-half-fig1.png>
- [31
+ [29
 
-] [32] [33]) [34] [35]
-(./appendix/B/appendix_b.tex [36] [37] [38]) [39]
-(./appendix/Williamson/appendix_w.tex [40]
+] [30] [31]) [32] [33]
+(./appendix/B/appendix_b.tex [34] [35] [36]) [37]
+(./appendix/Williamson/appendix_w.tex [38]
 File: ./appendix/Williamson/fig/case1/case1_h.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case1/case1_h.png>
- [41] [42]
+ [39] [40]
 File: ./appendix/Williamson/fig/case1/case1_lh.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case1/case1_lh.png>
 File: ./appendix/Williamson/fig/case1/case1_Jakob.jpg Graphic file (type bmp)
 <./appendix/Williamson/fig/case1/case1_Jakob.jpg>
- [43
+ [41
 
 ]
 File: ./appendix/Williamson/fig/case2/case2_h.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case2/case2_h.png>
- [44
+ [42
 
-] [45]
+] [43]
 File: ./appendix/Williamson/fig/case2/case2_lh.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case2/case2_lh.png>
 File: ./appendix/Williamson/fig/case2/case2_Jakob.jpg Graphic file (type bmp)
 <./appendix/Williamson/fig/case2/case2_Jakob.jpg>
- [46
+ [44
 
 ]
 File: ./appendix/Williamson/fig/case2/parallel/p_1.png Graphic file (type bmp)
@@ -785,51 +779,51 @@ File: ./appendix/Williamson/fig/case2/parallel/s_p.png Graphic file (type bmp)
 File: ./appendix/Williamson/fig/case2/parallel/e_p.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case2/parallel/e_p.png>
 
-[47
+[45
 
-] [48] [49
+] [46] [47
 
 ]
 File: ./appendix/Williamson/fig/case3/case3_h.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case3/case3_h.png>
- [50] [51]
+ [48] [49]
 File: ./appendix/Williamson/fig/case3/case3_lh.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case3/case3_lh.png>
 File: ./appendix/Williamson/fig/case3/case3_Jakob.jpg Graphic file (type bmp)
 <./appendix/Williamson/fig/case3/case3_Jakob.jpg>
- [52
+ [50
 
 ]
 File: ./appendix/Williamson/fig/case4/case4_h.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case4/case4_h.png>
- [53
+ [51
 
-] [54]
+] [52]
 File: ./appendix/Williamson/fig/case4/case4_lh.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case4/case4_lh.png>
 File: ./appendix/Williamson/fig/case4/case4_Jakob.jpg Graphic file (type bmp)
 <./appendix/Williamson/fig/case4/case4_Jakob.jpg>
- [55
+ [53
 
 ]
 File: ./appendix/Williamson/fig/case5/case5_htopo.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case5/case5_htopo.png>
 File: ./appendix/Williamson/fig/case5/case5_h.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case5/case5_h.png>
- [56
+ [54
 
-] [57] [58]
+] [55] [56]
 File: ./appendix/Williamson/fig/case5/case5_hcomp.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case5/case5_hcomp.png>
- [59
+ [57
 
 ]
 File: ./appendix/Williamson/fig/case5/case5_error1.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case5/case5_error1.png>
- [60]
+ [58]
 File: ./appendix/Williamson/fig/case5/case5_error2.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case5/case5_error2.png>
- [61
+ [59
 
 
 ]
@@ -839,23 +833,31 @@ Overfull \hbox (13.0774pt too wide) detected at line 609
 
 File: ./appendix/Williamson/fig/case6/case6_h.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case6/case6_h.png>
-[62
+[60
 
-] [63]
+] [61]
 File: ./appendix/Williamson/fig/case6/case6_hcomp.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case6/case6_hcomp.png>
- [64
+ [62
 
 ]
 File: ./appendix/Williamson/fig/case6/case6_error1.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case6/case6_error1.png>
- [65]
+ [63]
 File: ./appendix/Williamson/fig/case6/case6_error2.png Graphic file (type bmp)
 <./appendix/Williamson/fig/case6/case6_error2.png>
- [66
+ [64
 
 
-]) [67
+]) (./appendix/betadrift/appendix_beta.tex
+File: ./appendix/betadrift/fig/nonqv_a3.png Graphic file (type bmp)
+<./appendix/betadrift/fig/nonqv_a3.png>
+File: ./appendix/betadrift/fig/betadrift_1.png Graphic file (type bmp)
+<./appendix/betadrift/fig/betadrift_1.png>
+ [65
+
+] [66])
+[67
 
 
 ] (./rsuzuki_Mthesis.bbl
@@ -882,28 +884,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 165--167
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1356.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1310.
  [70]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1356.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1310.
  (./rsuzuki_Mthesis.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1356.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1356.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1310.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1310.
 
 Package rerunfilecheck Info: File `rsuzuki_Mthesis.out' has not changed.
-(rerunfilecheck)             Checksum: C710B99F722821BC41A24F0800580FBA;2545.
+(rerunfilecheck)             Checksum: F367E5FF398070DD6982E718F54FB001;2682.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1356.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1310.
  ) 
 Here is how much of TeX's memory you used:
- 9163 strings out of 493226
- 136276 string characters out of 6144096
- 260506 words of memory out of 5000000
- 12849 multiletter control sequences out of 15000+600000
+ 9171 strings out of 493226
+ 136469 string characters out of 6144096
+ 260662 words of memory out of 5000000
+ 12853 multiletter control sequences out of 15000+600000
  29838 words of font info for 119 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  31i,18n,31p,1087b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on rsuzuki_Mthesis.dvi (74 pages, 248920 bytes).
+Output written on rsuzuki_Mthesis.dvi (74 pages, 250924 bytes).

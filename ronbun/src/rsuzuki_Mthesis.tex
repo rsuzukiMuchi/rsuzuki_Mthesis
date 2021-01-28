@@ -1136,7 +1136,7 @@ $\alpha = 1.0 (~0.0)$ のとき正(負)の質量強制のみが与えられ，
 \markright{4 \chap4}
 %
 以下では，\ref{chap:3}章での実験結果で得られた結果に対する議論とまとめを行う．
-\section{実験1 : Burger 数による影響}
+\section{Burger 数に対する極渦の特徴}
 \label{sec:consid_case1}
 %
 \ref{sec:case1} 節のBurger 数を変えた実験では
@@ -1161,67 +1161,12 @@ B4, A5 ($Bu = 1.00 \times 10^{-2}$) は
 これらのBurger 数に対する極渦の特徴の変化は
 \cite{Brueshaber2019} の結果と整合的である．
 %
-Burger 数が比較的大きい場合，極域低気圧性渦が形成する．
-正(負)の質量強制の場合，流体層に局所的な膨らみ(窪み)を作る．
-この膨らみ(窪み)はコリオリ力により，
-図\ref{fig:consid_nonqv_a3} の5日目の計算結果を見て分かるように
-高気圧性(低気圧性)渦を形成する．
-50日目になると，低気圧性渦が形成し始め，
-3000 日になると，極を中心に強力な低気圧性渦が出来る．
-%
-極域への低気圧性渦度の集積が起こる原因として，
-低気圧性の渦度が極域に集まる理由として
-ベータドリフトが考えられている．
-%
-ベータドリフトとは惑星渦度の緯度方向勾配による
-ベータ効果により，渦が自身のまわりに
-2次的な渦を作り出し，その渦の効果で移動するというものである．
-これは，次のように理解することができる．
-強制散逸のない球面浅水系では
-ポテンシャル渦度 : $q$ が保存する．
-\begin{align}
-q = \frac{\zeta + f}{h}. \label{qv}
-\end{align}
-ここで，図\ref{fig:betadrift}のように
-北半球のある緯度に低気圧性渦が置かれている状況を考える.
-この渦の上下にある流体がこの低気圧性渦の影響を受け，
-移動したとする．
-低緯度側に移動してきた流体は$f$が小さくなるが
-式(\ref{qv})は保存しなければならないため，$\zeta$ が増えなければいけない.
-高緯度側に移動した流体も同様の効果を受け，渦度を持つ．
-その結果，その2次的な渦の影響を受け，
-元々の低気圧性渦が高緯度へ移動する．
-初期に高気圧性渦が位置していた場合，同様に考えると低緯度側へ移動する．
-その結果，極での低気圧性渦度の累積が起きると考えられる．
-\begin{figure}[ht]
-  \begin{center}
-    \includegraphics[clip,width=14cm]{./fig/consideration/nonqv_a3.png}
-    \caption{
-      \footnotesize{緯度$90^\circ$ から見た球面投影の無次元ポテンシャル渦度．
-上にケース名を示す．
-左から5, 50, 500, 3000 日の計算結果．
-無次元ポテンシャル渦度のトーン値の範囲は$-0.1:0.1$である．
-      }
-    }
-    \label{fig:consid_nonqv_a3}
-  \end{center}
-\end{figure}
-%
-\begin{figure}[ht]
-  \begin{center}
-    \includegraphics[clip,width=14cm]{./fig/consideration/betadrift_1.png}
-    \caption{
-      \footnotesize{ベータドリフトの模式図．
-上 : 初期に位置している低気圧性渦．
-下 : 低気圧性渦のまわりの流体が移動し，2次的な渦を形成．
-低気圧性渦自体を高緯度へ移流させる．
-      }
-    }
-    \label{fig:betadrift}
-  \end{center}
-\end{figure}
-\clearpage
+Burger 数が比較的大きい場合，極域に低気圧性渦が形成する．
+極域に低気圧性渦度が集積する理由としてベータドリフト効果が
+考えられている\footnote{付録\ref{ape:betadrift}を参照．}．
 
+\section{東西風}
+\label{sec:consid_vellon}
 東西風分布を見てみると，
 $Bu \leq 1.46 \times 10^{-3} $  の場合で，
 赤道域の東風ジェット，中緯度域では帯状構造と
@@ -1235,6 +1180,7 @@ $Bu \leq 1.46 \times 10^{-3} $  の場合で，
 反対半球の存在がジェットの強度に影響を与える可能性を示唆しているのかもしれない．
 %
 %
+
 \newpage
 %
 巨大惑星で観測される極渦やジェットといった構造が
@@ -1328,6 +1274,14 @@ APE とKE が平衡することがわかった．
 \input{./appendix/Williamson/appendix_w.tex}
 %
 \newpage
+%
+%%  betadrift  %%
+\def\apetitlebeta{: ベータドリフト効果}
+\def\apebeta{\Alph{section} \apetitlebeta}
+\section{\apetitlebeta}
+\label{ape:betadrift}
+\markright{\apebeta}
+\input{./appendix/betadrift/appendix_beta.tex}
 %
 %%  Fig  %%
 %\def\apetitleFig{: 実験図集}

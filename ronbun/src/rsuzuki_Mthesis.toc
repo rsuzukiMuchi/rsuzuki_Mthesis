@@ -15,17 +15,19 @@
 \contentsline {section}{\numberline {3.4}実験3 : {$\alpha $} の変化による影響}{24}{section.0.4}% 
 \contentsline {section}{\numberline {3.5}実験4 : $R_{\rm {storm}}$ の変化による影響}{26}{section.0.5}% 
 \contentsline {chapter}{\numberline {第4章}議論とまとめ}{27}{chapter.0.4}% 
-\contentsline {section}{\numberline {4.1}実験1 : Burger 数による影響}{27}{section.0.1}% 
-\contentsline {chapter}{付録}{31}{chapter*.2}% 
-\contentsline {section}{\numberline {A}: 1.5層浅水方程式系の導出}{31}{section.1.1}% 
-\contentsline {section}{\numberline {B}: モデルで使用した方程式系}{36}{section.1.2}% 
-\contentsline {section}{\numberline {C}: Williamson et al. (1992) のテスト計算}{40}{section.1.3}% 
-\contentsline {subsection}{\numberline {C.1}テストケース1 : 極をこえるcos 型の山の移流}{40}{subsection.1.3.1}% 
-\contentsline {subsection}{\numberline {C.2}テストケース2 : 定常な非線形帯状地衡流}{44}{subsection.1.3.2}% 
-\contentsline {subsubsection}{\numberline {C.2.1}SPMODEL ver.1, ver.2 の並列化効率の比較}{47}{subsubsection.1.3.2.1}% 
-\contentsline {subsection}{\numberline {C.3}テストケース3 : 局在した定常非線形帯状地衡流}{49}{subsection.1.3.3}% 
-\contentsline {subsection}{\numberline {C.4}テストケース4 : 移動する低気圧を持つ強制された流れ}{53}{subsection.1.3.4}% 
-\contentsline {subsection}{\numberline {C.5}テストケース5 : 孤立した山を越える帯状流}{56}{subsection.1.3.5}% 
-\contentsline {subsection}{\numberline {C.6}テストケース6 : ロスビー・ハウルヴィッツ波}{62}{subsection.1.3.6}% 
+\contentsline {section}{\numberline {4.1}Burger 数に対する極渦の特徴}{27}{section.0.1}% 
+\contentsline {section}{\numberline {4.2}東西風}{27}{section.0.2}% 
+\contentsline {chapter}{付録}{29}{chapter*.2}% 
+\contentsline {section}{\numberline {A}: 1.5層浅水方程式系の導出}{29}{section.1.1}% 
+\contentsline {section}{\numberline {B}: モデルで使用した方程式系}{34}{section.1.2}% 
+\contentsline {section}{\numberline {C}: Williamson et al. (1992) のテスト計算}{38}{section.1.3}% 
+\contentsline {subsection}{\numberline {C.1}テストケース1 : 極をこえるcos 型の山の移流}{38}{subsection.1.3.1}% 
+\contentsline {subsection}{\numberline {C.2}テストケース2 : 定常な非線形帯状地衡流}{42}{subsection.1.3.2}% 
+\contentsline {subsubsection}{\numberline {C.2.1}SPMODEL ver.1, ver.2 の並列化効率の比較}{45}{subsubsection.1.3.2.1}% 
+\contentsline {subsection}{\numberline {C.3}テストケース3 : 局在した定常非線形帯状地衡流}{47}{subsection.1.3.3}% 
+\contentsline {subsection}{\numberline {C.4}テストケース4 : 移動する低気圧を持つ強制された流れ}{51}{subsection.1.3.4}% 
+\contentsline {subsection}{\numberline {C.5}テストケース5 : 孤立した山を越える帯状流}{54}{subsection.1.3.5}% 
+\contentsline {subsection}{\numberline {C.6}テストケース6 : ロスビー・ハウルヴィッツ波}{60}{subsection.1.3.6}% 
+\contentsline {section}{\numberline {D}: ベータドリフト効果}{65}{section.1.4}% 
 \contentsline {chapter}{謝辞}{67}{chapter*.19}% 
 \contentsline {chapter}{参考文献}{68}{chapter*.19}% 
