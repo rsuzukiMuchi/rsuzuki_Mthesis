@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -12,16 +12,6 @@ S.~R. Brueshaber, K.~M. Sayanagi, and T.~E. Dowling.
 \newblock \emph{Icarus}, 323:\penalty0 46--61, May 2019.
 \newblock \doi{10.1016/j.icarus.2019.02.001}.
 \newblock URL \url{https://doi.org/10.1016/j.icarus.2019.02.001}.
-
-\bibitem[Gierasch et~al.(2000)Gierasch, Ingersoll, Banfield, Ewald,
-  Helfenstein, Simon-Miller, Vasavada, Breneman, Senske, and
-  Team]{Gierasch2000}
-P.~J. Gierasch, A.~P. Ingersoll, D.~Banfield, S.~P. Ewald, P.~Helfenstein,
-  A.~Simon-Miller, A.~Vasavada, H.~H. Breneman, D.~A. Senske, and G.~I. Team.
-\newblock Observation of moist convection in jupiter's atmosphere.
-\newblock \emph{Nature}, 403\penalty0 (6770):\penalty0 628--630, Feb. 2000.
-\newblock \doi{10.1038/35001017}.
-\newblock URL \url{https://doi.org/10.1038/35001017}.
 
 \bibitem[Ingersoll et~al.(2000)Ingersoll, Gierasch, Banfield, Vasavada, and
   Team]{Ingersoll2000}
