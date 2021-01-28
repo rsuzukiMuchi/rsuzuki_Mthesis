@@ -15,8 +15,6 @@
 \contentsline {section}{\numberline {3.4}実験3 : {$\alpha $} の変化による影響}{24}{section.0.4}% 
 \contentsline {section}{\numberline {3.5}実験4 : $R_{\rm {storm}}$ の変化による影響}{26}{section.0.5}% 
 \contentsline {chapter}{\numberline {第4章}議論とまとめ}{27}{chapter.0.4}% 
-\contentsline {section}{\numberline {4.1}Burger 数に対する極渦の特徴}{27}{section.0.1}% 
-\contentsline {section}{\numberline {4.2}東西風}{27}{section.0.2}% 
 \contentsline {chapter}{付録}{29}{chapter*.2}% 
 \contentsline {section}{\numberline {A}: 1.5層浅水方程式系の導出}{29}{section.1.1}% 
 \contentsline {section}{\numberline {B}: モデルで使用した方程式系}{34}{section.1.2}% 
