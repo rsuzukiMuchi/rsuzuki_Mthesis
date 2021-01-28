@@ -113,7 +113,7 @@ Burger 数(変形半径と惑星半径の比で書かれる無次元量) の値に
 %
 % 段落をかえて，本研究の目的は... と1つの段落に
 
-しかし，\cite{Showman2007}, \cite{Brueshaber2019}はどちらも領域計算であった．
+しかし，\cite{Showman2007}, \cite{Brueshaber2019}　はどちらも領域計算であった．
 そのため，全球計算を行い，彼らの結果を確かめる必要がある．
 %
 なぜなら，先行研究では考慮されていない
@@ -132,12 +132,14 @@ Burger 数(変形半径と惑星半径の比で書かれる無次元量) の値に
 (SPMODEL; \cite{spmodel2006}, \cite{spmodel2013})を用い，
 雷雲を想定した質量強制を加えた1.5層浅水系全球計算を行った．
 %
-標準実験の結果，帯状構造と渦構造が形成した．
+計算の結果，全球計算でも
+\cite{Showman2007} で得られた帯状構造と
+\cite{Brueshaber2019} で得られた渦構造が形成するという結果が得られた．
 % jet
+また，帯状構造や極渦の構造は
 質量強制の正負の割合や，
-空間的大きさを変更した実験を行ったが，
-帯状構造や極渦の構造はほとんど変化しなかった．
-また，極渦の特徴はBurger 数の値に強く依存する結果を得た．
+空間的大きさを変更しても変わらず，
+極渦の特徴はBurger 数の値に強く依存する結果を得た．
 %   具体的な渦の状態
 Burger 数が小さい場合，木星で観測されるような
 比較的小さな複数の渦が形成し，
@@ -149,8 +151,7 @@ Burger 数が大きくなるにつれて，
 これらの結果は，\cite{Showman2007}, \cite{Brueshaber2019} で
 得られた結果と整合的である．
 %
-ただし，標準実験で得られた計算結果では
-赤道域でのジェットの風速が\cite{Showman2007} の結果に比べて，
+ただし，今回の計算結果では赤道域でのジェットの風速が\cite{Showman2007} の結果に比べて，
 約10倍大きい．この結果は\cite{Showman2007} では考慮されていない
 極域あるいは反対半球の存在がジェットの強度に影響を与える可能性を示唆しているかもしれない．
 % vor
@@ -161,26 +162,26 @@ Burger 数が大きくなるにつれて，
 \newpage
 
 Title : Numerical experiments of giant planet surface flows 
-produced by forcings representing thunderstorms
+produced by the forcing representing thunderstorms
 %
 \\
 \\
 \quad 
 %%%
-It is known that the surfaces of giant planets have
-the banded structure consisting of eqatorial jets with wide latitudinal widths,
-mid-latitude jets with a narrow latitudinal widths, and 
-the vortex structure in the polar regions.
+It is known that the surface of giant planets have
+the banded structure consisting of jets with a wide latitude in the equatorial region, 
+jets with a narrow latitude in the mid-latitude region, 
+and the vortex structure in the polar region.
 %巨大惑星表層には，
 %赤道域における緯度幅の広いジェットや
 %中緯度域における緯度幅の狭いジェットから成る帯状構造，
 %極域における渦構造が存在することが知られている．
 %
 Large-scale structures such as bands and polar vortices 
-can be formed from small-scale turbulence in the atmospheres 
-due to the inverse cascade effect (Vallis 2017). 
+can be formed from small-scale turbulence in the atmosphere 
+due to the inverse energy cascade effect(\cite{Vallis2017}). 
 Thunderstorms are considered to be 
-a candidate for causing such small-scale turbulence (e.g. Ingersoll et al., 2000).
+a candidate for causing such small-scale turbulence(e.g. \cite{Ingersoll2000}).
 %帯状構造や極渦のような  
 %大規模構造はエネルギーの逆カスケード効果(\cite{Vallis2017})によって，
 %大気中の小規模乱流から形成される可能性がある．
@@ -189,83 +190,84 @@ a candidate for causing such small-scale turbulence (e.g. Ingersoll et al., 2000
 %雷雲が考えられる(\cite{Gierasch2000}, \cite{Ingersoll2000})． 
 %% 
 %
-Showman (2007) and Brueshaber et al. (2019) restricted the 
-computational domain to a part of the sphere and 
-calculated in the framework of the shallow water equations 
-with the mass forcing representing thunderstorms.
+\cite{Showman2007} and \cite{Brueshaber2019} calculated 
+shallow water experiment with the mass forcing representing thunderstorms 
+in a part of the sphere.
 %\cite{Showman2007}, \cite{Brueshaber2019} は
 %この雷雲を想定した質量強制を加えた浅水実験を
 %球面の一部の領域で行った．
 %
 %
-Showman (2007) restricted the computational domain to the latitude range of 
-$0^\circ - 70^\circ$ and the longitude range of $0^\circ - 120^\circ$，
-and the results showed the formation of the banded structures.
+\cite{Showman2007} calculated the area of latitude $0^\circ - 70^\circ$ and
+longitude $0^\circ - 120^\circ$，
+Their results showed the formation of the zonal banded structure.
 %\cite{Showman2007} は緯度$0^\circ - 70^\circ$，経度$0^\circ - 120^\circ$ の領域を計算した結果，
 %帯状構造が形成されることがわかった．
 %
-Brueshaber et al. (2019) found the polar vortex structures were formed 
-in the computational domain from latitude $60^\circ$ to high latitude
+\cite{Brueshaber2019} calculated the polar region at latitudes higher than $60^\circ$ 
+and the polar vortices were formed.
 %\cite{Brueshaber2019} は緯度$60^\circ$ より高緯度の極域を計算し，
 %極渦が形成されることがわかった．
 %
-In addition, their results showed 
-that the number and size of polar vortices,
-the sign of vorticity significantly depend on 
-the value of Burger number (dimensionless number written 
-by a ratio of deformation radius to planetary radius).
+In addition, ther calculation results showed 
+that features such as the number and size of polar vortices,
+cyclones and anticylones largely depend on 
+the value of the Burger number (dimensionless number written 
+by the ratio of the deformation radius to the planetary radius).
 %また，極渦の数や大きさ，低気圧性・高気圧性といった特徴は
 %Burger 数(変形半径と惑星半径の比で書かれる無次元量) の値に
 %強く依存することがわかった．
 
-However, their computational domain is only a part of the sphere.
-It is necessary to confirm their results by calculating on the global domain.
+However, both previous studies are area calculations, 
+and it is necessary to perform global calculations and confirm their results.
 %しかし，どちらの先行研究も領域計算であり，
 %全球計算を行い，彼らの結果を確かめる必要がある．
-Since the structure of jets and vortices may change due to momentum transport from 
-outside the restricted computational domain.
+%
+This is because the calculated jet and vortex structures 
+may change due to momentum transport from outside the computational domain, 
+which was not considered in the previous studies.
 %なぜなら，先行研究では考慮されていない
 %計算領域外からの運動量輸送などにより，
 %計算で得られたジェットや
 %渦の構造が変化する可能性があるからである．
 %
-The purpose of this study is to perform 
+The purpose of this study is to investigate
 wheter the jet and polar vortex structures seen on giant planets are
 formed by the mass forcing representing thunderstorms.
 %本研究の目的は雷雲を想定して与えた質量強制による
 %数値実験を全球で行い，雷雲による強制により，
 %巨大惑星で見られる帯状構造と極渦が形成されるのかを調べることである
 %
-Then, compare the global calculation results with the results of previous studies 
+Then, compare my global calculation results with the results of previous studies 
 and consider the validity of the results obtained by domain calculation.
 %加えて，それらの構造を先行研究で得られた結果と比較し，
 %領域計算で得られた結果の妥当性を調べる．
 
-The model of this study uses the Hierarchical Spectral Models for GFD (SPMODEL; Takehiro et al. 2006, Takehiro et al. 2013).
+This study used Hierarchical Spectral Models for GFD (SPMODEL; \cite{spmodel2006}, \cite{spmodel2013}).
 %
-The used equations are a 1.5-layer shallow water equations 
+The equation system is a 1.5-layer shallow water system
 with the mass forcing representing thunderstorms.
+And the calculation are is global.
 %本研究は地球流体電脳倶楽部の階層的地球スペクトルモデル集
 %(SPMODEL; \cite{spmodel2006}, \cite{spmodel2013})を用い，
 %雷雲を想定した質量強制を加えた1.5層浅水系全球計算を行う．
 %
-
-In the standard experimetal results, 
-the banded structure and 
-the polar vortex structure were formed.
-%標準実験では帯状構造と渦構造が形成した．
+The results of the experiments showed 
+that the banded structure obtained by \cite{Showman2007} and 
+the polar vortex structure obtatine by \cite{Brueshaber2019} were formed.
+%計算の結果，全球計算でも
+%\cite{Showman2007} で得られた帯状構造と
+%\cite{Brueshaber2019} で得られた渦構造が形成するという結果が得られた．
 %
-It was also found that the structures remained almost unchanged 
-even if the positive / negative 
-ratio of the mass forcing and the spatial size were varied.
-%質量強制の正負の割合や，
-%空間的大きさを変更した実験を行ったが，
-%帯状構造や極渦の構造はほとんど変化しなかった．
+It was also found that the structure does not chenge even if the positive / negative 
+ratio of the mass forcing and the spatial size are changed.
+%また，帯状構造や極渦は質量強制の正負の割合や，
+%空間的大きさを変更しても変わらないことがわかった．
 %
 The characteristics of the polar vortex were 
-found to depend on the value of Burger number:
+found to depend on the value of the Burger number:
 when the Burger number is small, 
-small multiple vortices are formed, as observed Jupiter,
+relatively small multiple vortices are formed, as observed Jupiter,
 and as the Burger number increases, 
 a single cyclonic vortex is formed, observed on Saturn, Uranus, and Neptune.
 %また，極渦の特徴はBurger 数の値に依存することがわかった．
@@ -275,19 +277,18 @@ a single cyclonic vortex is formed, observed on Saturn, Uranus, and Neptune.
 %土星，天王星，海王星で
 %観測されている単一の低気圧性渦が形成する．
 %
-These results are consistent with the results of Showman (2007) and Brueshaber et al. (2019).
+These results are consistent with the results of \cite{Showman2007} and \cite{Brueshaber2019}.
 %これらの結果は，\cite{Showman2007}, \cite{Brueshaber2019} で
 %得られた結果と整合的である．
 %
-Moreover, the results of the standard experiment show that 
+However, my calculation results show that 
 the zonal wind speed of the equatorial jet is 
-about 10 times larger than that of Showman (2007).
-%ただし，標準実験で得られた計算結果では
-%赤道域でのジェットの風速が\cite{Showman2007} の結果に比べて，
-%約10倍大きい.
+about 10 times larger than that of \cite{Showman2007}.
+%しかし，今回の計算結果では赤道域でのジェットの風速が\cite{Showman2007} の結果に比べて，
+%約10倍大きくなることがわかった．
 %
-The result possibly suggests that the existence of polar reions and/or opposite hemisphere,
-which was not considered in Showman (2007), affect the strength of the jet.
+The result suggests that the polar reion or opposite hemisphere,
+which are not considered in \cite{Showman2007}, may affect the strength of the jet.
 %この結果は\cite{Showman2007} では考慮されていない
 %極域あるいは反対半球の存在が
 %ジェットの強度に影響を与える可能性を示唆している．
