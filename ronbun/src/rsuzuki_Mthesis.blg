@@ -3,51 +3,51 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: rsuzuki_Mthesis.aux
 The style file: abbrvnat.bst
 Database file #1: ./reference/reference.bib
-Repeated entry---line 106 of file ./reference/reference.bib
+Repeated entry---line 134 of file ./reference/reference.bib
  : @article{Gierasch2000
  :                      ,
 I'm skipping whatever remains of this entry
 Warning--empty institution in Jakob1993
-You've used 19 entries,
+You've used 21 entries,
             2773 wiz_defined-function locations,
-            759 strings with 9677 characters,
-and the built_in function-call counts, 11000 in all, are:
-= -- 963
-> -- 864
-< -- 9
-+ -- 292
-- -- 273
-* -- 1036
-:= -- 1772
-add.period$ -- 83
-call.type$ -- 19
-change.case$ -- 148
-chr.to.int$ -- 19
-cite$ -- 39
-duplicate$ -- 360
-empty$ -- 710
-format.name$ -- 298
-if$ -- 2211
+            778 strings with 10029 characters,
+and the built_in function-call counts, 11860 in all, are:
+= -- 1053
+> -- 884
+< -- 11
++ -- 300
+- -- 279
+* -- 1108
+:= -- 1904
+add.period$ -- 93
+call.type$ -- 21
+change.case$ -- 156
+chr.to.int$ -- 21
+cite$ -- 43
+duplicate$ -- 400
+empty$ -- 792
+format.name$ -- 306
+if$ -- 2391
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 14
-newline$ -- 129
-num.names$ -- 76
-pop$ -- 268
+missing$ -- 16
+newline$ -- 143
+num.names$ -- 84
+pop$ -- 278
 preamble$ -- 1
-purify$ -- 129
+purify$ -- 135
 quote$ -- 0
-skip$ -- 314
+skip$ -- 338
 stack$ -- 0
-substring$ -- 356
-swap$ -- 30
+substring$ -- 416
+swap$ -- 34
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 204
+type$ -- 226
 warning$ -- 1
-while$ -- 81
+while$ -- 91
 width$ -- 0
-write$ -- 299
+write$ -- 333
 is.kanji.str$ -- 0
 (There was 1 error message)

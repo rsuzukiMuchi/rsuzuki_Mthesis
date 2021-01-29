@@ -1,4 +1,4 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{21}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -82,12 +82,26 @@ R.~Jakob, J.~Hack, and D.~Williamson.
 \newblock Technical report, 1993.
 \newblock URL \url{http://opensky.ucar.edu/islandora/object/technotes:155}.
 
+\bibitem[Limaye(1986)]{Limaye1986}
+S.~S. Limaye.
+\newblock Jupiter: New estimates of the mean zonal flow at the cloud level.
+\newblock \emph{Icarus}, 65\penalty0 (2-3):\penalty0 335--352, Feb. 1986.
+\newblock \doi{10.1016/0019-1035(86)90142-9}.
+\newblock URL \url{https://doi.org/10.1016/0019-1035(86)90142-9}.
+
 \bibitem[Odaka(2005)]{OdakaWilliamson}
 M.~Odaka.
 \newblock Spmodel 球面浅水モデルを用いた williamson et al. (1992) のテスト,
   2005.
 \newblock URL
   \url{http://www.gfd-dennou.org/library/numexp/spshallow-zd_bench/exp/}.
+
+\bibitem[Porco(2003)]{Porco2003}
+C.~C. Porco.
+\newblock Cassini imaging of jupiter's atmosphere, satellites, and rings.
+\newblock \emph{Science}, 299\penalty0 (5612):\penalty0 1541--1547, Mar. 2003.
+\newblock \doi{10.1126/science.1079462}.
+\newblock URL \url{https://doi.org/10.1126/science.1079462}.
 
 \bibitem[Porco(2005)]{Porco2005}
 C.~C. Porco.
