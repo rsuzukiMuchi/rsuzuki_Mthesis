@@ -79,7 +79,6 @@ a candidate for causing such small-scale turbulence (e.g. Ingersoll et al., 2000
 Showman (2007) and Brueshaber et al. (2019) performed calculations 
 in the framework of the shallow water system
 with the mass forcing representing thunderstorms.
-Their computational domain is restricted to a part of the sphere.
 %\cite{Showman2007}, \cite{Brueshaber2019} は
 %この雷雲を想定した質量強制を加えた浅水実験を
 %球面の一部の領域で行った．
@@ -109,7 +108,7 @@ It is necessary to confirm their results by calculating on the global domain,
 %しかし，\cite{Showman2007}, \cite{Brueshaber2019} は
 %どちらも領域計算であった．
 %そのため，全球計算を行い，彼らの結果を確かめる必要がある．
-Since the structure of jets and vortices may change due to momentum transport from
+since the structure of jets and vortices may change due to momentum transport from
 outside the restricted computational domain.
 %なぜなら，先行研究では考慮されていない
 %計算領域外からの運動量輸送などにより，
@@ -117,8 +116,8 @@ outside the restricted computational domain.
 %渦の構造が変化する可能性があるからである．
 %
 The purpose of this study is to perform the global calculation and to investigate
-whether the jet and polar vortex structures seen on giant planets 
-are formed by the mass forcing representing thunderstorms.
+whether the jet and polar vortex structures 
+can be formed by the mass forcing representing thunderstorms.
 %本研究の目的は雷雲を想定して与えた質量強制による
 %数値実験を全球で行い，雷雲による強制により，
 %巨大惑星で見られる帯状構造と極渦が形成されるのかを調べることである
@@ -134,11 +133,16 @@ The used equations are a 1.5-layer shallow water equations
 with the mass forcing representing thunderstorms.
 %本研究は地球流体電脳倶楽部の階層的地球スペクトルモデル集
 %(SPMODEL; \cite{spmodel2006}, \cite{spmodel2013})を用い，
-%雷雲を想定した質量強制を加えた1.5層浅水系全球計算を行った．
-%
+%雷雲を想定した質量強制を加えた1.5層浅水系全球計算を行った.
+In this study, the experiments are performed with different values of 
+the Burger number.
+% Burger 数を変えた実験を行う.
+The parameters of the standard experiment are planetary radius and rotation rate of Jupiter, 
+$Bu = 9.72 \times 10^{-5}$ and 
+all give the mass forcing positive(i.e., creating an anticyclonic vortex in the region where the forcing is given).
+% 標準実験は...
 
-In the standard experimetal with planetary radius, rotation rate of Jupiter, $Bu = 9.72\times 10^{-5}$
-and all give the mass forcing positive(i.e., creating an anticyclonic vortex in the region where the forcing is given) results,
+In the standard experimetal results,
 the banded structure and the polar vortex structure were formed.
 %標準実験($Bu = 9.72\times 10^{-5}$)では帯状構造と渦構造が形成した．
 %
@@ -149,8 +153,7 @@ ratio of the mass forcing and the spatial size were varied.
 %空間的大きさを変更した実験を行ったが，
 %帯状構造や極渦の構造はほとんど変化しなかった．
 %
-The characteristics of the polar vortex were
-found to depend on the value of Burger number (Fig. 1):
+The characteristics of the polar vortex changed according to the value of Burger number (Fig. 1):
 when the Burger number is small,
 small multiple vortices are formed, as observed Jupiter,
 and as the Burger number increases,
