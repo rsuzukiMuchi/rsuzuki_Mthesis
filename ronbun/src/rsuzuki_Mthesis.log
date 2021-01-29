@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2020.3.7)  29 JAN 2021 11:59
+This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2020.3.7)  29 JAN 2021 13:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -831,7 +831,7 @@ File: ./appendix/Williamson/fig/case5/case5_error2.png Graphic file (type bmp)
 
 
 ]
-Overfull \hbox (13.0774pt too wide) detected at line 609
+Overfull \hbox (13.0774pt too wide) detected at line 611
 []
  []
 
@@ -858,10 +858,14 @@ File: ./appendix/betadrift/fig/nonqv_a3.png Graphic file (type bmp)
 <./appendix/betadrift/fig/nonqv_a3.png>
 File: ./appendix/betadrift/fig/betadrift_1.png Graphic file (type bmp)
 <./appendix/betadrift/fig/betadrift_1.png>
- [66
 
-] [67])
-(./rsuzuki_Mthesis.bbl
+Overfull \hbox (37.24408pt too wide) in paragraph at lines 61--68
+ [] 
+ []
+
+[66
+
+] [67]) (./rsuzuki_Mthesis.bbl
 
 LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
 (Font)              using `JT1/gt/m/n' instead on input line 20.
@@ -886,12 +890,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 179--181
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1339.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1347.
  [71]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1339.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1347.
  (./rsuzuki_Mthesis.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1339.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1339.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1347.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1347.
 
 Package rerunfilecheck Info: File `rsuzuki_Mthesis.out' has not changed.
 (rerunfilecheck)             Checksum: 7D9C2E2B9D33E242445FD6DB1A70D7F4;2538.
@@ -899,15 +903,15 @@ Package rerunfilecheck Info: File `rsuzuki_Mthesis.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1339.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1347.
  ) 
 Here is how much of TeX's memory you used:
  9182 strings out of 493226
  136719 string characters out of 6144096
- 260712 words of memory out of 5000000
+ 260711 words of memory out of 5000000
  12860 multiletter control sequences out of 15000+600000
  30006 words of font info for 120 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  31i,18n,31p,1087b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on rsuzuki_Mthesis.dvi (75 pages, 252664 bytes).
+Output written on rsuzuki_Mthesis.dvi (75 pages, 253324 bytes).

@@ -5,7 +5,8 @@
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{url}
 \usepackage{here}
- \usepackage{multicol}
+\usepackage{caption}
+\usepackage{multicol}
 \renewcommand{\figurename}{Fig.}
 \newcommand{\Figref}[1]{Fig~\ref{#1}}
 \setlength\textfloatsep{0pt} % 本文と図の間の余白
@@ -55,17 +56,16 @@ produced by forcings representing thunderstorms
 %
 %%%
 It is known that the surfaces of giant planets have
-the banded structure consisting of eqatorial jets with wide latitudinal widths,
-mid-latitude jets with a narrow latitudinal widths, and
-the vortex structure in the polar regions.
+the banded structures consisting of eqatorial jets with wide latitudinal widths
+and mid-latitudinal jets with narrow latitudinal widths, and
+the vortex structures in the polar regions.
 %巨大惑星表層には，
 %赤道域における緯度幅の広いジェットや
 %中緯度域における緯度幅の狭いジェットから成る帯状構造，
 %極域における渦構造が存在することが知られている．
 %
-Large-scale structures such as bands and polar vortices
-can be formed from small-scale turbulence in the atmospheres
-due to the inverse cascade effect (Vallis 2017).
+Large-scale structures such as banded structures and polar vortices
+can be formed from small-scale turbulence due to the inverse cascade effect (Vallis 2017).
 Thunderstorms are considered to be
 a candidate for causing such small-scale turbulence (e.g. Ingersoll et al., 2000).
 %帯状構造や極渦のような
@@ -76,18 +76,18 @@ a candidate for causing such small-scale turbulence (e.g. Ingersoll et al., 2000
 %雷雲が考えられる(例えば， \cite{Ingersoll2000})．
 %%
 %
-Showman (2007) and Brueshaber et al. (2019) restricted the
-computational domain to a part of the sphere and
-calculated in the framework of the shallow water equations
+Showman (2007) and Brueshaber et al. (2019) performed calculations 
+in the framework of the shallow water system
 with the mass forcing representing thunderstorms.
+Their computational domain is restricted to a part of the sphere.
 %\cite{Showman2007}, \cite{Brueshaber2019} は
 %この雷雲を想定した質量強制を加えた浅水実験を
 %球面の一部の領域で行った．
 %
 %
-Showman (2007) restricted the computational domain to the latitude range of
-$0^\circ - 70^\circ$ and the longitude range of $0^\circ - 120^\circ$，
-and the results showed the formation of the banded structures.
+Showman (2007) showed the formation of the banded structures 
+with restricted the computational domain to the latitude range of
+$0^\circ - 70^\circ$ and the longitude range of $0^\circ - 120^\circ$.
 %\cite{Showman2007} は緯度$0^\circ - 70^\circ$，経度$0^\circ - 120^\circ$ の領域を計算した結果，
 %帯状構造が形成されることを示した．
 %
@@ -104,8 +104,8 @@ the value of Burger number ($Bu \equiv (L_d/a)^2$, $L_d$ : deformation radius, $
 %Burger 数($Bu \equiv (L_d/a)^2$, $L_d$ : 変形半径, $a$ : 惑星半径) の値に
 %強く依存する結果を得た．
 
-However, their computational domain is only a part of the sphere.
-It is necessary to confirm their results by calculating on the global domain.
+However, Computational domains used by previous studies are restricted to a part of the sphere.
+It is necessary to confirm their results by calculating on the global domain, 
 %しかし，\cite{Showman2007}, \cite{Brueshaber2019} は
 %どちらも領域計算であった．
 %そのため，全球計算を行い，彼らの結果を確かめる必要がある．
@@ -116,19 +116,19 @@ outside the restricted computational domain.
 %計算で得られたジェットや
 %渦の構造が変化する可能性があるからである．
 %
-The purpose of this study is to perform
-wheter the jet and polar vortex structures seen on giant planets are
-formed by the mass forcing representing thunderstorms.
+The purpose of this study is to perform the global calculation and to investigate
+whether the jet and polar vortex structures seen on giant planets 
+are formed by the mass forcing representing thunderstorms.
 %本研究の目的は雷雲を想定して与えた質量強制による
 %数値実験を全球で行い，雷雲による強制により，
 %巨大惑星で見られる帯状構造と極渦が形成されるのかを調べることである
 %
-Then, compare the global calculation results with the results of previous studies
-and consider the validity of the results obtained by domain calculation.
+Then, these structures are compared with the results obtained in previous studies
+to validate the domain calculations.
 %加えて，それらの構造を先行研究で得られた結果と比較し，
 %領域計算で得られた結果の妥当性を調べる．
 
-In the numerical experiment using the Hierarchical Spectral Models for GFD (SPMODEL; Takehiro et al. 2006, Takehiro et al. 2013).
+The model used in this study is the Hierarchical Spectral Models for GFD (SPMODEL; Takehiro et al. 2006, Takehiro et al. 2013).
 %
 The used equations are a 1.5-layer shallow water equations
 with the mass forcing representing thunderstorms.
@@ -137,9 +137,9 @@ with the mass forcing representing thunderstorms.
 %雷雲を想定した質量強制を加えた1.5層浅水系全球計算を行った．
 %
 
-In the standard experimetal ($Bu = 9.72\times 10^{-5}$) results,
-the banded structure and
-the polar vortex structure were formed.
+In the standard experimetal with planetary radius, rotation rate of Jupiter, $Bu = 9.72\times 10^{-5}$
+and all give the mass forcing positive(i.e., creating an anticyclonic vortex in the region where the forcing is given) results,
+the banded structure and the polar vortex structure were formed.
 %標準実験($Bu = 9.72\times 10^{-5}$)では帯状構造と渦構造が形成した．
 %
 It was also found that the structures remained almost unchanged
@@ -150,7 +150,7 @@ ratio of the mass forcing and the spatial size were varied.
 %帯状構造や極渦の構造はほとんど変化しなかった．
 %
 The characteristics of the polar vortex were
-found to depend on the value of Burger number:
+found to depend on the value of Burger number (Fig. 1):
 when the Burger number is small,
 small multiple vortices are formed, as observed Jupiter,
 and as the Burger number increases,
@@ -173,7 +173,7 @@ about 10 times larger than their results.
 %赤道域でのジェットの風速が彼らの結果に比べて，
 %約10倍大きいという結果が得られた．
 %
-The result possibly suggests that the existence of polar reions and/or opposite hemisphere,
+The result possibly suggests that the existences of polar reions and/or opposite hemisphere,
 which was not considered in Showman (2007), affect the strength of the jet.
 %この結果は\cite{Showman2007} では考慮されていない
 %極域あるいは反対半球の存在が
@@ -181,10 +181,10 @@ which was not considered in Showman (2007), affect the strength of the jet.
 %
 \begin{figure*}[b]
   \begin{center}
-  \includegraphics[width=12cm]{./fig/case1_nonqv_a.png}
-  \caption{\footnotesize{Nondimensional potential vorticity : $Q_e^*$ for various values of Burger number.
-Positive (Negative) values of $Q_e^*$ are cyclonic (anticyclonic).
-}}
+  \includegraphics[width=10cm]{./fig/case1_nonqv_a.png}
+  \caption{ \footnotesize Nondimensional potential vorticity : $Q_e^*$ for various values of Burger number.}
+\captionsetup{labelformat=empty,labelsep=none}
+\caption{\footnotesize Positive (Negative) values of $Q_e^*$ are cyclonic (anticyclonic).}
   \label{case1:nonqv_a}
   \end{center}
 \end{figure*}
