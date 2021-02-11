@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2020.3.7)  29 JAN 2021 15:48
+This is e-pTeX, Version 3.14159265-p3.8.1-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2020.3.7)  11 FEB 2021 23:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -243,23 +243,23 @@ LaTeX Font Info:    ... okay on input line 34.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 47.
+(Font)              <12> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 47.
+(Font)              <8> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 47.
+(Font)              <6> on input line 50.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 51.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 51.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 51.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 51.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 54.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 89.
+(Font)              <7> on input line 92.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 89.
+(Font)              <5> on input line 92.
 File: ./fig/case1_nonqv_a.png Graphic file (type bmp)
 <./fig/case1_nonqv_a.png>
 [1
@@ -274,4 +274,4 @@ Here is how much of TeX's memory you used:
  929 hyphenation exceptions out of 8191
  36i,7n,39p,653b,487s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on abstract.dvi (1 page, 5724 bytes).
+Output written on abstract.dvi (1 page, 5728 bytes).

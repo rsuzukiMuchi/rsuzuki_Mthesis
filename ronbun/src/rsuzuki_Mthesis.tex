@@ -39,6 +39,7 @@
 \usepackage{remreset}
 \usepackage{subfigure}
 \usepackage{here} % 強制的に画像位置を指定
+\usepackage{natbib} % natbib 使用
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%            PageStyle Setting           %%%%%%%%
@@ -51,8 +52,10 @@
 %%  { } は表題 (\maketitle) に書き出される.
 \Dtitle{修士学位論文}
 \Dauthor{鈴木 綾馬}
-\Ddate{2021/01/29}       % 提出期限日
-\Dfile{rsuzuki\_Mthesis.tex}
+\Ddate{\today}       % 提出期限日
+%\Ddate{2021/01/29}       % 提出期限日
+\Dfile{~}
+%\Dfile{rsuzuki\_Mthesis.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%   Set Counter (chapter, section etc. ) %%%%%%%%
@@ -165,7 +168,7 @@
   \vspace{10truept}
  \end{center}
  \begin{center}
-  {\Large 2021 年 1 月 29 日}
+  {\Large \today}
  \end{center}
  \vspace{50truept}
  {\Large 北海道大学大学院理学院修士課程} \\
@@ -337,7 +340,7 @@
 強制が巨大惑星に働いているとは考えにくい．
 %
 現実的に考えられる強制として
-雷雲(\cite{Gierasch2000}, \cite{Porco2005}, \cite{Ingersoll2000})が考えられている．
+雷雲\citep{Gierasch2000, Porco2005, Ingersoll2000}が考えられている．
 %
 \cite{Showman2007}は雷雲を想定した
 局所的かつ離散的な強制を与え，球面浅水実験を行った．
@@ -576,7 +579,7 @@ $g'h$を$\langle g'h \rangle$に向かって平衡化するときの緩和時間
 それ以外の項には4次のルンゲクッタ法を用いる．
 %
 数値モデルの作成には地球流体電脳倶楽部の階層的地球スペクトルモデル集
-(SPMODEL; \cite{spmodel2006}, \cite{spmodel2013}) を使用する．
+(SPMODEL; \citealp{spmodel2006, spmodel2013}) を使用する．
 また，スキームの確認と並列化効率の測定のために
 \cite{Williamson1992} が提案したテストセットを
 実行した\footnote{付録\ref{Williamson}を参照．}．
@@ -1238,7 +1241,7 @@ Burger 数の影響を強く受けるという結果は
 %
 また，木星で観測される雷雲の分布は
 一様的ではなく，図\ref{fig:thunderstorm}に示すように
-ベルト領域で多いことが示唆されている(\cite{Porco2003})．
+ベルト領域で多いことが示唆されている\citep{Porco2003}．
 このような雷雲の分布による影響や
 今回の計算では考慮しなかった
 発生する雷雲の個数など，
@@ -1271,7 +1274,7 @@ Burger 数の影響を強く受けるという結果は
 石渡正樹教授，佐々木洋平先生には
 多大なるご指導を頂きました．
 心より，感謝申し上げます．
-数値モデルにはSPMODEL (\cite{spmodel2006},\cite{spmodel2013})，
+数値モデルにはSPMODEL \citep{spmodel2006, spmodel2013}，
 作図には地球流体電脳ライブラリ\footnote{\url{http://www.gfd-dennou.org/library/dcl/index.html}}を用いました．
 ここに記して謝意を表します.
 \markright{謝辞}
