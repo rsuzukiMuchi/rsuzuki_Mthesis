@@ -1,0 +1,53 @@
+%% Appendix storm %%
+%%%%%%%%%%%%%%%%
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+\setcounter{secnumdepth}{3}
+\renewcommand{\thesubsection}{\Alph{section}.\arabic{subsection}} 
+\renewcommand{\thesubsubsection}{\Alph{section}.\arabic{subsection}.\arabic{subsubsection}} 
+\renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
+\renewcommand{\thetable}{\Alph{section}.\arabic{table}}
+%\renewcommand{\thefigure}{\Alph{section}.\arabic{subsection}.\arabic{figure}}
+%\renewcommand{\thetable}{\Alph{section}.\arabic{subsection}.\arabic{table}}
+%
+ここでは，本研究で用いたソースコードで
+雷雲を想定した質量強制項(式(\ref{eq:eq3})) の
+計算方法についてまとめる．
+質量強制項の1つ1つのストーム: $S_{\rm{storm}}$ の模式図を
+図\ref{fig:storm} に示す．
+ストームは初期発生時刻 : $t_{\rm{init}}$ で発生し，$2.2\tau_{\rm{storm}}$後，消滅する．
+その$\tau_{\rm{interval}}$後に，別の位置にまた発生する．
+%
+より，詳細な説明を行うために質量強制項の計算フローチャートを図\ref{fig:flow} に示す．
+まず，任意の範囲(今回の計算では$10\tau_{\rm{{interval}}}$としている)でストームの初期発生時刻$t_{\rm{init}}$の
+乱数，ストームの中心位置である$\vartheta, \lambda$ の乱数を生成する．
+また，$s$ の符号を$\alpha$ によって，決定する．
+%
+次に，ストームが発生してからの時間 : $t^*$ をmod 関数を使い，計算する．
+%
+$t^* \leq 2.2 \tau_{\rm{storm}}$ の場合に，式(\ref{eq:eq3}) を計算する．
+最後に全てのストームの和をとり，それを質量強制項として，用いる．
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=16cm]{./appendix/storm/fig/storm.png}
+ \end{center}
+ \caption{\footnotesize{ストームの模式図
+}
+}
+ \label{fig:storm}
+\end{figure}
+%
+\begin{figure}[ht]
+ \begin{center}
+ \includegraphics[clip,width=16cm]{./appendix/storm/fig/flow.png}
+ \end{center}
+ \caption{\footnotesize{フローチャート
+}
+}
+ \label{fig:flow}
+\end{figure}
+\clearpage

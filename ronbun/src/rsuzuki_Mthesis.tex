@@ -1333,12 +1333,20 @@ Burger 数の影響を強く受けるという結果は
 \input{./appendix/betadrift/appendix_beta.tex}
 %
 %%  Fig  %%
-%\def\apetitleFig{: 実験図集}
-%\def\apeFig{\Alph{section} \apetitleFig}
-%\section{\apetitleFig}
-%\label{ape:Fig}
-%\markright{\apeFig}
-%\input{./appendix/C/appendix_c.tex}
+\def\apetitleFig{: ソースコードと計算結果}
+\def\apeFig{\Alph{section} \apetitleFig}
+\section{\apetitleFig}
+\label{ape:Fig}
+\markright{\apeFig}
+\input{./appendix/figcolle/appendix_figcolle.tex}
+%%  Storm  %%
+\def\apetitleStorm{: 質量強制項の計算方法}
+\def\apeStorm{\Alph{section} \apetitleStorm}
+\section{\apetitleStorm}
+\label{ape:Storm}
+\markright{\apeStorm}
+\input{./appendix/storm/appendix_storm.tex}
+%
 \newpage
 \renewcommand{\bibname}{参考文献}
 \addcontentsline{toc}{chapter}{参考文献}
